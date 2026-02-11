@@ -22,7 +22,7 @@ services:
 
   producer_history_strava:
     build:
-      context: ./scripts
+      context: ./scripts_import_data
       dockerfile: Dockerfile
     container_name: producer_history_strava
     depends_on:
