@@ -1,0 +1,40 @@
+services:
+  postgres:
+    image: debezium/postgres:16
+    container_name: postgres
+    ports:
+      - 5433:5432
+    environment:
+      POSTGRES_USER: postgresuser
+      POSTGRES_PASSWORD: postgrespw
+      POSTGRES_DB: sport_activities_db
+    command: postgres -c 'wal_level=logical'
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgresuser -d sport_activities_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    volumes:
+      - ./DB_SQL:/docker-entrypoint-initdb.d
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - sport_network
+
+  producer_history_strava:
+    build:
+      context: ./scripts
+      dockerfile: Dockerfile
+    container_name: producer_history_strava
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - sport_network
+
+volumes:
+  postgres_data:
+
+networks:
+  sport_network:
+    driver: bridge
+
