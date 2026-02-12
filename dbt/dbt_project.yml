@@ -1,0 +1,18 @@
+name: "etl_project"
+version: "1.0.0"
+config-version: 2
+
+profile: "etl_project"
+
+model-paths: ["models"]
+target-path: "target"
+clean-targets: ["target", "dbt_modules"]
+
+models:
+  etl_project:
+    silver:
+      +schema: silver
+      +materialized: table
+    gold:
+      +schema: gold
+      +materialized: table

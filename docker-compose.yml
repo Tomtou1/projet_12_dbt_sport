@@ -31,10 +31,28 @@ services:
     networks:
       - sport_network
 
+  dbt:
+    build:
+      context: ./dbt
+      dockerfile: Dockerfile
+    container_name: elt_dbt
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      - DBT_PROFILES_DIR=/app/profiles
+      - POSTGRES_HOST=postgres
+      - POSTGRES_DB=sport_activities_db
+      - POSTGRES_SCHEMA=public
+      - POSTGRES_USER=postgresuser
+      - POSTGRES_PASSWORD=postgrespw
+    volumes:
+      - ./dbt:/app
+    networks:
+      - sport_network
 volumes:
   postgres_data:
 
 networks:
   sport_network:
     driver: bridge
-
