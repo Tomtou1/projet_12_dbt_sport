@@ -3,6 +3,10 @@ import random
 from datetime import datetime, timedelta
 import psycopg2
 import pandas as pd
+import googlemaps
+import os
+from dotenv import load_dotenv
+
 
 def connexion_sql():
     hostname = "postgres"
@@ -30,6 +34,14 @@ def create_sql_table_sport_enterprise(conn):
     type_activity VARCHAR(50)
     );''')
     conn.commit()
+    
+    # Check if table exist
+    cur.execute("SELECT COUNT(*) FROM sport_enterprise")
+    existing_count = cur.fetchone()[0]
+
+    if existing_count > 0:
+        print(f"✓ Table sport_enterprise existe et contient {existing_count} lignes.")
+        return 
     
     # Read the Excel file
     excel_file_path = 'data/Donnees_Sportive.xlsx'
@@ -62,6 +74,14 @@ def create_sql_table_RH(conn):
     );''')
     conn.commit()
     
+    # Check if table exist
+    cur.execute("SELECT COUNT(*) FROM RH_info")
+    existing_count = cur.fetchone()[0]
+
+    if existing_count > 0:
+        print(f"✓ Table RH_info existe et contient {existing_count} lignes.")
+        return
+    
     # Read the Excel file
     excel_file_path = 'data/Donnees_RH.xlsx'
     df = pd.read_excel(excel_file_path)
@@ -77,32 +97,59 @@ def create_sql_table_RH(conn):
         adresse_domicile = row[1]['Adresse du domicile']
         moyen_de_deplacement = row[1]['Moyen de déplacement']
 
-        cur.execute("INSERT INTO RH_info (id_salarie, bu_salarie, salaire_brut, type_contrat, jours_cp, adresse_domicile, moyen_de_deplacement) VALUES (%s, %s, %s, %s, %s, %s, %s)",
-                (int(id_salarie), bu_salarie, salaire_brut, type_contrat, jours_cp, adresse_domicile, moyen_de_deplacement)
-            )
+        cur.execute("""
+            INSERT INTO RH_info 
+            (id_salarie, bu_salarie, salaire_brut, type_contrat, jours_cp, adresse_domicile, moyen_de_deplacement) 
+            VALUES (%s, %s, %s, %s, %s, %s, %s)
+            ON CONFLICT (id_salarie) DO NOTHING
+            """,
+            (int(id_salarie), bu_salarie, salaire_brut, type_contrat, jours_cp, adresse_domicile, moyen_de_deplacement)
+        )
         inserted_count += 1
         conn.commit()
     print(f"{inserted_count} informations RH insérées")
 
 def add_distance_to_office(conn, api_use):
     cur = conn.cursor()
-    cur.execute("SELECT id_salarie, adresse_domicile FROM RH_info")
-    employees = cur.fetchall()
     cur.execute("ALTER TABLE RH_info ADD COLUMN IF NOT EXISTS distance_to_office_km FLOAT")
-    for employee in employees:
-        id_salarie = employee[0]
-        adresse_domicile = employee[1]
-
-        if api_use:
-            # Call the API to get the distance
-            distance_to_office_km = 0
-        else:
-            # Simulate distance calculation (replace with actual API call if needed)
-            distance_to_office_km = random.uniform(1, 50)  # Simulated distance in km
-
-        cur.execute("UPDATE RH_info SET distance_to_office_km = %s WHERE id_salarie = %s",
-                    (distance_to_office_km, id_salarie))
     conn.commit()
+
+    #Get employee where distance is not yet calculated
+    cur.execute("SELECT id_salarie, moyen_de_deplacement, adresse_domicile FROM RH_info WHERE distance_to_office_km IS NULL")
+    employees = cur.fetchall()
+    gmaps_dict_mode = {
+        "véhicule thermique/électrique": "driving",
+        "Transports en commun": "transit",
+        "Vélo/Trottinette/Autres": "bicycling",
+        "Marche/running": "walking"
+    }
+
+
+    if len(employees) == 0:
+        print("Toutes les distances sont déjà calculées.")
+        return
+    else:
+        print(f"Calcul de la distance pour {len(employees)} employés...")
+        for employee in employees:
+            id_salarie = employee[0]
+            moyen_de_deplacement = employee[1]  
+            adresse_domicile = employee[2]  
+
+            print(f" {id_salarie} a le mode de deplacement: {moyen_de_deplacement}, le mode gmaps est donc {gmaps_dict_mode.get(moyen_de_deplacement, 'driving')}")
+            if api_use:
+                # Call the API to get the distance
+                load_dotenv()
+                gmaps = googlemaps.Client(key=os.getenv("GCP_key"))
+                adresse_entreprise = "1362 Av. des Platanes, 34970 Lattes"
+                result = gmaps.distance_matrix(adresse_entreprise, adresse_domicile, mode=gmaps_dict_mode.get(moyen_de_deplacement, "driving"), units='metric')
+                distance_to_office_km = result["rows"][0]["elements"][0]["distance"]["value"] / 1000  # Convert to km
+            else:
+                # Simulate distance calculation (replace with actual API call if needed)
+                distance_to_office_km = random.uniform(1, 50)  # Simulated distance in km
+
+            cur.execute("UPDATE RH_info SET distance_to_office_km = %s WHERE id_salarie = %s",
+                        (distance_to_office_km, id_salarie))
+        conn.commit()
 
 def generate_history_activity(conn):
     range_start_date = datetime(2025, 1, 1).timestamp()

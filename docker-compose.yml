@@ -37,8 +37,8 @@ services:
       dockerfile: Dockerfile
     container_name: elt_dbt
     depends_on:
-      postgres:
-        condition: service_healthy
+      producer_history_strava:
+        condition: service_completed_successfully
     environment:
       - DBT_PROFILES_DIR=/app/profiles
       - POSTGRES_HOST=postgres
