@@ -50,8 +50,39 @@ services:
       - ./dbt:/app
     networks:
       - sport_network
+
+  superset:
+    image: apache/superset:latest-dev
+    container_name: superset
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      SUPERSET_SECRET_KEY: 2laHBf2PuCw5sQTwayU7cIewUW7WVqeNr8lPm6Urswc7qEVPh6Zl313X
+      SUPERSET_LOAD_EXAMPLES: "no"
+      EXTRA_PIP_PACKAGES: psycopg2-binary
+    ports:
+      - "8088:8088"
+    volumes:
+      - superset_data:/app/superset_home
+      - ./export.zip:/app/export.zip
+      - ./superset_config.py:/app/pythonpath/superset_config.py
+    command: >
+      /bin/sh -c "
+      pip install psycopg2-binary &&
+      superset db upgrade &&
+      superset fab create-admin --username admin --firstname Admin --lastname User --email admin@example.com --password admin &&
+      superset init &&
+      superset set-database-uri -d sport_activities -u postgresql+psycopg2://postgresuser:postgrespw@postgres:5432/sport_activities_db &&
+      superset import-dashboards -p export.zip -u admin &&
+      superset run -h 0.0.0.0 -p 8088
+      "
+    networks:
+      - sport_network
+
 volumes:
   postgres_data:
+  superset_data:
 
 networks:
   sport_network:
