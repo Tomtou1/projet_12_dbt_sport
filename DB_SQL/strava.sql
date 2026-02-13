@@ -14,4 +14,4 @@ REPLICA IDENTITY FULL;
 -- 1ère insertion de données pour la table sport_activities
 INSERT INTO sport_activities_history (id_salarie, date_start, type_activity, distance_m, date_end, comments)
 VALUES
-( 56482, '2025-01-02 10:00:00', 'Tennis', NULL, '2025-01-02 11:00:00', 'Super match avec mon frère!');
+( 56482, '2026-02-12 17:00:00', 'Tennis', NULL, '2026-02-12 18:00:00', 'Super match avec mon frère!');
