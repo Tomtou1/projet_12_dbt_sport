@@ -6,7 +6,7 @@ sources:
     database: sport_activities_db
     schema: public
     tables:
-      - name: sport_activities
+      - name: sport_activities_history
         description: "Employee sport activities with timestamps and details"
         columns:
           - name: id_activity
@@ -27,16 +27,15 @@ sources:
             tests:
               - not_null
           - name: distance_m
-            description: "Distance in meters (nullable for non-distance activities)"
+            description: "Distance in meters (can be null)"
           - name: date_end
             description: "Activity end timestamp"
             tests:
               - not_null
           - name: comments
-            description: "User comments about the activity"
 
       - name: sport_enterprise
-        description: "Mapping of employees to their declared sport activities"
+        description: "Employess sport activities"
         columns:
           - name: id_duo
             description: "Primary key"
@@ -80,5 +79,13 @@ sources:
               - not_null
           - name: adresse_domicile
             description: "Home address"
+            tests:
+              - not_null
           - name: moyen_de_deplacement
             description: "Transportation method"
+            tests:
+              - not_null
+          - name: distance_to_office_km
+            description: "Distance from home to office in kilometers"
+            tests:
+              - not_null

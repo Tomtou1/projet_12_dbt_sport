@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: gold_rh_info
+    description: "HR information"
+    columns:
+      - name: id_salarie
+        description: "Salarie ID - Primary key"
+        tests:
+          - unique
+          - not_null
+
+  - name: gold_sport_enterprise
+    description: "Employee sport preferences"
+    columns:
+      - name: id_duo
+        description: "Duo ID - Primary key"
+        tests:
+          - unique
+          - not_null
+
+      - name: id_salarie
+        description: "Salarie ID - Foreign key"
+        tests:
+          - not_null
+
+      - name: type_activity
+        description: "Type of sport activity"
+        tests:
+          - not_null
