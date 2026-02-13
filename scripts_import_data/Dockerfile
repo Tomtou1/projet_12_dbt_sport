@@ -7,4 +7,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-CMD python3 -u prod_activities_sport.py
+CMD python3 -u extract_data.py

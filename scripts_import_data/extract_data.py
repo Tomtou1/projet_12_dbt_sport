@@ -27,7 +27,7 @@ def create_sql_table_sport_enterprise(conn):
     cur.execute('''CREATE TABLE IF NOT EXISTS sport_enterprise (
     id_duo INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     id_salarie INT NOT NULL,
-    type_activity VARCHAR(50) NOT NULL
+    type_activity VARCHAR(50)
     );''')
     conn.commit()
     
@@ -40,17 +40,13 @@ def create_sql_table_sport_enterprise(conn):
     for row in df.iterrows():
         id_salarie = row[1]['ID salarié']
         type_activity = row[1]['Pratique d\'un sport']
-        
-        if type(type_activity) == str:
-            print((int(id_salarie), type_activity))
-            cur.execute(
-                "INSERT INTO sport_enterprise (id_salarie, type_activity) VALUES (%s, %s)",
-                (int(id_salarie), type_activity)
-            )
-            inserted_count += 1 
-        conn.commit()
-    print(f"{inserted_count} activités sportives insérées")
 
+        cur.execute("INSERT INTO sport_enterprise (id_salarie, type_activity) VALUES (%s, %s)",
+                    (int(id_salarie), type_activity)
+                   )
+        inserted_count += 1
+    conn.commit()
+    print(f"{inserted_count} activités sportives insérées")
 
 def create_sql_table_RH(conn):
     # Create the table RH_info
@@ -88,6 +84,25 @@ def create_sql_table_RH(conn):
         conn.commit()
     print(f"{inserted_count} informations RH insérées")
 
+def add_distance_to_office(conn, api_use):
+    cur = conn.cursor()
+    cur.execute("SELECT id_salarie, adresse_domicile FROM RH_info")
+    employees = cur.fetchall()
+    cur.execute("ALTER TABLE RH_info ADD COLUMN IF NOT EXISTS distance_to_office_km FLOAT")
+    for employee in employees:
+        id_salarie = employee[0]
+        adresse_domicile = employee[1]
+
+        if api_use:
+            # Call the API to get the distance
+            distance_to_office_km = 0
+        else:
+            # Simulate distance calculation (replace with actual API call if needed)
+            distance_to_office_km = random.uniform(1, 50)  # Simulated distance in km
+
+        cur.execute("UPDATE RH_info SET distance_to_office_km = %s WHERE id_salarie = %s",
+                    (distance_to_office_km, id_salarie))
+    conn.commit()
 
 def generate_history_activity(conn):
     range_start_date = datetime(2025, 1, 1).timestamp()
@@ -101,17 +116,22 @@ def generate_history_activity(conn):
     # Get all employee IDs and their sports activities
     cur.execute("SELECT id_salarie, type_activity FROM sport_enterprise")
     employees = cur.fetchall()
+
     random_employee = random.choice(employees)
+    while random_employee[1] == "NaN":
+        random_employee = random.choice(employees)
+
     id_salarie = random_employee[0]
-    date_start = start_dt.strftime("%Y-%m-%d %H:%M:%S")
     type_activity = random_employee[1]
+    
+    date_start = start_dt.strftime("%Y-%m-%d %H:%M:%S")
     distance_m = random.randint(1000, 20000) if type_activity in ['Randonnée', 'Running', 'Natation'] else None
     date_end = end_dt.strftime("%Y-%m-%d %H:%M:%S")
     comments = f"Score: {random.randint(0, 10)}/10"
 
     print(f"Generated activity for employee {id_salarie}: {type_activity} from {date_start} to {date_end} with distance {distance_m}m and comments '{comments}'")
     cur.execute(
-        "INSERT INTO sport_activities (id_salarie, date_start, type_activity, distance_m, date_end, comments) VALUES (%s, %s, %s, %s, %s, %s)",
+        "INSERT INTO sport_activities_history (id_salarie, date_start, type_activity, distance_m, date_end, comments) VALUES (%s, %s, %s, %s, %s, %s)",
         (id_salarie, date_start, type_activity, distance_m, date_end, comments)
         )
     conn.commit()
@@ -124,15 +144,16 @@ if __name__ == "__main__":
     #Create table wih activities of each employee, and RH table with info about employees
     create_sql_table_sport_enterprise(conn)
     create_sql_table_RH(conn)
+    add_distance_to_office(conn, False)
 
     #Create history of activity
-    n_history_activities = 10
+    n_history_activities = 100
     for _ in range(n_history_activities):
         generate_history_activity(conn)
 
-    while True:
-        generate_history_activity(conn)
-        time.sleep(2)  # Wait for 2 seconds before generating the next activity
+    #while True:
+    #    generate_history_activity(conn)
+    #    time.sleep(2)  # Wait for 2 seconds before generating the next activity
     # Close connection
     cur.close()
     conn.close()
