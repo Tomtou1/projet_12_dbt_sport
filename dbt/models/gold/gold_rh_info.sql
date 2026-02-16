@@ -8,3 +8,4 @@ SELECT
         ELSE 0
     END AS prime_mobilite_deplacement
 FROM {{ ref('silver_rh_info') }}
+WHERE moyen_de_deplacement_valide IN ('Marche/running', 'Vélo/Trottinette/Autres')

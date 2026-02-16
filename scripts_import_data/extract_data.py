@@ -152,8 +152,8 @@ def add_distance_to_office(conn, api_use):
         conn.commit()
 
 def generate_history_activity(conn):
-    range_start_date = datetime(2025, 1, 1).timestamp()
-    range_end_date = datetime(2025, 12, 31).timestamp()
+    range_start_date = datetime(2026, 1, 1).timestamp()
+    range_end_date = datetime.now().timestamp() - 24*3600  # Up to yesterday
 
     start_dt = datetime.fromtimestamp(random.uniform(range_start_date, range_end_date))
     end_dt = start_dt + timedelta(hours=random.randint(1, 3))  
