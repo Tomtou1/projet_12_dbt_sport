@@ -5,12 +5,12 @@ services:
     ports:
       - 5433:5432
     environment:
-      POSTGRES_USER: postgresuser
-      POSTGRES_PASSWORD: postgrespw
-      POSTGRES_DB: sport_activities_db
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
     command: postgres -c 'wal_level=logical'
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U postgresuser -d sport_activities_db"]
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
       interval: 10s
       timeout: 5s
       retries: 5
@@ -58,7 +58,7 @@ services:
       postgres:
         condition: service_healthy
     environment:
-      SUPERSET_SECRET_KEY: 2laHBf2PuCw5sQTwayU7cIewUW7WVqeNr8lPm6Urswc7qEVPh6Zl313X
+      SUPERSET_SECRET_KEY: ${SUPERSET_SECRET_KEY}
       SUPERSET_LOAD_EXAMPLES: "no"
       EXTRA_PIP_PACKAGES: psycopg2-binary
     ports:
@@ -73,7 +73,7 @@ services:
       superset db upgrade &&
       superset fab create-admin --username admin --firstname Admin --lastname User --email admin@example.com --password admin &&
       superset init &&
-      superset set-database-uri -d sport_activities -u postgresql+psycopg2://postgresuser:postgrespw@postgres:5432/sport_activities_db &&
+      superset set-database-uri -d sport_activities -u postgresql+psycopg2://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB} &&
       superset import-dashboards -p export.zip -u admin &&
       superset run -h 0.0.0.0 -p 8088
       "
@@ -86,7 +86,7 @@ services:
       dockerfile: Dockerfile
     container_name: slack_sender
     environment:
-      - SLACK_WEBHOOK_URL=aHR0cHM6Ly9ob29rcy5zbGFjay5jb20vc2VydmljZXMvVDBBODdRTTNFRVQvQjBBOE02ODIyUkwvYk5CUnpBZmRBV2pWTEdnUUYwNHlrQmdK
+      - SLACK_WEBHOOK_URL=${SLACK_WEBHOOK_URL}
     depends_on:
       dbt:
         condition: service_completed_successfully
