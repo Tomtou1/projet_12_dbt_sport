@@ -1373,3 +1373,1339 @@ slack_sender             | row 8 : N/A
 slack_sender             | row 9 : N/A
 [Kslack_sender exited with code 0
 Mon Feb 16 13:30:09 CET 2026: Daily pipeline execution completed
+ Container producer_history_strava  Recreate
+ Container producer_history_strava  Recreated
+ Container elt_dbt  Recreate
+ Container elt_dbt  Recreated
+ Container slack_sender  Recreate
+ Container slack_sender  Recreated
+Attaching to elt_dbt, producer_history_strava, slack_sender
+producer_history_strava  | Démarrage du producteur d'activités sportives...
+producer_history_strava  | Connecté à la base de données sport_activities_db sur postgres:5432 en tant qu'utilisateur postgresuser.
+producer_history_strava  | ✓ Table sport_enterprise existe et contient 161 lignes.
+producer_history_strava  | ✓ Table RH_info existe et contient 161 lignes.
+producer_history_strava  | Toutes les distances sont déjà calculées.
+producer_history_strava  | Generated activity for employee 22426: Voile from 2026-01-01 10:57:21 to 2026-01-01 12:57:21 with distance Nonem and comments 'Score: 6/10'
+producer_history_strava  | Generated activity for employee 42960: Runing from 2026-01-09 13:19:09 to 2026-01-09 16:19:09 with distance Nonem and comments 'Score: 1/10'
+producer_history_strava  | Generated activity for employee 53673: Voile from 2026-02-04 06:16:28 to 2026-02-04 07:16:28 with distance Nonem and comments 'Score: 9/10'
+producer_history_strava  | Generated activity for employee 17757: Badminton from 2026-01-22 02:41:59 to 2026-01-22 04:41:59 with distance Nonem and comments 'Score: 2/10'
+producer_history_strava  | Generated activity for employee 55153: Boxe from 2026-01-22 05:48:13 to 2026-01-22 06:48:13 with distance Nonem and comments 'Score: 5/10'
+producer_history_strava  | Generated activity for employee 97309: Tennis from 2026-01-05 15:43:28 to 2026-01-05 16:43:28 with distance Nonem and comments 'Score: 6/10'
+producer_history_strava  | Generated activity for employee 94680: Natation from 2026-02-04 04:49:23 to 2026-02-04 06:49:23 with distance 7288m and comments 'Score: 7/10'
+producer_history_strava  | Generated activity for employee 36981: Natation from 2026-02-13 05:00:56 to 2026-02-13 08:00:56 with distance 10402m and comments 'Score: 5/10'
+producer_history_strava  | Generated activity for employee 34899: Football from 2026-02-05 07:14:23 to 2026-02-05 09:14:23 with distance Nonem and comments 'Score: 0/10'
+producer_history_strava  | Generated activity for employee 56482: Tennis from 2026-01-22 01:52:22 to 2026-01-22 02:52:22 with distance Nonem and comments 'Score: 5/10'
+producer_history_strava  | Generated activity for employee 76341: Football from 2026-02-03 07:58:49 to 2026-02-03 09:58:49 with distance Nonem and comments 'Score: 8/10'
+producer_history_strava  | Generated activity for employee 50309: Runing from 2026-01-07 01:26:27 to 2026-01-07 03:26:27 with distance Nonem and comments 'Score: 8/10'
+producer_history_strava  | Generated activity for employee 86486: Judo from 2026-02-03 18:33:19 to 2026-02-03 21:33:19 with distance Nonem and comments 'Score: 4/10'
+producer_history_strava  | Generated activity for employee 43542: Judo from 2026-02-09 08:55:01 to 2026-02-09 11:55:01 with distance Nonem and comments 'Score: 9/10'
+producer_history_strava  | Generated activity for employee 83440: Triathlon from 2026-01-04 18:41:06 to 2026-01-04 21:41:06 with distance Nonem and comments 'Score: 5/10'
+producer_history_strava  | Generated activity for employee 66386: Badminton from 2026-02-03 06:17:55 to 2026-02-03 07:17:55 with distance Nonem and comments 'Score: 5/10'
+producer_history_strava  | Generated activity for employee 29793: Runing from 2026-01-03 20:50:37 to 2026-01-03 21:50:37 with distance Nonem and comments 'Score: 9/10'
+producer_history_strava  | Generated activity for employee 71190: Badminton from 2026-01-10 16:49:13 to 2026-01-10 19:49:13 with distance Nonem and comments 'Score: 5/10'
+producer_history_strava  | Generated activity for employee 92440: Triathlon from 2026-01-08 08:36:15 to 2026-01-08 11:36:15 with distance Nonem and comments 'Score: 0/10'
+producer_history_strava  | Generated activity for employee 55153: Boxe from 2026-01-25 09:46:02 to 2026-01-25 12:46:02 with distance Nonem and comments 'Score: 9/10'
+producer_history_strava  | Generated activity for employee 27069: Runing from 2026-01-22 16:57:57 to 2026-01-22 19:57:57 with distance Nonem and comments 'Score: 10/10'
+producer_history_strava  | Generated activity for employee 49804: Runing from 2026-01-02 15:10:07 to 2026-01-02 18:10:07 with distance Nonem and comments 'Score: 0/10'
+producer_history_strava  | Generated activity for employee 86847: Football from 2026-01-17 19:19:28 to 2026-01-17 20:19:28 with distance Nonem and comments 'Score: 3/10'
+producer_history_strava  | Generated activity for employee 49419: Natation from 2026-02-03 16:21:10 to 2026-02-03 18:21:10 with distance 16860m and comments 'Score: 3/10'
+producer_history_strava  | Generated activity for employee 56530: Runing from 2026-01-03 21:51:46 to 2026-01-04 00:51:46 with distance Nonem and comments 'Score: 9/10'
+producer_history_strava  | Generated activity for employee 88193: Randonnée from 2026-01-14 16:20:11 to 2026-01-14 18:20:11 with distance 4681m and comments 'Score: 2/10'
+producer_history_strava  | Generated activity for employee 86633: Runing from 2026-01-17 14:00:51 to 2026-01-17 15:00:51 with distance Nonem and comments 'Score: 7/10'
+producer_history_strava  | Generated activity for employee 50955: Rugby from 2026-01-28 12:33:40 to 2026-01-28 15:33:40 with distance Nonem and comments 'Score: 1/10'
+producer_history_strava  | Generated activity for employee 89943: Randonnée from 2026-01-18 05:54:44 to 2026-01-18 07:54:44 with distance 17395m and comments 'Score: 8/10'
+producer_history_strava  | Generated activity for employee 27483: Badminton from 2026-01-26 23:31:53 to 2026-01-27 02:31:53 with distance Nonem and comments 'Score: 10/10'
+producer_history_strava  | Generated activity for employee 92368: Runing from 2026-01-09 04:20:56 to 2026-01-09 07:20:56 with distance Nonem and comments 'Score: 0/10'
+producer_history_strava  | Generated activity for employee 56482: Tennis from 2026-02-14 19:41:27 to 2026-02-14 22:41:27 with distance Nonem and comments 'Score: 8/10'
+producer_history_strava  | Generated activity for employee 45221: Randonnée from 2026-02-09 12:36:56 to 2026-02-09 15:36:56 with distance 1296m and comments 'Score: 1/10'
+producer_history_strava  | Generated activity for employee 76341: Football from 2026-02-14 17:30:01 to 2026-02-14 19:30:01 with distance Nonem and comments 'Score: 2/10'
+producer_history_strava  | Generated activity for employee 17997: Tennis de table from 2026-01-22 14:13:13 to 2026-01-22 15:13:13 with distance Nonem and comments 'Score: 10/10'
+producer_history_strava  | Generated activity for employee 88193: Randonnée from 2026-01-17 08:37:33 to 2026-01-17 10:37:33 with distance 11786m and comments 'Score: 9/10'
+producer_history_strava  | Generated activity for employee 43542: Judo from 2026-01-31 08:01:44 to 2026-01-31 10:01:44 with distance Nonem and comments 'Score: 8/10'
+producer_history_strava  | Generated activity for employee 91916: Rugby from 2026-01-15 05:55:39 to 2026-01-15 07:55:39 with distance Nonem and comments 'Score: 8/10'
+producer_history_strava  | Generated activity for employee 75791: Runing from 2026-01-17 18:19:03 to 2026-01-17 19:19:03 with distance Nonem and comments 'Score: 7/10'
+producer_history_strava  | Generated activity for employee 59040: Judo from 2026-02-12 04:21:52 to 2026-02-12 06:21:52 with distance Nonem and comments 'Score: 0/10'
+producer_history_strava  | Generated activity for employee 44927: Randonnée from 2026-01-26 12:54:28 to 2026-01-26 13:54:28 with distance 17936m and comments 'Score: 9/10'
+producer_history_strava  | Generated activity for employee 71190: Badminton from 2026-02-02 08:43:26 to 2026-02-02 11:43:26 with distance Nonem and comments 'Score: 0/10'
+producer_history_strava  | Generated activity for employee 50866: Randonnée from 2026-02-08 22:21:56 to 2026-02-09 01:21:56 with distance 12016m and comments 'Score: 2/10'
+producer_history_strava  | Generated activity for employee 67121: Rugby from 2026-01-02 07:23:17 to 2026-01-02 08:23:17 with distance Nonem and comments 'Score: 10/10'
+producer_history_strava  | Generated activity for employee 17036: Escalade from 2026-02-13 19:31:10 to 2026-02-13 21:31:10 with distance Nonem and comments 'Score: 2/10'
+producer_history_strava  | Generated activity for employee 90813: Natation from 2026-01-10 17:57:01 to 2026-01-10 18:57:01 with distance 1127m and comments 'Score: 8/10'
+producer_history_strava  | Generated activity for employee 89328: Tennis de table from 2026-01-02 08:35:55 to 2026-01-02 11:35:55 with distance Nonem and comments 'Score: 8/10'
+producer_history_strava  | Generated activity for employee 56632: Voile from 2026-02-09 07:44:55 to 2026-02-09 10:44:55 with distance Nonem and comments 'Score: 3/10'
+producer_history_strava  | Generated activity for employee 50309: Runing from 2026-01-13 18:57:47 to 2026-01-13 21:57:47 with distance Nonem and comments 'Score: 6/10'
+producer_history_strava  | Generated activity for employee 34922: Tennis from 2026-01-06 08:44:17 to 2026-01-06 10:44:17 with distance Nonem and comments 'Score: 9/10'
+producer_history_strava  | Generated activity for employee 92368: Runing from 2026-01-26 17:26:29 to 2026-01-26 19:26:29 with distance Nonem and comments 'Score: 5/10'
+producer_history_strava  | Generated activity for employee 25701: Runing from 2026-01-15 15:55:32 to 2026-01-15 18:55:32 with distance Nonem and comments 'Score: 10/10'
+producer_history_strava  | Generated activity for employee 37866: Natation from 2026-01-14 14:48:42 to 2026-01-14 15:48:42 with distance 17651m and comments 'Score: 1/10'
+producer_history_strava  | Generated activity for employee 91916: Rugby from 2026-01-04 11:05:51 to 2026-01-04 13:05:51 with distance Nonem and comments 'Score: 8/10'
+producer_history_strava  | Generated activity for employee 59040: Judo from 2026-02-01 06:49:05 to 2026-02-01 08:49:05 with distance Nonem and comments 'Score: 9/10'
+producer_history_strava  | Generated activity for employee 17997: Tennis de table from 2026-01-08 10:00:47 to 2026-01-08 13:00:47 with distance Nonem and comments 'Score: 6/10'
+producer_history_strava  | Generated activity for employee 60948: Runing from 2026-02-08 07:18:21 to 2026-02-08 08:18:21 with distance Nonem and comments 'Score: 0/10'
+producer_history_strava  | Generated activity for employee 73367: Boxe from 2026-01-29 02:26:15 to 2026-01-29 05:26:15 with distance Nonem and comments 'Score: 4/10'
+producer_history_strava  | Generated activity for employee 96558: Triathlon from 2026-02-04 03:24:02 to 2026-02-04 04:24:02 with distance Nonem and comments 'Score: 3/10'
+producer_history_strava  | Generated activity for employee 48260: Voile from 2026-01-12 16:55:14 to 2026-01-12 18:55:14 with distance Nonem and comments 'Score: 9/10'
+producer_history_strava  | Generated activity for employee 69938: Randonnée from 2026-01-08 12:14:11 to 2026-01-08 13:14:11 with distance 2512m and comments 'Score: 1/10'
+producer_history_strava  | Generated activity for employee 41377: Football from 2026-02-11 23:16:05 to 2026-02-12 00:16:05 with distance Nonem and comments 'Score: 8/10'
+producer_history_strava  | Generated activity for employee 56632: Voile from 2026-02-12 05:29:09 to 2026-02-12 06:29:09 with distance Nonem and comments 'Score: 5/10'
+producer_history_strava  | Generated activity for employee 29793: Runing from 2026-02-10 05:15:10 to 2026-02-10 06:15:10 with distance Nonem and comments 'Score: 2/10'
+producer_history_strava  | Generated activity for employee 56530: Runing from 2026-01-25 11:30:42 to 2026-01-25 12:30:42 with distance Nonem and comments 'Score: 3/10'
+producer_history_strava  | Generated activity for employee 76076: Football from 2026-01-18 23:33:04 to 2026-01-19 02:33:04 with distance Nonem and comments 'Score: 6/10'
+producer_history_strava  | Generated activity for employee 93699: Runing from 2026-01-16 04:50:39 to 2026-01-16 07:50:39 with distance Nonem and comments 'Score: 5/10'
+producer_history_strava  | Generated activity for employee 89328: Tennis de table from 2026-01-28 21:33:58 to 2026-01-28 22:33:58 with distance Nonem and comments 'Score: 1/10'
+producer_history_strava  | Generated activity for employee 66882: Judo from 2026-01-27 11:12:52 to 2026-01-27 14:12:52 with distance Nonem and comments 'Score: 4/10'
+producer_history_strava  | Generated activity for employee 90813: Natation from 2026-02-11 21:41:03 to 2026-02-11 22:41:03 with distance 16902m and comments 'Score: 7/10'
+producer_history_strava  | Generated activity for employee 18918: Tennis from 2026-02-03 21:57:19 to 2026-02-04 00:57:19 with distance Nonem and comments 'Score: 0/10'
+producer_history_strava  | Generated activity for employee 60358: Natation from 2026-02-10 09:21:22 to 2026-02-10 11:21:22 with distance 12708m and comments 'Score: 7/10'
+producer_history_strava  | Generated activity for employee 86948: Tennis from 2026-02-08 22:29:42 to 2026-02-09 00:29:42 with distance Nonem and comments 'Score: 0/10'
+producer_history_strava  | Generated activity for employee 76076: Football from 2026-01-27 19:32:17 to 2026-01-27 20:32:17 with distance Nonem and comments 'Score: 10/10'
+producer_history_strava  | Generated activity for employee 37830: Randonnée from 2026-01-06 12:24:03 to 2026-01-06 13:24:03 with distance 4840m and comments 'Score: 4/10'
+producer_history_strava  | Generated activity for employee 46253: Randonnée from 2026-01-10 14:25:19 to 2026-01-10 15:25:19 with distance 17111m and comments 'Score: 8/10'
+producer_history_strava  | Generated activity for employee 44927: Randonnée from 2026-01-16 06:29:44 to 2026-01-16 07:29:44 with distance 6045m and comments 'Score: 2/10'
+producer_history_strava  | Generated activity for employee 31222: Natation from 2026-02-02 12:57:00 to 2026-02-02 13:57:00 with distance 1881m and comments 'Score: 4/10'
+producer_history_strava  | Generated activity for employee 34382: Équitation from 2026-01-22 21:45:47 to 2026-01-23 00:45:47 with distance Nonem and comments 'Score: 9/10'
+producer_history_strava  | Generated activity for employee 42472: Randonnée from 2026-02-05 23:00:21 to 2026-02-06 01:00:21 with distance 14401m and comments 'Score: 6/10'
+producer_history_strava  | Generated activity for employee 67121: Rugby from 2026-01-24 20:17:57 to 2026-01-24 23:17:57 with distance Nonem and comments 'Score: 8/10'
+producer_history_strava  | Generated activity for employee 88193: Randonnée from 2026-01-24 15:51:11 to 2026-01-24 18:51:11 with distance 12413m and comments 'Score: 3/10'
+producer_history_strava  | Generated activity for employee 44472: Football from 2026-01-09 07:25:42 to 2026-01-09 09:25:42 with distance Nonem and comments 'Score: 10/10'
+producer_history_strava  | Generated activity for employee 22426: Voile from 2026-01-22 01:03:15 to 2026-01-22 04:03:15 with distance Nonem and comments 'Score: 2/10'
+producer_history_strava  | Generated activity for employee 20697: Randonnée from 2026-01-24 18:17:14 to 2026-01-24 20:17:14 with distance 1462m and comments 'Score: 8/10'
+producer_history_strava  | Generated activity for employee 75791: Runing from 2026-01-22 02:12:57 to 2026-01-22 03:12:57 with distance Nonem and comments 'Score: 0/10'
+producer_history_strava  | Generated activity for employee 41293: Randonnée from 2026-01-24 08:28:04 to 2026-01-24 11:28:04 with distance 2388m and comments 'Score: 5/10'
+producer_history_strava  | Generated activity for employee 31222: Natation from 2026-01-09 07:14:23 to 2026-01-09 10:14:23 with distance 12349m and comments 'Score: 1/10'
+producer_history_strava  | Generated activity for employee 92368: Runing from 2026-01-14 21:03:11 to 2026-01-15 00:03:11 with distance Nonem and comments 'Score: 5/10'
+producer_history_strava  | Generated activity for employee 96558: Triathlon from 2026-01-31 19:29:56 to 2026-01-31 22:29:56 with distance Nonem and comments 'Score: 6/10'
+producer_history_strava  | Generated activity for employee 92440: Triathlon from 2026-01-18 23:01:22 to 2026-01-19 02:01:22 with distance Nonem and comments 'Score: 10/10'
+producer_history_strava  | Generated activity for employee 86847: Football from 2026-02-05 07:55:27 to 2026-02-05 10:55:27 with distance Nonem and comments 'Score: 6/10'
+producer_history_strava  | Generated activity for employee 49571: Rugby from 2026-02-11 09:43:48 to 2026-02-11 10:43:48 with distance Nonem and comments 'Score: 10/10'
+producer_history_strava  | Generated activity for employee 23842: Voile from 2026-01-10 13:30:57 to 2026-01-10 15:30:57 with distance Nonem and comments 'Score: 7/10'
+producer_history_strava  | Generated activity for employee 43124: Équitation from 2026-01-06 18:40:28 to 2026-01-06 20:40:28 with distance Nonem and comments 'Score: 3/10'
+producer_history_strava  | Generated activity for employee 90284: Randonnée from 2026-01-04 17:50:29 to 2026-01-04 18:50:29 with distance 5848m and comments 'Score: 4/10'
+producer_history_strava  | Generated activity for employee 17997: Tennis de table from 2026-01-18 11:18:50 to 2026-01-18 13:18:50 with distance Nonem and comments 'Score: 6/10'
+producer_history_strava  | Generated activity for employee 42472: Randonnée from 2026-01-16 15:17:50 to 2026-01-16 17:17:50 with distance 12147m and comments 'Score: 9/10'
+producer_history_strava  | Generated activity for employee 67121: Rugby from 2026-01-31 14:06:54 to 2026-01-31 15:06:54 with distance Nonem and comments 'Score: 2/10'
+producer_history_strava  | Generated activity for employee 27483: Badminton from 2026-02-14 01:51:20 to 2026-02-14 03:51:20 with distance Nonem and comments 'Score: 0/10'
+producer_history_strava  | Connexion fermée.
+[Kproducer_history_strava exited with code 0
+[31m[1mAborting on container exit...[0m
+ Container slack_sender  Stopping
+ Container slack_sender  Stopped
+ Container elt_dbt  Stopping
+ Container elt_dbt  Stopped
+ Container producer_history_strava  Stopping
+ Container producer_history_strava  Stopped
+elt_dbt                  | [0m12:35:03  Running with dbt=1.7.4
+elt_dbt                  | [0m12:35:03  dbt version: 1.7.4
+elt_dbt                  | [0m12:35:03  python version: 3.10.19
+elt_dbt                  | [0m12:35:03  python path: /usr/local/bin/python3.10
+elt_dbt                  | [0m12:35:03  os info: Linux-6.10.14-linuxkit-aarch64-with-glibc2.41
+elt_dbt                  | [0m12:35:03  Using profiles dir at /app/profiles
+elt_dbt                  | [0m12:35:03  Using profiles.yml file at /app/profiles/profiles.yml
+elt_dbt                  | [0m12:35:03  Using dbt_project.yml file at /app/dbt_project.yml
+elt_dbt                  | [0m12:35:03  adapter type: postgres
+elt_dbt                  | [0m12:35:03  adapter version: 1.7.4
+elt_dbt                  | [0m12:35:03  Configuration:
+elt_dbt                  | [0m12:35:03    profiles.yml file [[32mOK found and valid[0m]
+elt_dbt                  | [0m12:35:03    dbt_project.yml file [[32mOK found and valid[0m]
+elt_dbt                  | [0m12:35:03  Required dependencies:
+elt_dbt                  | [0m12:35:03   - git [[32mOK found[0m]
+elt_dbt                  | 
+elt_dbt                  | [0m12:35:03  Connection:
+elt_dbt                  | [0m12:35:03    host: postgres
+elt_dbt                  | [0m12:35:03    port: 5432
+elt_dbt                  | [0m12:35:03    user: postgresuser
+elt_dbt                  | [0m12:35:03    database: sport_activities_db
+elt_dbt                  | [0m12:35:03    schema: public
+elt_dbt                  | [0m12:35:03    connect_timeout: 10
+elt_dbt                  | [0m12:35:03    role: None
+elt_dbt                  | [0m12:35:03    search_path: None
+elt_dbt                  | [0m12:35:03    keepalives_idle: 0
+elt_dbt                  | [0m12:35:03    sslmode: None
+elt_dbt                  | [0m12:35:03    sslcert: None
+elt_dbt                  | [0m12:35:03    sslkey: None
+elt_dbt                  | [0m12:35:03    sslrootcert: None
+elt_dbt                  | [0m12:35:03    application_name: dbt
+elt_dbt                  | [0m12:35:03    retries: 1
+elt_dbt                  | [0m12:35:03  Registered adapter: postgres=1.7.4
+elt_dbt                  | [0m12:35:03    Connection test: [[32mOK connection ok[0m]
+elt_dbt                  | 
+elt_dbt                  | [0m12:35:03  [32mAll checks passed![0m
+elt_dbt                  | [0m12:35:05  Running with dbt=1.7.4
+elt_dbt                  | [0m12:35:05  Registered adapter: postgres=1.7.4
+elt_dbt                  | [0m12:35:05  Found 22 tests, 8 models, 3 sources, 0 exposures, 0 metrics, 401 macros, 0 groups, 0 semantic models
+elt_dbt                  | [0m12:35:05  
+elt_dbt                  | [0m12:35:05  Concurrency: 1 threads (target='dev')
+elt_dbt                  | [0m12:35:05  
+elt_dbt                  | [0m12:35:05  1 of 30 START test source_accepted_values_raw_data_rh_info_type_contrat__CDI__CDD  [RUN]
+elt_dbt                  | [0m12:35:05  1 of 30 PASS source_accepted_values_raw_data_rh_info_type_contrat__CDI__CDD .... [[32mPASS[0m in 0.03s]
+elt_dbt                  | [0m12:35:05  2 of 30 START test source_not_null_raw_data_rh_info_adresse_domicile ........... [RUN]
+elt_dbt                  | [0m12:35:05  2 of 30 PASS source_not_null_raw_data_rh_info_adresse_domicile ................. [[32mPASS[0m in 0.02s]
+elt_dbt                  | [0m12:35:05  3 of 30 START test source_not_null_raw_data_rh_info_bu_salarie ................. [RUN]
+elt_dbt                  | [0m12:35:05  3 of 30 PASS source_not_null_raw_data_rh_info_bu_salarie ....................... [[32mPASS[0m in 0.01s]
+elt_dbt                  | [0m12:35:05  4 of 30 START test source_not_null_raw_data_rh_info_distance_to_office_km ...... [RUN]
+elt_dbt                  | [0m12:35:05  4 of 30 PASS source_not_null_raw_data_rh_info_distance_to_office_km ............ [[32mPASS[0m in 0.02s]
+elt_dbt                  | [0m12:35:05  5 of 30 START test source_not_null_raw_data_rh_info_id_salarie ................. [RUN]
+elt_dbt                  | [0m12:35:05  5 of 30 PASS source_not_null_raw_data_rh_info_id_salarie ....................... [[32mPASS[0m in 0.01s]
+elt_dbt                  | [0m12:35:05  6 of 30 START test source_not_null_raw_data_rh_info_jours_cp ................... [RUN]
+elt_dbt                  | [0m12:35:05  6 of 30 PASS source_not_null_raw_data_rh_info_jours_cp ......................... [[32mPASS[0m in 0.01s]
+elt_dbt                  | [0m12:35:05  7 of 30 START test source_not_null_raw_data_rh_info_moyen_de_deplacement ....... [RUN]
+elt_dbt                  | [0m12:35:05  7 of 30 PASS source_not_null_raw_data_rh_info_moyen_de_deplacement ............. [[32mPASS[0m in 0.01s]
+elt_dbt                  | [0m12:35:05  8 of 30 START test source_not_null_raw_data_rh_info_salaire_brut ............... [RUN]
+elt_dbt                  | [0m12:35:05  8 of 30 PASS source_not_null_raw_data_rh_info_salaire_brut ..................... [[32mPASS[0m in 0.01s]
+elt_dbt                  | [0m12:35:05  9 of 30 START test source_not_null_raw_data_rh_info_type_contrat ............... [RUN]
+elt_dbt                  | [0m12:35:05  9 of 30 PASS source_not_null_raw_data_rh_info_type_contrat ..................... [[32mPASS[0m in 0.01s]
+elt_dbt                  | [0m12:35:05  10 of 30 START test source_not_null_raw_data_sport_activities_history_date_end . [RUN]
+elt_dbt                  | [0m12:35:05  10 of 30 PASS source_not_null_raw_data_sport_activities_history_date_end ....... [[32mPASS[0m in 0.01s]
+elt_dbt                  | [0m12:35:05  11 of 30 START test source_not_null_raw_data_sport_activities_history_date_start  [RUN]
+elt_dbt                  | [0m12:35:05  11 of 30 PASS source_not_null_raw_data_sport_activities_history_date_start ..... [[32mPASS[0m in 0.02s]
+elt_dbt                  | [0m12:35:05  12 of 30 START test source_not_null_raw_data_sport_activities_history_id_activity  [RUN]
+elt_dbt                  | [0m12:35:05  12 of 30 PASS source_not_null_raw_data_sport_activities_history_id_activity .... [[32mPASS[0m in 0.02s]
+elt_dbt                  | [0m12:35:05  13 of 30 START test source_not_null_raw_data_sport_activities_history_id_salarie  [RUN]
+elt_dbt                  | [0m12:35:05  13 of 30 PASS source_not_null_raw_data_sport_activities_history_id_salarie ..... [[32mPASS[0m in 0.01s]
+elt_dbt                  | [0m12:35:05  14 of 30 START test source_not_null_raw_data_sport_activities_history_type_activity  [RUN]
+elt_dbt                  | [0m12:35:05  14 of 30 PASS source_not_null_raw_data_sport_activities_history_type_activity .. [[32mPASS[0m in 0.01s]
+elt_dbt                  | [0m12:35:05  15 of 30 START test source_not_null_raw_data_sport_enterprise_id_duo ........... [RUN]
+elt_dbt                  | [0m12:35:05  15 of 30 PASS source_not_null_raw_data_sport_enterprise_id_duo ................. [[32mPASS[0m in 0.01s]
+elt_dbt                  | [0m12:35:05  16 of 30 START test source_not_null_raw_data_sport_enterprise_id_salarie ....... [RUN]
+elt_dbt                  | [0m12:35:05  16 of 30 PASS source_not_null_raw_data_sport_enterprise_id_salarie ............. [[32mPASS[0m in 0.02s]
+elt_dbt                  | [0m12:35:05  17 of 30 START test source_not_null_raw_data_sport_enterprise_type_activity .... [RUN]
+elt_dbt                  | [0m12:35:05  17 of 30 PASS source_not_null_raw_data_sport_enterprise_type_activity .......... [[32mPASS[0m in 0.01s]
+elt_dbt                  | [0m12:35:05  18 of 30 START test source_unique_raw_data_rh_info_id_salarie .................. [RUN]
+elt_dbt                  | [0m12:35:05  18 of 30 PASS source_unique_raw_data_rh_info_id_salarie ........................ [[32mPASS[0m in 0.02s]
+elt_dbt                  | [0m12:35:05  19 of 30 START test source_unique_raw_data_sport_activities_history_id_activity  [RUN]
+elt_dbt                  | [0m12:35:05  19 of 30 PASS source_unique_raw_data_sport_activities_history_id_activity ...... [[32mPASS[0m in 0.01s]
+elt_dbt                  | [0m12:35:05  20 of 30 START test source_unique_raw_data_sport_enterprise_id_duo ............. [RUN]
+elt_dbt                  | [0m12:35:05  20 of 30 PASS source_unique_raw_data_sport_enterprise_id_duo ................... [[32mPASS[0m in 0.02s]
+elt_dbt                  | [0m12:35:05  21 of 30 START sql table model public_silver.silver_rh_info .................... [RUN]
+elt_dbt                  | [0m12:35:06  21 of 30 OK created sql table model public_silver.silver_rh_info ............... [[32mSELECT 161[0m in 0.06s]
+elt_dbt                  | [0m12:35:06  22 of 30 START sql incremental model public_silver.silver_sport_activities_history  [RUN]
+elt_dbt                  | [0m12:35:06  22 of 30 OK created sql incremental model public_silver.silver_sport_activities_history  [[32mINSERT 0 0[0m in 0.06s]
+elt_dbt                  | [0m12:35:06  23 of 30 START sql table model public_silver.silver_sport_enterprise ........... [RUN]
+elt_dbt                  | [0m12:35:06  23 of 30 OK created sql table model public_silver.silver_sport_enterprise ...... [[32mSELECT 95[0m in 0.02s]
+elt_dbt                  | [0m12:35:06  24 of 30 START sql table model public_gold.gold_incorrect_moyen_deplacement .... [RUN]
+elt_dbt                  | [0m12:35:06  24 of 30 OK created sql table model public_gold.gold_incorrect_moyen_deplacement  [[32mSELECT 29[0m in 0.03s]
+elt_dbt                  | [0m12:35:06  25 of 30 START sql table model public_gold.gold_potential_moyen_deplac_bonus ... [RUN]
+elt_dbt                  | [0m12:35:06  25 of 30 OK created sql table model public_gold.gold_potential_moyen_deplac_bonus  [[32mSELECT 41[0m in 0.03s]
+elt_dbt                  | [0m12:35:06  26 of 30 START sql table model public_gold.gold_rh_info ........................ [RUN]
+elt_dbt                  | [0m12:35:06  26 of 30 OK created sql table model public_gold.gold_rh_info ................... [[32mSELECT 39[0m in 0.03s]
+elt_dbt                  | [0m12:35:06  27 of 30 START sql incremental model public_gold.gold_slack_message_activities . [RUN]
+elt_dbt                  | [0m12:35:06  27 of 30 OK created sql incremental model public_gold.gold_slack_message_activities  [[32mINSERT 0 6[0m in 0.03s]
+elt_dbt                  | [0m12:35:06  28 of 30 START sql incremental model public_gold.gold_sport_activities_history . [RUN]
+elt_dbt                  | [0m12:35:06  28 of 30 OK created sql incremental model public_gold.gold_sport_activities_history  [[32mINSERT 0 0[0m in 0.03s]
+elt_dbt                  | [0m12:35:06  29 of 30 START test not_null_gold_rh_info_id_salarie ........................... [RUN]
+elt_dbt                  | [0m12:35:06  29 of 30 PASS not_null_gold_rh_info_id_salarie ................................. [[32mPASS[0m in 0.01s]
+elt_dbt                  | [0m12:35:06  30 of 30 START test unique_gold_rh_info_id_salarie ............................. [RUN]
+elt_dbt                  | [0m12:35:06  30 of 30 PASS unique_gold_rh_info_id_salarie ................................... [[32mPASS[0m in 0.01s]
+elt_dbt                  | [0m12:35:06  
+elt_dbt                  | [0m12:35:06  Finished running 22 tests, 5 table models, 3 incremental models in 0 hours 0 minutes and 0.79 seconds (0.79s).
+elt_dbt                  | [0m12:35:06  
+elt_dbt                  | [0m12:35:06  [32mCompleted successfully[0m
+elt_dbt                  | [0m12:35:06  
+elt_dbt                  | [0m12:35:06  Done. PASS=30 WARN=0 ERROR=0 SKIP=0 TOTAL=30
+[Kelt_dbt exited with code 0
+slack_sender             | Démarrage du producteur d'activités sportives...
+slack_sender             | Connecté à la base de données sport_activities_db sur postgres:5432 en tant qu'utilisateur postgresuser.
+slack_sender             | (81676, datetime.date(2026, 2, 15), 'Tennis', None, datetime.datetime(2026, 2, 16, 12, 35, 6, 247490, tzinfo=datetime.timezone.utc))
+slack_sender             | (56263, datetime.date(2026, 2, 15), 'Boxe', None, datetime.datetime(2026, 2, 16, 12, 35, 6, 247490, tzinfo=datetime.timezone.utc))
+slack_sender             | (76903, datetime.date(2026, 2, 15), 'Basketball', None, datetime.datetime(2026, 2, 16, 12, 35, 6, 247490, tzinfo=datetime.timezone.utc))
+slack_sender             | (17997, datetime.date(2026, 2, 15), 'Tennis de table', None, datetime.datetime(2026, 2, 16, 12, 35, 6, 247490, tzinfo=datetime.timezone.utc))
+slack_sender             | (19260, datetime.date(2026, 2, 15), 'Runing', None, datetime.datetime(2026, 2, 16, 12, 35, 6, 247490, tzinfo=datetime.timezone.utc))
+slack_sender             | (18941, datetime.date(2026, 2, 15), 'Runing', None, datetime.datetime(2026, 2, 16, 12, 35, 6, 247490, tzinfo=datetime.timezone.utc))
+slack_sender             | Connexion fermée.
+slack_sender             | row 0 : 81676
+slack_sender             | row 1 : 2026-02-15
+slack_sender             | row 2 : Tennis
+slack_sender             | row 3 : None
+slack_sender             | row 4 : 2026-02-16 12:35:06.247490+00:00
+slack_sender             | row 5 : N/A
+slack_sender             | row 6 : N/A
+slack_sender             | row 7 : N/A
+slack_sender             | row 8 : N/A
+slack_sender             | row 9 : N/A
+slack_sender             | row 0 : 56263
+slack_sender             | row 1 : 2026-02-15
+slack_sender             | row 2 : Boxe
+slack_sender             | row 3 : None
+slack_sender             | row 4 : 2026-02-16 12:35:06.247490+00:00
+slack_sender             | row 5 : N/A
+slack_sender             | row 6 : N/A
+slack_sender             | row 7 : N/A
+slack_sender             | row 8 : N/A
+slack_sender             | row 9 : N/A
+slack_sender             | row 0 : 76903
+slack_sender             | row 1 : 2026-02-15
+slack_sender             | row 2 : Basketball
+slack_sender             | row 3 : None
+slack_sender             | row 4 : 2026-02-16 12:35:06.247490+00:00
+slack_sender             | row 5 : N/A
+slack_sender             | row 6 : N/A
+slack_sender             | row 7 : N/A
+slack_sender             | row 8 : N/A
+slack_sender             | row 9 : N/A
+slack_sender             | row 0 : 17997
+slack_sender             | row 1 : 2026-02-15
+slack_sender             | row 2 : Tennis de table
+slack_sender             | row 3 : None
+slack_sender             | row 4 : 2026-02-16 12:35:06.247490+00:00
+slack_sender             | row 5 : N/A
+slack_sender             | row 6 : N/A
+slack_sender             | row 7 : N/A
+slack_sender             | row 8 : N/A
+slack_sender             | row 9 : N/A
+slack_sender             | row 0 : 19260
+slack_sender             | row 1 : 2026-02-15
+slack_sender             | row 2 : Runing
+slack_sender             | row 3 : None
+slack_sender             | row 4 : 2026-02-16 12:35:06.247490+00:00
+slack_sender             | row 5 : N/A
+slack_sender             | row 6 : N/A
+slack_sender             | row 7 : N/A
+slack_sender             | row 8 : N/A
+slack_sender             | row 9 : N/A
+slack_sender             | row 0 : 18941
+slack_sender             | row 1 : 2026-02-15
+slack_sender             | row 2 : Runing
+slack_sender             | row 3 : None
+slack_sender             | row 4 : 2026-02-16 12:35:06.247490+00:00
+slack_sender             | row 5 : N/A
+slack_sender             | row 6 : N/A
+slack_sender             | row 7 : N/A
+slack_sender             | row 8 : N/A
+slack_sender             | row 9 : N/A
+[Kslack_sender exited with code 0
+Mon Feb 16 13:35:09 CET 2026: Daily pipeline execution completed
+ Container producer_history_strava  Recreate
+ Container producer_history_strava  Recreated
+ Container elt_dbt  Recreate
+ Container elt_dbt  Recreated
+ Container slack_sender  Recreate
+ Container slack_sender  Recreated
+Attaching to elt_dbt, producer_history_strava, slack_sender
+producer_history_strava  | Démarrage du producteur d'activités sportives...
+producer_history_strava  | Traceback (most recent call last):
+producer_history_strava  |   File "/app/extract_data.py", line 188, in <module>
+producer_history_strava  |     conn = connexion_sql()
+producer_history_strava  |            ^^^^^^^^^^^^^^^
+producer_history_strava  |   File "/app/extract_data.py", line 18, in connexion_sql
+producer_history_strava  |     conn  = psycopg2.connect(
+producer_history_strava  |             ^^^^^^^^^^^^^^^^^
+producer_history_strava  |   File "/usr/local/lib/python3.11/site-packages/psycopg2/__init__.py", line 122, in connect
+producer_history_strava  |     conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+producer_history_strava  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+producer_history_strava  | psycopg2.OperationalError: could not translate host name "postgres" to address: Name or service not known
+producer_history_strava  | 
+[Kproducer_history_strava exited with code 1
+[31m[1mAborting on container exit...[0m
+ Container slack_sender  Stopping
+ Container slack_sender  Stopped
+ Container elt_dbt  Stopping
+ Container elt_dbt  Stopped
+ Container producer_history_strava  Stopping
+ Container producer_history_strava  Stopped
+service "producer_history_strava" didn't complete successfully: exit 1
+ Container producer_history_strava  Recreate
+ Container producer_history_strava  Recreated
+ Container elt_dbt  Recreate
+ Container elt_dbt  Recreated
+ Container slack_sender  Recreate
+ Container slack_sender  Recreated
+Attaching to elt_dbt, producer_history_strava, slack_sender
+producer_history_strava  | Démarrage du producteur d'activités sportives...
+producer_history_strava  | Connecté à la base de données sport_activities_db sur postgres:5432 en tant qu'utilisateur postgresuser.
+producer_history_strava  | ✓ Table sport_enterprise existe et contient 161 lignes.
+producer_history_strava  | ✓ Table RH_info existe et contient 161 lignes.
+producer_history_strava  | Toutes les distances sont déjà calculées.
+producer_history_strava  | Generated activity for employee 50955: Rugby from 2026-01-25 17:20:23 to 2026-01-25 18:20:23 with distance Nonem and comments 'Score: 9/10'
+producer_history_strava  | Generated activity for employee 76341: Football from 2026-01-05 17:40:11 to 2026-01-05 18:40:11 with distance Nonem and comments 'Score: 4/10'
+producer_history_strava  | Generated activity for employee 91916: Rugby from 2026-01-24 02:05:08 to 2026-01-24 04:05:08 with distance Nonem and comments 'Score: 8/10'
+producer_history_strava  | Generated activity for employee 56632: Voile from 2026-01-29 21:41:14 to 2026-01-29 22:41:14 with distance Nonem and comments 'Score: 4/10'
+producer_history_strava  | Generated activity for employee 51866: Runing from 2026-01-20 10:07:14 to 2026-01-20 11:07:14 with distance Nonem and comments 'Score: 6/10'
+producer_history_strava  | Generated activity for employee 37830: Randonnée from 2026-02-03 08:46:43 to 2026-02-03 10:46:43 with distance 10239m and comments 'Score: 4/10'
+producer_history_strava  | Generated activity for employee 43124: Équitation from 2026-02-09 15:39:04 to 2026-02-09 18:39:04 with distance Nonem and comments 'Score: 2/10'
+producer_history_strava  | Generated activity for employee 90813: Natation from 2026-02-12 09:20:06 to 2026-02-12 11:20:06 with distance 6602m and comments 'Score: 8/10'
+producer_history_strava  | Generated activity for employee 66386: Badminton from 2026-01-18 17:39:58 to 2026-01-18 20:39:58 with distance Nonem and comments 'Score: 7/10'
+producer_history_strava  | Generated activity for employee 44472: Football from 2026-02-07 13:12:06 to 2026-02-07 16:12:06 with distance Nonem and comments 'Score: 1/10'
+producer_history_strava  | Generated activity for employee 70575: Randonnée from 2026-01-17 23:38:22 to 2026-01-18 02:38:22 with distance 8548m and comments 'Score: 10/10'
+producer_history_strava  | Generated activity for employee 39874: Tennis from 2026-02-10 14:21:07 to 2026-02-10 16:21:07 with distance Nonem and comments 'Score: 8/10'
+producer_history_strava  | Generated activity for employee 50955: Rugby from 2026-02-10 14:21:49 to 2026-02-10 17:21:49 with distance Nonem and comments 'Score: 6/10'
+producer_history_strava  | Generated activity for employee 36827: Tennis from 2026-02-01 11:47:44 to 2026-02-01 13:47:44 with distance Nonem and comments 'Score: 5/10'
+producer_history_strava  | Generated activity for employee 49419: Natation from 2026-02-09 03:15:55 to 2026-02-09 05:15:55 with distance 6445m and comments 'Score: 7/10'
+producer_history_strava  | Generated activity for employee 19260: Runing from 2026-02-13 06:26:56 to 2026-02-13 08:26:56 with distance Nonem and comments 'Score: 6/10'
+producer_history_strava  | Generated activity for employee 36981: Natation from 2026-01-27 00:52:01 to 2026-01-27 03:52:01 with distance 5590m and comments 'Score: 4/10'
+producer_history_strava  | Generated activity for employee 76341: Football from 2026-01-31 02:33:19 to 2026-01-31 04:33:19 with distance Nonem and comments 'Score: 6/10'
+producer_history_strava  | Generated activity for employee 86847: Football from 2026-01-25 04:36:27 to 2026-01-25 06:36:27 with distance Nonem and comments 'Score: 5/10'
+producer_history_strava  | Generated activity for employee 90813: Natation from 2026-01-14 22:44:22 to 2026-01-15 01:44:22 with distance 4330m and comments 'Score: 5/10'
+producer_history_strava  | Generated activity for employee 17997: Tennis de table from 2026-01-18 00:09:12 to 2026-01-18 03:09:12 with distance Nonem and comments 'Score: 1/10'
+producer_history_strava  | Generated activity for employee 50504: Escalade from 2026-01-23 23:32:19 to 2026-01-24 01:32:19 with distance Nonem and comments 'Score: 7/10'
+producer_history_strava  | Generated activity for employee 17027: Tennis from 2026-02-07 01:34:58 to 2026-02-07 03:34:58 with distance Nonem and comments 'Score: 0/10'
+producer_history_strava  | Generated activity for employee 66386: Badminton from 2026-01-07 21:27:46 to 2026-01-07 22:27:46 with distance Nonem and comments 'Score: 4/10'
+producer_history_strava  | Generated activity for employee 37866: Natation from 2026-02-02 13:45:45 to 2026-02-02 14:45:45 with distance 12563m and comments 'Score: 6/10'
+producer_history_strava  | Generated activity for employee 69938: Randonnée from 2026-01-13 19:13:58 to 2026-01-13 22:13:58 with distance 8200m and comments 'Score: 0/10'
+producer_history_strava  | Generated activity for employee 37830: Randonnée from 2026-02-04 22:44:07 to 2026-02-05 00:44:07 with distance 15567m and comments 'Score: 0/10'
+producer_history_strava  | Generated activity for employee 71190: Badminton from 2026-01-26 23:34:37 to 2026-01-27 00:34:37 with distance Nonem and comments 'Score: 2/10'
+producer_history_strava  | Generated activity for employee 42472: Randonnée from 2026-01-21 21:11:28 to 2026-01-21 22:11:28 with distance 4792m and comments 'Score: 10/10'
+producer_history_strava  | Generated activity for employee 22426: Voile from 2026-01-29 03:48:11 to 2026-01-29 06:48:11 with distance Nonem and comments 'Score: 3/10'
+producer_history_strava  | Generated activity for employee 32690: Badminton from 2026-01-08 04:45:09 to 2026-01-08 06:45:09 with distance Nonem and comments 'Score: 6/10'
+producer_history_strava  | Generated activity for employee 35731: Rugby from 2026-02-06 15:42:16 to 2026-02-06 17:42:16 with distance Nonem and comments 'Score: 0/10'
+producer_history_strava  | Generated activity for employee 94680: Natation from 2026-01-18 18:43:09 to 2026-01-18 20:43:09 with distance 9956m and comments 'Score: 3/10'
+producer_history_strava  | Generated activity for employee 33386: Randonnée from 2026-02-06 15:34:31 to 2026-02-06 16:34:31 with distance 15778m and comments 'Score: 0/10'
+producer_history_strava  | Generated activity for employee 89943: Randonnée from 2026-01-29 02:09:50 to 2026-01-29 03:09:50 with distance 13154m and comments 'Score: 8/10'
+producer_history_strava  | Generated activity for employee 99401: Runing from 2026-02-03 23:36:59 to 2026-02-04 00:36:59 with distance Nonem and comments 'Score: 4/10'
+producer_history_strava  | Generated activity for employee 17757: Badminton from 2026-02-02 11:41:13 to 2026-02-02 14:41:13 with distance Nonem and comments 'Score: 9/10'
+producer_history_strava  | Generated activity for employee 56632: Voile from 2026-02-01 07:39:47 to 2026-02-01 08:39:47 with distance Nonem and comments 'Score: 10/10'
+producer_history_strava  | Generated activity for employee 96558: Triathlon from 2026-01-12 05:27:40 to 2026-01-12 08:27:40 with distance Nonem and comments 'Score: 1/10'
+producer_history_strava  | Generated activity for employee 90284: Randonnée from 2026-02-14 05:36:23 to 2026-02-14 06:36:23 with distance 16841m and comments 'Score: 7/10'
+producer_history_strava  | Generated activity for employee 50955: Rugby from 2026-02-10 06:43:32 to 2026-02-10 08:43:32 with distance Nonem and comments 'Score: 9/10'
+producer_history_strava  | Generated activity for employee 17036: Escalade from 2026-01-02 19:49:18 to 2026-01-02 21:49:18 with distance Nonem and comments 'Score: 8/10'
+producer_history_strava  | Generated activity for employee 86948: Tennis from 2026-01-26 05:05:19 to 2026-01-26 08:05:19 with distance Nonem and comments 'Score: 3/10'
+producer_history_strava  | Generated activity for employee 56263: Boxe from 2026-01-23 13:11:40 to 2026-01-23 15:11:40 with distance Nonem and comments 'Score: 8/10'
+producer_history_strava  | Generated activity for employee 36827: Tennis from 2026-01-24 02:39:02 to 2026-01-24 03:39:02 with distance Nonem and comments 'Score: 7/10'
+producer_history_strava  | Generated activity for employee 67121: Rugby from 2026-01-07 12:25:00 to 2026-01-07 15:25:00 with distance Nonem and comments 'Score: 6/10'
+producer_history_strava  | Generated activity for employee 76341: Football from 2026-01-27 23:55:35 to 2026-01-28 01:55:35 with distance Nonem and comments 'Score: 3/10'
+producer_history_strava  | Generated activity for employee 75791: Runing from 2026-01-09 10:57:24 to 2026-01-09 12:57:24 with distance Nonem and comments 'Score: 2/10'
+producer_history_strava  | Generated activity for employee 45221: Randonnée from 2026-02-03 15:30:04 to 2026-02-03 17:30:04 with distance 14340m and comments 'Score: 4/10'
+producer_history_strava  | Generated activity for employee 70575: Randonnée from 2026-02-05 15:47:49 to 2026-02-05 16:47:49 with distance 8423m and comments 'Score: 2/10'
+producer_history_strava  | Generated activity for employee 20697: Randonnée from 2026-01-20 02:19:12 to 2026-01-20 04:19:12 with distance 2854m and comments 'Score: 4/10'
+producer_history_strava  | Generated activity for employee 99401: Runing from 2026-02-08 14:55:44 to 2026-02-08 16:55:44 with distance Nonem and comments 'Score: 8/10'
+producer_history_strava  | Generated activity for employee 29793: Runing from 2026-01-27 18:38:50 to 2026-01-27 20:38:50 with distance Nonem and comments 'Score: 8/10'
+producer_history_strava  | Generated activity for employee 50955: Rugby from 2026-02-09 10:24:50 to 2026-02-09 11:24:50 with distance Nonem and comments 'Score: 8/10'
+producer_history_strava  | Generated activity for employee 66882: Judo from 2026-02-05 02:23:16 to 2026-02-05 03:23:16 with distance Nonem and comments 'Score: 9/10'
+producer_history_strava  | Generated activity for employee 56482: Tennis from 2026-02-08 01:40:35 to 2026-02-08 02:40:35 with distance Nonem and comments 'Score: 4/10'
+producer_history_strava  | Generated activity for employee 81676: Tennis from 2026-02-01 19:40:28 to 2026-02-01 22:40:28 with distance Nonem and comments 'Score: 4/10'
+producer_history_strava  | Generated activity for employee 60948: Runing from 2026-02-03 13:38:03 to 2026-02-03 16:38:03 with distance Nonem and comments 'Score: 8/10'
+producer_history_strava  | Generated activity for employee 86633: Runing from 2026-02-04 12:38:24 to 2026-02-04 14:38:24 with distance Nonem and comments 'Score: 0/10'
+producer_history_strava  | Generated activity for employee 92440: Triathlon from 2026-01-05 15:18:35 to 2026-01-05 18:18:35 with distance Nonem and comments 'Score: 1/10'
+producer_history_strava  | Generated activity for employee 56530: Runing from 2026-01-19 09:02:33 to 2026-01-19 10:02:33 with distance Nonem and comments 'Score: 9/10'
+producer_history_strava  | Generated activity for employee 44927: Randonnée from 2026-01-07 05:35:30 to 2026-01-07 07:35:30 with distance 16029m and comments 'Score: 3/10'
+producer_history_strava  | Generated activity for employee 89328: Tennis de table from 2026-01-13 05:22:34 to 2026-01-13 08:22:34 with distance Nonem and comments 'Score: 0/10'
+producer_history_strava  | Generated activity for employee 86847: Football from 2026-02-14 00:23:25 to 2026-02-14 01:23:25 with distance Nonem and comments 'Score: 4/10'
+producer_history_strava  | Generated activity for employee 39874: Tennis from 2026-02-02 04:21:15 to 2026-02-02 05:21:15 with distance Nonem and comments 'Score: 3/10'
+producer_history_strava  | Generated activity for employee 37866: Natation from 2026-01-04 09:24:39 to 2026-01-04 12:24:39 with distance 19456m and comments 'Score: 6/10'
+producer_history_strava  | Generated activity for employee 97309: Tennis from 2026-02-06 03:12:21 to 2026-02-06 05:12:21 with distance Nonem and comments 'Score: 7/10'
+producer_history_strava  | Generated activity for employee 73367: Boxe from 2026-02-14 08:35:19 to 2026-02-14 10:35:19 with distance Nonem and comments 'Score: 2/10'
+producer_history_strava  | Generated activity for employee 59040: Judo from 2026-02-05 11:24:06 to 2026-02-05 13:24:06 with distance Nonem and comments 'Score: 8/10'
+producer_history_strava  | Generated activity for employee 20157: Basketball from 2026-01-07 20:41:47 to 2026-01-07 23:41:47 with distance Nonem and comments 'Score: 5/10'
+producer_history_strava  | Generated activity for employee 53673: Voile from 2026-01-25 21:08:46 to 2026-01-26 00:08:46 with distance Nonem and comments 'Score: 3/10'
+producer_history_strava  | Generated activity for employee 45221: Randonnée from 2026-01-05 11:12:19 to 2026-01-05 13:12:19 with distance 15814m and comments 'Score: 2/10'
+producer_history_strava  | Generated activity for employee 36827: Tennis from 2026-01-01 17:40:10 to 2026-01-01 18:40:10 with distance Nonem and comments 'Score: 4/10'
+producer_history_strava  | Generated activity for employee 29450: Randonnée from 2026-01-31 18:14:41 to 2026-01-31 21:14:41 with distance 6245m and comments 'Score: 8/10'
+producer_history_strava  | Generated activity for employee 60358: Natation from 2026-01-22 15:17:24 to 2026-01-22 16:17:24 with distance 17916m and comments 'Score: 7/10'
+producer_history_strava  | Generated activity for employee 94680: Natation from 2026-01-16 11:15:33 to 2026-01-16 14:15:33 with distance 3248m and comments 'Score: 8/10'
+producer_history_strava  | Generated activity for employee 44927: Randonnée from 2026-01-25 03:32:06 to 2026-01-25 06:32:06 with distance 8199m and comments 'Score: 0/10'
+producer_history_strava  | Generated activity for employee 43124: Équitation from 2026-01-29 07:05:58 to 2026-01-29 08:05:58 with distance Nonem and comments 'Score: 10/10'
+producer_history_strava  | Generated activity for employee 71190: Badminton from 2026-02-12 01:36:33 to 2026-02-12 03:36:33 with distance Nonem and comments 'Score: 6/10'
+producer_history_strava  | Generated activity for employee 86948: Tennis from 2026-01-13 14:50:01 to 2026-01-13 17:50:01 with distance Nonem and comments 'Score: 2/10'
+producer_history_strava  | Generated activity for employee 56482: Tennis from 2026-02-02 20:13:05 to 2026-02-02 22:13:05 with distance Nonem and comments 'Score: 4/10'
+producer_history_strava  | Generated activity for employee 25701: Runing from 2026-01-03 10:55:24 to 2026-01-03 11:55:24 with distance Nonem and comments 'Score: 6/10'
+producer_history_strava  | Generated activity for employee 53944: Natation from 2026-02-11 09:50:43 to 2026-02-11 12:50:43 with distance 13467m and comments 'Score: 8/10'
+producer_history_strava  | Generated activity for employee 49571: Rugby from 2026-02-02 00:34:09 to 2026-02-02 01:34:09 with distance Nonem and comments 'Score: 10/10'
+producer_history_strava  | Generated activity for employee 81676: Tennis from 2026-01-10 13:56:04 to 2026-01-10 16:56:04 with distance Nonem and comments 'Score: 0/10'
+producer_history_strava  | Generated activity for employee 53944: Natation from 2026-01-25 17:29:41 to 2026-01-25 19:29:41 with distance 5633m and comments 'Score: 9/10'
+producer_history_strava  | Generated activity for employee 67121: Rugby from 2026-01-13 12:18:29 to 2026-01-13 13:18:29 with distance Nonem and comments 'Score: 4/10'
+producer_history_strava  | Generated activity for employee 70933: Tennis from 2026-01-03 17:37:36 to 2026-01-03 19:37:36 with distance Nonem and comments 'Score: 1/10'
+producer_history_strava  | Generated activity for employee 29450: Randonnée from 2026-01-11 15:54:24 to 2026-01-11 18:54:24 with distance 5956m and comments 'Score: 10/10'
+producer_history_strava  | Generated activity for employee 19260: Runing from 2026-01-16 10:48:34 to 2026-01-16 12:48:34 with distance Nonem and comments 'Score: 8/10'
+producer_history_strava  | Generated activity for employee 50504: Escalade from 2026-02-09 00:07:18 to 2026-02-09 03:07:18 with distance Nonem and comments 'Score: 3/10'
+producer_history_strava  | Generated activity for employee 96558: Triathlon from 2026-01-13 00:37:17 to 2026-01-13 01:37:17 with distance Nonem and comments 'Score: 6/10'
+producer_history_strava  | Generated activity for employee 66882: Judo from 2026-02-09 11:42:42 to 2026-02-09 13:42:42 with distance Nonem and comments 'Score: 7/10'
+producer_history_strava  | Generated activity for employee 20157: Basketball from 2026-01-05 10:46:05 to 2026-01-05 13:46:05 with distance Nonem and comments 'Score: 2/10'
+producer_history_strava  | Generated activity for employee 29450: Randonnée from 2026-01-29 05:49:01 to 2026-01-29 07:49:01 with distance 3071m and comments 'Score: 9/10'
+producer_history_strava  | Generated activity for employee 44472: Football from 2026-01-08 22:07:30 to 2026-01-09 01:07:30 with distance Nonem and comments 'Score: 4/10'
+producer_history_strava  | Generated activity for employee 49804: Runing from 2026-02-05 09:44:04 to 2026-02-05 12:44:04 with distance Nonem and comments 'Score: 3/10'
+producer_history_strava  | Generated activity for employee 76076: Football from 2026-01-01 12:57:18 to 2026-01-01 15:57:18 with distance Nonem and comments 'Score: 10/10'
+producer_history_strava  | Generated activity for employee 46253: Randonnée from 2026-01-17 15:44:16 to 2026-01-17 18:44:16 with distance 1724m and comments 'Score: 8/10'
+producer_history_strava  | Generated activity for employee 17757: Badminton from 2026-01-05 03:45:29 to 2026-01-05 04:45:29 with distance Nonem and comments 'Score: 10/10'
+producer_history_strava  | Connexion fermée.
+[Kproducer_history_strava exited with code 0
+[31m[1mAborting on container exit...[0m
+ Container slack_sender  Stopping
+ Container slack_sender  Stopped
+ Container elt_dbt  Stopping
+ Container elt_dbt  Stopped
+ Container producer_history_strava  Stopping
+ Container producer_history_strava  Stopped
+elt_dbt                  | [0m12:45:02  Running with dbt=1.7.4
+elt_dbt                  | [0m12:45:02  dbt version: 1.7.4
+elt_dbt                  | [0m12:45:02  python version: 3.10.19
+elt_dbt                  | [0m12:45:02  python path: /usr/local/bin/python3.10
+elt_dbt                  | [0m12:45:02  os info: Linux-6.10.14-linuxkit-aarch64-with-glibc2.41
+elt_dbt                  | [0m12:45:02  Using profiles dir at /app/profiles
+elt_dbt                  | [0m12:45:02  Using profiles.yml file at /app/profiles/profiles.yml
+elt_dbt                  | [0m12:45:02  Using dbt_project.yml file at /app/dbt_project.yml
+elt_dbt                  | [0m12:45:02  adapter type: postgres
+elt_dbt                  | [0m12:45:02  adapter version: 1.7.4
+elt_dbt                  | [0m12:45:02  Configuration:
+elt_dbt                  | [0m12:45:02    profiles.yml file [[32mOK found and valid[0m]
+elt_dbt                  | [0m12:45:02    dbt_project.yml file [[32mOK found and valid[0m]
+elt_dbt                  | [0m12:45:02  Required dependencies:
+elt_dbt                  | [0m12:45:02   - git [[32mOK found[0m]
+elt_dbt                  | 
+elt_dbt                  | [0m12:45:02  Connection:
+elt_dbt                  | [0m12:45:02    host: postgres
+elt_dbt                  | [0m12:45:02    port: 5432
+elt_dbt                  | [0m12:45:02    user: postgresuser
+elt_dbt                  | [0m12:45:02    database: sport_activities_db
+elt_dbt                  | [0m12:45:02    schema: public
+elt_dbt                  | [0m12:45:02    connect_timeout: 10
+elt_dbt                  | [0m12:45:02    role: None
+elt_dbt                  | [0m12:45:02    search_path: None
+elt_dbt                  | [0m12:45:02    keepalives_idle: 0
+elt_dbt                  | [0m12:45:02    sslmode: None
+elt_dbt                  | [0m12:45:02    sslcert: None
+elt_dbt                  | [0m12:45:02    sslkey: None
+elt_dbt                  | [0m12:45:02    sslrootcert: None
+elt_dbt                  | [0m12:45:02    application_name: dbt
+elt_dbt                  | [0m12:45:02    retries: 1
+elt_dbt                  | [0m12:45:02  Registered adapter: postgres=1.7.4
+elt_dbt                  | [0m12:45:02    Connection test: [[32mOK connection ok[0m]
+elt_dbt                  | 
+elt_dbt                  | [0m12:45:02  [32mAll checks passed![0m
+elt_dbt                  | [0m12:45:04  Running with dbt=1.7.4
+elt_dbt                  | [0m12:45:04  Registered adapter: postgres=1.7.4
+elt_dbt                  | [0m12:45:04  Found 22 tests, 8 models, 3 sources, 0 exposures, 0 metrics, 401 macros, 0 groups, 0 semantic models
+elt_dbt                  | [0m12:45:04  
+elt_dbt                  | [0m12:45:04  Concurrency: 1 threads (target='dev')
+elt_dbt                  | [0m12:45:04  
+elt_dbt                  | [0m12:45:04  1 of 30 START test source_accepted_values_raw_data_rh_info_type_contrat__CDI__CDD  [RUN]
+elt_dbt                  | [0m12:45:04  1 of 30 PASS source_accepted_values_raw_data_rh_info_type_contrat__CDI__CDD .... [[32mPASS[0m in 0.03s]
+elt_dbt                  | [0m12:45:04  2 of 30 START test source_not_null_raw_data_rh_info_adresse_domicile ........... [RUN]
+elt_dbt                  | [0m12:45:04  2 of 30 PASS source_not_null_raw_data_rh_info_adresse_domicile ................. [[32mPASS[0m in 0.02s]
+elt_dbt                  | [0m12:45:04  3 of 30 START test source_not_null_raw_data_rh_info_bu_salarie ................. [RUN]
+elt_dbt                  | [0m12:45:04  3 of 30 PASS source_not_null_raw_data_rh_info_bu_salarie ....................... [[32mPASS[0m in 0.01s]
+elt_dbt                  | [0m12:45:04  4 of 30 START test source_not_null_raw_data_rh_info_distance_to_office_km ...... [RUN]
+elt_dbt                  | [0m12:45:04  4 of 30 PASS source_not_null_raw_data_rh_info_distance_to_office_km ............ [[32mPASS[0m in 0.02s]
+elt_dbt                  | [0m12:45:04  5 of 30 START test source_not_null_raw_data_rh_info_id_salarie ................. [RUN]
+elt_dbt                  | [0m12:45:04  5 of 30 PASS source_not_null_raw_data_rh_info_id_salarie ....................... [[32mPASS[0m in 0.01s]
+elt_dbt                  | [0m12:45:04  6 of 30 START test source_not_null_raw_data_rh_info_jours_cp ................... [RUN]
+elt_dbt                  | [0m12:45:04  6 of 30 PASS source_not_null_raw_data_rh_info_jours_cp ......................... [[32mPASS[0m in 0.01s]
+elt_dbt                  | [0m12:45:04  7 of 30 START test source_not_null_raw_data_rh_info_moyen_de_deplacement ....... [RUN]
+elt_dbt                  | [0m12:45:04  7 of 30 PASS source_not_null_raw_data_rh_info_moyen_de_deplacement ............. [[32mPASS[0m in 0.01s]
+elt_dbt                  | [0m12:45:04  8 of 30 START test source_not_null_raw_data_rh_info_salaire_brut ............... [RUN]
+elt_dbt                  | [0m12:45:04  8 of 30 PASS source_not_null_raw_data_rh_info_salaire_brut ..................... [[32mPASS[0m in 0.01s]
+elt_dbt                  | [0m12:45:04  9 of 30 START test source_not_null_raw_data_rh_info_type_contrat ............... [RUN]
+elt_dbt                  | [0m12:45:04  9 of 30 PASS source_not_null_raw_data_rh_info_type_contrat ..................... [[32mPASS[0m in 0.01s]
+elt_dbt                  | [0m12:45:04  10 of 30 START test source_not_null_raw_data_sport_activities_history_date_end . [RUN]
+elt_dbt                  | [0m12:45:04  10 of 30 PASS source_not_null_raw_data_sport_activities_history_date_end ....... [[32mPASS[0m in 0.01s]
+elt_dbt                  | [0m12:45:04  11 of 30 START test source_not_null_raw_data_sport_activities_history_date_start  [RUN]
+elt_dbt                  | [0m12:45:05  11 of 30 PASS source_not_null_raw_data_sport_activities_history_date_start ..... [[32mPASS[0m in 0.06s]
+elt_dbt                  | [0m12:45:05  12 of 30 START test source_not_null_raw_data_sport_activities_history_id_activity  [RUN]
+elt_dbt                  | [0m12:45:05  12 of 30 PASS source_not_null_raw_data_sport_activities_history_id_activity .... [[32mPASS[0m in 0.02s]
+elt_dbt                  | [0m12:45:05  13 of 30 START test source_not_null_raw_data_sport_activities_history_id_salarie  [RUN]
+elt_dbt                  | [0m12:45:05  13 of 30 PASS source_not_null_raw_data_sport_activities_history_id_salarie ..... [[32mPASS[0m in 0.01s]
+elt_dbt                  | [0m12:45:05  14 of 30 START test source_not_null_raw_data_sport_activities_history_type_activity  [RUN]
+elt_dbt                  | [0m12:45:05  14 of 30 PASS source_not_null_raw_data_sport_activities_history_type_activity .. [[32mPASS[0m in 0.01s]
+elt_dbt                  | [0m12:45:05  15 of 30 START test source_not_null_raw_data_sport_enterprise_id_duo ........... [RUN]
+elt_dbt                  | [0m12:45:05  15 of 30 PASS source_not_null_raw_data_sport_enterprise_id_duo ................. [[32mPASS[0m in 0.01s]
+elt_dbt                  | [0m12:45:05  16 of 30 START test source_not_null_raw_data_sport_enterprise_id_salarie ....... [RUN]
+elt_dbt                  | [0m12:45:05  16 of 30 PASS source_not_null_raw_data_sport_enterprise_id_salarie ............. [[32mPASS[0m in 0.02s]
+elt_dbt                  | [0m12:45:05  17 of 30 START test source_not_null_raw_data_sport_enterprise_type_activity .... [RUN]
+elt_dbt                  | [0m12:45:05  17 of 30 PASS source_not_null_raw_data_sport_enterprise_type_activity .......... [[32mPASS[0m in 0.01s]
+elt_dbt                  | [0m12:45:05  18 of 30 START test source_unique_raw_data_rh_info_id_salarie .................. [RUN]
+elt_dbt                  | [0m12:45:05  18 of 30 PASS source_unique_raw_data_rh_info_id_salarie ........................ [[32mPASS[0m in 0.01s]
+elt_dbt                  | [0m12:45:05  19 of 30 START test source_unique_raw_data_sport_activities_history_id_activity  [RUN]
+elt_dbt                  | [0m12:45:05  19 of 30 PASS source_unique_raw_data_sport_activities_history_id_activity ...... [[32mPASS[0m in 0.02s]
+elt_dbt                  | [0m12:45:05  20 of 30 START test source_unique_raw_data_sport_enterprise_id_duo ............. [RUN]
+elt_dbt                  | [0m12:45:05  20 of 30 PASS source_unique_raw_data_sport_enterprise_id_duo ................... [[32mPASS[0m in 0.02s]
+elt_dbt                  | [0m12:45:05  21 of 30 START sql table model public_silver.silver_rh_info .................... [RUN]
+elt_dbt                  | [0m12:45:05  21 of 30 OK created sql table model public_silver.silver_rh_info ............... [[32mSELECT 161[0m in 0.06s]
+elt_dbt                  | [0m12:45:05  22 of 30 START sql incremental model public_silver.silver_sport_activities_history  [RUN]
+elt_dbt                  | [0m12:45:05  22 of 30 OK created sql incremental model public_silver.silver_sport_activities_history  [[32mINSERT 0 0[0m in 0.06s]
+elt_dbt                  | [0m12:45:05  23 of 30 START sql table model public_silver.silver_sport_enterprise ........... [RUN]
+elt_dbt                  | [0m12:45:05  23 of 30 OK created sql table model public_silver.silver_sport_enterprise ...... [[32mSELECT 95[0m in 0.03s]
+elt_dbt                  | [0m12:45:05  24 of 30 START sql table model public_gold.gold_incorrect_moyen_deplacement .... [RUN]
+elt_dbt                  | [0m12:45:05  24 of 30 OK created sql table model public_gold.gold_incorrect_moyen_deplacement  [[32mSELECT 37[0m in 0.03s]
+elt_dbt                  | [0m12:45:05  25 of 30 START sql table model public_gold.gold_potential_moyen_deplac_bonus ... [RUN]
+elt_dbt                  | [0m12:45:05  25 of 30 OK created sql table model public_gold.gold_potential_moyen_deplac_bonus  [[32mSELECT 43[0m in 0.03s]
+elt_dbt                  | [0m12:45:05  26 of 30 START sql table model public_gold.gold_rh_info ........................ [RUN]
+elt_dbt                  | [0m12:45:05  26 of 30 OK created sql table model public_gold.gold_rh_info ................... [[32mSELECT 31[0m in 0.03s]
+elt_dbt                  | [0m12:45:05  27 of 30 START sql incremental model public_gold.gold_slack_message_activities . [RUN]
+elt_dbt                  | [0m12:45:05  27 of 30 OK created sql incremental model public_gold.gold_slack_message_activities  [[32mINSERT 0 1[0m in 0.03s]
+elt_dbt                  | [0m12:45:05  28 of 30 START sql incremental model public_gold.gold_sport_activities_history . [RUN]
+elt_dbt                  | [0m12:45:05  28 of 30 OK created sql incremental model public_gold.gold_sport_activities_history  [[32mINSERT 0 0[0m in 0.03s]
+elt_dbt                  | [0m12:45:05  29 of 30 START test not_null_gold_rh_info_id_salarie ........................... [RUN]
+elt_dbt                  | [0m12:45:05  29 of 30 PASS not_null_gold_rh_info_id_salarie ................................. [[32mPASS[0m in 0.01s]
+elt_dbt                  | [0m12:45:05  30 of 30 START test unique_gold_rh_info_id_salarie ............................. [RUN]
+elt_dbt                  | [0m12:45:05  30 of 30 PASS unique_gold_rh_info_id_salarie ................................... [[32mPASS[0m in 0.01s]
+elt_dbt                  | [0m12:45:05  
+elt_dbt                  | [0m12:45:05  Finished running 22 tests, 5 table models, 3 incremental models in 0 hours 0 minutes and 0.83 seconds (0.83s).
+elt_dbt                  | [0m12:45:05  
+elt_dbt                  | [0m12:45:05  [32mCompleted successfully[0m
+elt_dbt                  | [0m12:45:05  
+elt_dbt                  | [0m12:45:05  Done. PASS=30 WARN=0 ERROR=0 SKIP=0 TOTAL=30
+[Kelt_dbt exited with code 0
+slack_sender             | Démarrage du producteur d'activités sportives...
+slack_sender             | Connecté à la base de données sport_activities_db sur postgres:5432 en tant qu'utilisateur postgresuser.
+slack_sender             | (36981, datetime.date(2026, 2, 15), 'Natation', 15540, datetime.datetime(2026, 2, 16, 12, 45, 5, 447263, tzinfo=datetime.timezone.utc))
+slack_sender             | Connexion fermée.
+slack_sender             | row 0 : 36981
+slack_sender             | row 1 : 2026-02-15
+slack_sender             | row 2 : Natation
+slack_sender             | row 3 : 15540
+slack_sender             | row 4 : 2026-02-16 12:45:05.447263+00:00
+slack_sender             | row 5 : N/A
+slack_sender             | row 6 : N/A
+slack_sender             | row 7 : N/A
+slack_sender             | row 8 : N/A
+slack_sender             | row 9 : N/A
+[Kslack_sender exited with code 0
+Mon Feb 16 13:45:07 CET 2026: Daily pipeline execution completed
+ Container producer_history_strava  Recreate
+ Container producer_history_strava  Recreated
+ Container elt_dbt  Recreate
+ Container elt_dbt  Recreated
+ Container slack_sender  Recreate
+ Container slack_sender  Recreated
+Attaching to elt_dbt, producer_history_strava, slack_sender
+producer_history_strava  | Démarrage du producteur d'activités sportives...
+producer_history_strava  | Connecté à la base de données sport_activities_db sur postgres:5432 en tant qu'utilisateur postgresuser.
+producer_history_strava  | ✓ Table sport_enterprise existe et contient 161 lignes.
+producer_history_strava  | ✓ Table RH_info existe et contient 161 lignes.
+producer_history_strava  | Toutes les distances sont déjà calculées.
+producer_history_strava  | Generated activity for employee 30945: Runing from 2026-01-04 14:36:35 to 2026-01-04 16:36:35 with distance Nonem and comments 'Score: 8/10'
+producer_history_strava  | Generated activity for employee 76341: Football from 2026-02-04 04:51:15 to 2026-02-04 07:51:15 with distance Nonem and comments 'Score: 9/10'
+producer_history_strava  | Generated activity for employee 69938: Randonnée from 2026-01-15 18:19:24 to 2026-01-15 20:19:24 with distance 5679m and comments 'Score: 7/10'
+producer_history_strava  | Generated activity for employee 78962: Boxe from 2026-01-27 21:07:04 to 2026-01-28 00:07:04 with distance Nonem and comments 'Score: 7/10'
+producer_history_strava  | Generated activity for employee 60358: Natation from 2026-01-08 10:29:42 to 2026-01-08 13:29:42 with distance 14328m and comments 'Score: 1/10'
+producer_history_strava  | Generated activity for employee 39874: Tennis from 2026-01-19 23:53:27 to 2026-01-20 02:53:27 with distance Nonem and comments 'Score: 0/10'
+producer_history_strava  | Generated activity for employee 90207: Tennis from 2026-01-09 18:50:24 to 2026-01-09 20:50:24 with distance Nonem and comments 'Score: 0/10'
+producer_history_strava  | Generated activity for employee 35731: Rugby from 2026-02-04 14:52:45 to 2026-02-04 17:52:45 with distance Nonem and comments 'Score: 10/10'
+producer_history_strava  | Generated activity for employee 43542: Judo from 2026-02-02 15:27:58 to 2026-02-02 16:27:58 with distance Nonem and comments 'Score: 4/10'
+producer_history_strava  | Generated activity for employee 94680: Natation from 2026-01-25 22:08:05 to 2026-01-26 01:08:05 with distance 19189m and comments 'Score: 2/10'
+producer_history_strava  | Generated activity for employee 46304: Rugby from 2026-01-08 23:04:28 to 2026-01-09 02:04:28 with distance Nonem and comments 'Score: 9/10'
+producer_history_strava  | Generated activity for employee 46903: Escalade from 2026-02-05 04:50:23 to 2026-02-05 05:50:23 with distance Nonem and comments 'Score: 4/10'
+producer_history_strava  | Generated activity for employee 71190: Badminton from 2026-01-20 10:36:39 to 2026-01-20 13:36:39 with distance Nonem and comments 'Score: 0/10'
+producer_history_strava  | Generated activity for employee 36827: Tennis from 2026-02-01 18:56:40 to 2026-02-01 21:56:40 with distance Nonem and comments 'Score: 1/10'
+producer_history_strava  | Generated activity for employee 18941: Runing from 2026-01-09 00:06:37 to 2026-01-09 02:06:37 with distance Nonem and comments 'Score: 4/10'
+producer_history_strava  | Generated activity for employee 17027: Tennis from 2026-01-30 04:45:33 to 2026-01-30 05:45:33 with distance Nonem and comments 'Score: 5/10'
+producer_history_strava  | Generated activity for employee 70933: Tennis from 2026-01-30 07:11:25 to 2026-01-30 10:11:25 with distance Nonem and comments 'Score: 2/10'
+producer_history_strava  | Generated activity for employee 43542: Judo from 2026-01-26 09:13:41 to 2026-01-26 12:13:41 with distance Nonem and comments 'Score: 4/10'
+producer_history_strava  | Generated activity for employee 56632: Voile from 2026-02-02 16:38:41 to 2026-02-02 17:38:41 with distance Nonem and comments 'Score: 5/10'
+producer_history_strava  | Generated activity for employee 76341: Football from 2026-01-05 20:19:58 to 2026-01-05 23:19:58 with distance Nonem and comments 'Score: 6/10'
+producer_history_strava  | Generated activity for employee 90207: Tennis from 2026-01-14 05:16:47 to 2026-01-14 08:16:47 with distance Nonem and comments 'Score: 10/10'
+producer_history_strava  | Generated activity for employee 48260: Voile from 2026-01-25 09:17:51 to 2026-01-25 11:17:51 with distance Nonem and comments 'Score: 0/10'
+producer_history_strava  | Generated activity for employee 66882: Judo from 2026-01-15 17:56:23 to 2026-01-15 18:56:23 with distance Nonem and comments 'Score: 7/10'
+producer_history_strava  | Generated activity for employee 49804: Runing from 2026-01-11 12:40:11 to 2026-01-11 15:40:11 with distance Nonem and comments 'Score: 8/10'
+producer_history_strava  | Generated activity for employee 32690: Badminton from 2026-01-28 15:34:59 to 2026-01-28 18:34:59 with distance Nonem and comments 'Score: 0/10'
+producer_history_strava  | Generated activity for employee 97309: Tennis from 2026-01-04 14:06:49 to 2026-01-04 16:06:49 with distance Nonem and comments 'Score: 4/10'
+producer_history_strava  | Generated activity for employee 86633: Runing from 2026-02-03 13:13:51 to 2026-02-03 14:13:51 with distance Nonem and comments 'Score: 7/10'
+producer_history_strava  | Generated activity for employee 30945: Runing from 2026-02-01 02:23:12 to 2026-02-01 04:23:12 with distance Nonem and comments 'Score: 1/10'
+producer_history_strava  | Generated activity for employee 43124: Équitation from 2026-01-08 16:03:20 to 2026-01-08 19:03:20 with distance Nonem and comments 'Score: 4/10'
+producer_history_strava  | Generated activity for employee 25701: Runing from 2026-02-12 00:16:17 to 2026-02-12 02:16:17 with distance Nonem and comments 'Score: 4/10'
+producer_history_strava  | Generated activity for employee 44472: Football from 2026-01-10 03:58:39 to 2026-01-10 04:58:39 with distance Nonem and comments 'Score: 7/10'
+producer_history_strava  | Generated activity for employee 71190: Badminton from 2026-02-02 18:43:59 to 2026-02-02 19:43:59 with distance Nonem and comments 'Score: 3/10'
+producer_history_strava  | Generated activity for employee 18918: Tennis from 2026-01-26 05:49:30 to 2026-01-26 07:49:30 with distance Nonem and comments 'Score: 2/10'
+producer_history_strava  | Generated activity for employee 17036: Escalade from 2026-01-21 04:25:51 to 2026-01-21 07:25:51 with distance Nonem and comments 'Score: 5/10'
+producer_history_strava  | Generated activity for employee 78962: Boxe from 2026-02-04 05:39:36 to 2026-02-04 06:39:36 with distance Nonem and comments 'Score: 2/10'
+producer_history_strava  | Generated activity for employee 17757: Badminton from 2026-01-17 22:51:31 to 2026-01-18 00:51:31 with distance Nonem and comments 'Score: 0/10'
+producer_history_strava  | Generated activity for employee 76341: Football from 2026-01-06 09:16:43 to 2026-01-06 10:16:43 with distance Nonem and comments 'Score: 10/10'
+producer_history_strava  | Generated activity for employee 34382: Équitation from 2026-01-31 08:22:26 to 2026-01-31 10:22:26 with distance Nonem and comments 'Score: 10/10'
+producer_history_strava  | Generated activity for employee 37866: Natation from 2026-02-08 08:16:22 to 2026-02-08 09:16:22 with distance 19822m and comments 'Score: 0/10'
+producer_history_strava  | Generated activity for employee 20157: Basketball from 2026-01-07 18:27:34 to 2026-01-07 20:27:34 with distance Nonem and comments 'Score: 2/10'
+producer_history_strava  | Generated activity for employee 56632: Voile from 2026-01-28 09:22:04 to 2026-01-28 11:22:04 with distance Nonem and comments 'Score: 4/10'
+producer_history_strava  | Generated activity for employee 36981: Natation from 2026-01-20 19:18:12 to 2026-01-20 21:18:12 with distance 8296m and comments 'Score: 2/10'
+producer_history_strava  | Generated activity for employee 18918: Tennis from 2026-01-28 04:20:57 to 2026-01-28 07:20:57 with distance Nonem and comments 'Score: 4/10'
+producer_history_strava  | Generated activity for employee 90207: Tennis from 2026-02-15 07:09:46 to 2026-02-15 09:09:46 with distance Nonem and comments 'Score: 5/10'
+producer_history_strava  | Generated activity for employee 44472: Football from 2026-01-13 09:52:40 to 2026-01-13 12:52:40 with distance Nonem and comments 'Score: 7/10'
+producer_history_strava  | Generated activity for employee 70933: Tennis from 2026-01-26 17:22:44 to 2026-01-26 19:22:44 with distance Nonem and comments 'Score: 3/10'
+producer_history_strava  | Generated activity for employee 56530: Runing from 2026-01-12 02:34:54 to 2026-01-12 03:34:54 with distance Nonem and comments 'Score: 0/10'
+producer_history_strava  | Generated activity for employee 56263: Boxe from 2026-01-27 12:23:17 to 2026-01-27 13:23:17 with distance Nonem and comments 'Score: 10/10'
+producer_history_strava  | Generated activity for employee 49804: Runing from 2026-01-17 10:43:38 to 2026-01-17 11:43:38 with distance Nonem and comments 'Score: 0/10'
+producer_history_strava  | Generated activity for employee 39874: Tennis from 2026-01-12 21:25:22 to 2026-01-12 23:25:22 with distance Nonem and comments 'Score: 7/10'
+producer_history_strava  | Generated activity for employee 56632: Voile from 2026-02-10 17:36:27 to 2026-02-10 19:36:27 with distance Nonem and comments 'Score: 7/10'
+producer_history_strava  | Generated activity for employee 32690: Badminton from 2026-02-12 15:08:32 to 2026-02-12 16:08:32 with distance Nonem and comments 'Score: 7/10'
+producer_history_strava  | Generated activity for employee 93699: Runing from 2026-01-05 07:29:11 to 2026-01-05 08:29:11 with distance Nonem and comments 'Score: 3/10'
+producer_history_strava  | Generated activity for employee 46304: Rugby from 2026-02-14 03:20:48 to 2026-02-14 04:20:48 with distance Nonem and comments 'Score: 7/10'
+producer_history_strava  | Generated activity for employee 70575: Randonnée from 2026-01-13 22:35:48 to 2026-01-14 01:35:48 with distance 1490m and comments 'Score: 6/10'
+producer_history_strava  | Generated activity for employee 92368: Runing from 2026-01-20 18:56:46 to 2026-01-20 21:56:46 with distance Nonem and comments 'Score: 6/10'
+producer_history_strava  | Generated activity for employee 48260: Voile from 2026-01-27 02:27:38 to 2026-01-27 03:27:38 with distance Nonem and comments 'Score: 1/10'
+producer_history_strava  | Generated activity for employee 53944: Natation from 2026-01-25 10:49:37 to 2026-01-25 12:49:37 with distance 9211m and comments 'Score: 6/10'
+producer_history_strava  | Generated activity for employee 46903: Escalade from 2026-02-10 18:07:17 to 2026-02-10 19:07:17 with distance Nonem and comments 'Score: 10/10'
+producer_history_strava  | Generated activity for employee 34899: Football from 2026-01-29 18:40:42 to 2026-01-29 21:40:42 with distance Nonem and comments 'Score: 6/10'
+producer_history_strava  | Generated activity for employee 18918: Tennis from 2026-01-31 21:36:45 to 2026-01-31 22:36:45 with distance Nonem and comments 'Score: 1/10'
+producer_history_strava  | Generated activity for employee 69938: Randonnée from 2026-02-08 22:03:01 to 2026-02-09 00:03:01 with distance 16993m and comments 'Score: 3/10'
+producer_history_strava  | Generated activity for employee 86847: Football from 2026-01-04 15:02:09 to 2026-01-04 18:02:09 with distance Nonem and comments 'Score: 5/10'
+producer_history_strava  | Generated activity for employee 20697: Randonnée from 2026-02-13 06:47:00 to 2026-02-13 08:47:00 with distance 18338m and comments 'Score: 3/10'
+producer_history_strava  | Generated activity for employee 76903: Basketball from 2026-01-15 14:19:30 to 2026-01-15 17:19:30 with distance Nonem and comments 'Score: 0/10'
+producer_history_strava  | Generated activity for employee 49804: Runing from 2026-02-11 06:48:45 to 2026-02-11 07:48:45 with distance Nonem and comments 'Score: 3/10'
+producer_history_strava  | Generated activity for employee 30945: Runing from 2026-01-28 10:35:04 to 2026-01-28 13:35:04 with distance Nonem and comments 'Score: 6/10'
+producer_history_strava  | Generated activity for employee 50309: Runing from 2026-02-14 08:52:47 to 2026-02-14 11:52:47 with distance Nonem and comments 'Score: 5/10'
+producer_history_strava  | Generated activity for employee 29450: Randonnée from 2026-01-24 19:54:10 to 2026-01-24 21:54:10 with distance 7336m and comments 'Score: 7/10'
+producer_history_strava  | Generated activity for employee 37830: Randonnée from 2026-01-19 20:58:13 to 2026-01-19 23:58:13 with distance 4790m and comments 'Score: 10/10'
+producer_history_strava  | Generated activity for employee 89943: Randonnée from 2026-01-13 14:04:56 to 2026-01-13 16:04:56 with distance 2409m and comments 'Score: 2/10'
+producer_history_strava  | Generated activity for employee 99401: Runing from 2026-02-07 11:14:12 to 2026-02-07 13:14:12 with distance Nonem and comments 'Score: 3/10'
+producer_history_strava  | Generated activity for employee 67121: Rugby from 2026-02-14 19:13:05 to 2026-02-14 22:13:05 with distance Nonem and comments 'Score: 7/10'
+producer_history_strava  | Generated activity for employee 81676: Tennis from 2026-02-03 23:25:16 to 2026-02-04 02:25:16 with distance Nonem and comments 'Score: 0/10'
+producer_history_strava  | Generated activity for employee 89328: Tennis de table from 2026-01-28 18:10:23 to 2026-01-28 20:10:23 with distance Nonem and comments 'Score: 8/10'
+producer_history_strava  | Generated activity for employee 97309: Tennis from 2026-01-17 14:49:04 to 2026-01-17 17:49:04 with distance Nonem and comments 'Score: 4/10'
+producer_history_strava  | Generated activity for employee 18918: Tennis from 2026-02-04 06:16:25 to 2026-02-04 08:16:25 with distance Nonem and comments 'Score: 8/10'
+producer_history_strava  | Generated activity for employee 90207: Tennis from 2026-01-24 07:50:28 to 2026-01-24 09:50:28 with distance Nonem and comments 'Score: 3/10'
+producer_history_strava  | Generated activity for employee 34922: Tennis from 2026-02-08 04:46:40 to 2026-02-08 06:46:40 with distance Nonem and comments 'Score: 3/10'
+producer_history_strava  | Generated activity for employee 76903: Basketball from 2026-02-01 13:11:13 to 2026-02-01 15:11:13 with distance Nonem and comments 'Score: 10/10'
+producer_history_strava  | Generated activity for employee 89943: Randonnée from 2026-01-16 03:51:23 to 2026-01-16 04:51:23 with distance 12197m and comments 'Score: 0/10'
+producer_history_strava  | Generated activity for employee 70933: Tennis from 2026-01-21 23:15:01 to 2026-01-22 00:15:01 with distance Nonem and comments 'Score: 8/10'
+producer_history_strava  | Generated activity for employee 34899: Football from 2026-02-09 15:17:30 to 2026-02-09 16:17:30 with distance Nonem and comments 'Score: 9/10'
+producer_history_strava  | Generated activity for employee 43124: Équitation from 2026-02-02 23:54:19 to 2026-02-03 01:54:19 with distance Nonem and comments 'Score: 4/10'
+producer_history_strava  | Generated activity for employee 44927: Randonnée from 2026-01-31 18:27:17 to 2026-01-31 21:27:17 with distance 13967m and comments 'Score: 9/10'
+producer_history_strava  | Generated activity for employee 34899: Football from 2026-01-03 20:20:07 to 2026-01-03 22:20:07 with distance Nonem and comments 'Score: 8/10'
+producer_history_strava  | Generated activity for employee 19260: Runing from 2026-01-28 17:22:07 to 2026-01-28 18:22:07 with distance Nonem and comments 'Score: 10/10'
+producer_history_strava  | Generated activity for employee 36827: Tennis from 2026-01-10 22:34:52 to 2026-01-10 23:34:52 with distance Nonem and comments 'Score: 7/10'
+producer_history_strava  | Generated activity for employee 20697: Randonnée from 2026-01-08 06:34:27 to 2026-01-08 09:34:27 with distance 5339m and comments 'Score: 6/10'
+producer_history_strava  | Generated activity for employee 29450: Randonnée from 2026-02-07 09:04:58 to 2026-02-07 11:04:58 with distance 6075m and comments 'Score: 6/10'
+producer_history_strava  | Generated activity for employee 86486: Judo from 2026-02-06 21:16:49 to 2026-02-06 22:16:49 with distance Nonem and comments 'Score: 10/10'
+producer_history_strava  | Generated activity for employee 46903: Escalade from 2026-01-12 23:14:00 to 2026-01-13 02:14:00 with distance Nonem and comments 'Score: 4/10'
+producer_history_strava  | Generated activity for employee 71190: Badminton from 2026-02-13 12:15:06 to 2026-02-13 15:15:06 with distance Nonem and comments 'Score: 2/10'
+producer_history_strava  | Generated activity for employee 60948: Runing from 2026-02-12 15:05:50 to 2026-02-12 18:05:50 with distance Nonem and comments 'Score: 1/10'
+producer_history_strava  | Generated activity for employee 41293: Randonnée from 2026-01-23 07:52:54 to 2026-01-23 09:52:54 with distance 11021m and comments 'Score: 3/10'
+producer_history_strava  | Generated activity for employee 17027: Tennis from 2026-01-17 21:02:40 to 2026-01-17 23:02:40 with distance Nonem and comments 'Score: 1/10'
+producer_history_strava  | Generated activity for employee 17997: Tennis de table from 2026-01-11 09:33:27 to 2026-01-11 11:33:27 with distance Nonem and comments 'Score: 8/10'
+producer_history_strava  | Generated activity for employee 90207: Tennis from 2026-01-31 23:34:54 to 2026-02-01 00:34:54 with distance Nonem and comments 'Score: 7/10'
+producer_history_strava  | Generated activity for employee 44927: Randonnée from 2026-01-02 00:50:49 to 2026-01-02 03:50:49 with distance 13551m and comments 'Score: 8/10'
+producer_history_strava  | Generated activity for employee 30945: Runing from 2026-01-19 20:58:02 to 2026-01-19 22:58:02 with distance Nonem and comments 'Score: 9/10'
+producer_history_strava  | Connexion fermée.
+[Kproducer_history_strava exited with code 0
+[31m[1mAborting on container exit...[0m
+ Container slack_sender  Stopping
+ Container slack_sender  Stopped
+ Container elt_dbt  Stopping
+ Container elt_dbt  Stopped
+ Container producer_history_strava  Stopping
+ Container producer_history_strava  Stopped
+elt_dbt                  | [0m12:50:02  Running with dbt=1.7.4
+elt_dbt                  | [0m12:50:02  dbt version: 1.7.4
+elt_dbt                  | [0m12:50:02  python version: 3.10.19
+elt_dbt                  | [0m12:50:02  python path: /usr/local/bin/python3.10
+elt_dbt                  | [0m12:50:02  os info: Linux-6.10.14-linuxkit-aarch64-with-glibc2.41
+elt_dbt                  | [0m12:50:02  Using profiles dir at /app/profiles
+elt_dbt                  | [0m12:50:02  Using profiles.yml file at /app/profiles/profiles.yml
+elt_dbt                  | [0m12:50:02  Using dbt_project.yml file at /app/dbt_project.yml
+elt_dbt                  | [0m12:50:02  adapter type: postgres
+elt_dbt                  | [0m12:50:02  adapter version: 1.7.4
+elt_dbt                  | [0m12:50:03  Configuration:
+elt_dbt                  | [0m12:50:03    profiles.yml file [[32mOK found and valid[0m]
+elt_dbt                  | [0m12:50:03    dbt_project.yml file [[32mOK found and valid[0m]
+elt_dbt                  | [0m12:50:03  Required dependencies:
+elt_dbt                  | [0m12:50:03   - git [[32mOK found[0m]
+elt_dbt                  | 
+elt_dbt                  | [0m12:50:03  Connection:
+elt_dbt                  | [0m12:50:03    host: postgres
+elt_dbt                  | [0m12:50:03    port: 5432
+elt_dbt                  | [0m12:50:03    user: postgresuser
+elt_dbt                  | [0m12:50:03    database: sport_activities_db
+elt_dbt                  | [0m12:50:03    schema: public
+elt_dbt                  | [0m12:50:03    connect_timeout: 10
+elt_dbt                  | [0m12:50:03    role: None
+elt_dbt                  | [0m12:50:03    search_path: None
+elt_dbt                  | [0m12:50:03    keepalives_idle: 0
+elt_dbt                  | [0m12:50:03    sslmode: None
+elt_dbt                  | [0m12:50:03    sslcert: None
+elt_dbt                  | [0m12:50:03    sslkey: None
+elt_dbt                  | [0m12:50:03    sslrootcert: None
+elt_dbt                  | [0m12:50:03    application_name: dbt
+elt_dbt                  | [0m12:50:03    retries: 1
+elt_dbt                  | [0m12:50:03  Registered adapter: postgres=1.7.4
+elt_dbt                  | [0m12:50:03    Connection test: [[32mOK connection ok[0m]
+elt_dbt                  | 
+elt_dbt                  | [0m12:50:03  [32mAll checks passed![0m
+elt_dbt                  | [0m12:50:04  Running with dbt=1.7.4
+elt_dbt                  | [0m12:50:04  Registered adapter: postgres=1.7.4
+elt_dbt                  | [0m12:50:04  Found 22 tests, 8 models, 3 sources, 0 exposures, 0 metrics, 401 macros, 0 groups, 0 semantic models
+elt_dbt                  | [0m12:50:04  
+elt_dbt                  | [0m12:50:05  Concurrency: 1 threads (target='dev')
+elt_dbt                  | [0m12:50:05  
+elt_dbt                  | [0m12:50:05  1 of 30 START test source_accepted_values_raw_data_rh_info_type_contrat__CDI__CDD  [RUN]
+elt_dbt                  | [0m12:50:05  1 of 30 PASS source_accepted_values_raw_data_rh_info_type_contrat__CDI__CDD .... [[32mPASS[0m in 0.03s]
+elt_dbt                  | [0m12:50:05  2 of 30 START test source_not_null_raw_data_rh_info_adresse_domicile ........... [RUN]
+elt_dbt                  | [0m12:50:05  2 of 30 PASS source_not_null_raw_data_rh_info_adresse_domicile ................. [[32mPASS[0m in 0.02s]
+elt_dbt                  | [0m12:50:05  3 of 30 START test source_not_null_raw_data_rh_info_bu_salarie ................. [RUN]
+elt_dbt                  | [0m12:50:05  3 of 30 PASS source_not_null_raw_data_rh_info_bu_salarie ....................... [[32mPASS[0m in 0.01s]
+elt_dbt                  | [0m12:50:05  4 of 30 START test source_not_null_raw_data_rh_info_distance_to_office_km ...... [RUN]
+elt_dbt                  | [0m12:50:05  4 of 30 PASS source_not_null_raw_data_rh_info_distance_to_office_km ............ [[32mPASS[0m in 0.02s]
+elt_dbt                  | [0m12:50:05  5 of 30 START test source_not_null_raw_data_rh_info_id_salarie ................. [RUN]
+elt_dbt                  | [0m12:50:05  5 of 30 PASS source_not_null_raw_data_rh_info_id_salarie ....................... [[32mPASS[0m in 0.01s]
+elt_dbt                  | [0m12:50:05  6 of 30 START test source_not_null_raw_data_rh_info_jours_cp ................... [RUN]
+elt_dbt                  | [0m12:50:05  6 of 30 PASS source_not_null_raw_data_rh_info_jours_cp ......................... [[32mPASS[0m in 0.01s]
+elt_dbt                  | [0m12:50:05  7 of 30 START test source_not_null_raw_data_rh_info_moyen_de_deplacement ....... [RUN]
+elt_dbt                  | [0m12:50:05  7 of 30 PASS source_not_null_raw_data_rh_info_moyen_de_deplacement ............. [[32mPASS[0m in 0.01s]
+elt_dbt                  | [0m12:50:05  8 of 30 START test source_not_null_raw_data_rh_info_salaire_brut ............... [RUN]
+elt_dbt                  | [0m12:50:05  8 of 30 PASS source_not_null_raw_data_rh_info_salaire_brut ..................... [[32mPASS[0m in 0.02s]
+elt_dbt                  | [0m12:50:05  9 of 30 START test source_not_null_raw_data_rh_info_type_contrat ............... [RUN]
+elt_dbt                  | [0m12:50:05  9 of 30 PASS source_not_null_raw_data_rh_info_type_contrat ..................... [[32mPASS[0m in 0.02s]
+elt_dbt                  | [0m12:50:05  10 of 30 START test source_not_null_raw_data_sport_activities_history_date_end . [RUN]
+elt_dbt                  | [0m12:50:05  10 of 30 PASS source_not_null_raw_data_sport_activities_history_date_end ....... [[32mPASS[0m in 0.01s]
+elt_dbt                  | [0m12:50:05  11 of 30 START test source_not_null_raw_data_sport_activities_history_date_start  [RUN]
+elt_dbt                  | [0m12:50:05  11 of 30 PASS source_not_null_raw_data_sport_activities_history_date_start ..... [[32mPASS[0m in 0.01s]
+elt_dbt                  | [0m12:50:05  12 of 30 START test source_not_null_raw_data_sport_activities_history_id_activity  [RUN]
+elt_dbt                  | [0m12:50:05  12 of 30 PASS source_not_null_raw_data_sport_activities_history_id_activity .... [[32mPASS[0m in 0.01s]
+elt_dbt                  | [0m12:50:05  13 of 30 START test source_not_null_raw_data_sport_activities_history_id_salarie  [RUN]
+elt_dbt                  | [0m12:50:05  13 of 30 PASS source_not_null_raw_data_sport_activities_history_id_salarie ..... [[32mPASS[0m in 0.01s]
+elt_dbt                  | [0m12:50:05  14 of 30 START test source_not_null_raw_data_sport_activities_history_type_activity  [RUN]
+elt_dbt                  | [0m12:50:05  14 of 30 PASS source_not_null_raw_data_sport_activities_history_type_activity .. [[32mPASS[0m in 0.01s]
+elt_dbt                  | [0m12:50:05  15 of 30 START test source_not_null_raw_data_sport_enterprise_id_duo ........... [RUN]
+elt_dbt                  | [0m12:50:05  15 of 30 PASS source_not_null_raw_data_sport_enterprise_id_duo ................. [[32mPASS[0m in 0.01s]
+elt_dbt                  | [0m12:50:05  16 of 30 START test source_not_null_raw_data_sport_enterprise_id_salarie ....... [RUN]
+elt_dbt                  | [0m12:50:05  16 of 30 PASS source_not_null_raw_data_sport_enterprise_id_salarie ............. [[32mPASS[0m in 0.02s]
+elt_dbt                  | [0m12:50:05  17 of 30 START test source_not_null_raw_data_sport_enterprise_type_activity .... [RUN]
+elt_dbt                  | [0m12:50:05  17 of 30 PASS source_not_null_raw_data_sport_enterprise_type_activity .......... [[32mPASS[0m in 0.01s]
+elt_dbt                  | [0m12:50:05  18 of 30 START test source_unique_raw_data_rh_info_id_salarie .................. [RUN]
+elt_dbt                  | [0m12:50:05  18 of 30 PASS source_unique_raw_data_rh_info_id_salarie ........................ [[32mPASS[0m in 0.02s]
+elt_dbt                  | [0m12:50:05  19 of 30 START test source_unique_raw_data_sport_activities_history_id_activity  [RUN]
+elt_dbt                  | [0m12:50:05  19 of 30 PASS source_unique_raw_data_sport_activities_history_id_activity ...... [[32mPASS[0m in 0.01s]
+elt_dbt                  | [0m12:50:05  20 of 30 START test source_unique_raw_data_sport_enterprise_id_duo ............. [RUN]
+elt_dbt                  | [0m12:50:05  20 of 30 PASS source_unique_raw_data_sport_enterprise_id_duo ................... [[32mPASS[0m in 0.02s]
+elt_dbt                  | [0m12:50:05  21 of 30 START sql table model public_silver.silver_rh_info .................... [RUN]
+elt_dbt                  | [0m12:50:05  21 of 30 OK created sql table model public_silver.silver_rh_info ............... [[32mSELECT 161[0m in 0.06s]
+elt_dbt                  | [0m12:50:05  22 of 30 START sql incremental model public_silver.silver_sport_activities_history  [RUN]
+elt_dbt                  | [0m12:50:05  22 of 30 OK created sql incremental model public_silver.silver_sport_activities_history  [[32mINSERT 0 0[0m in 0.06s]
+elt_dbt                  | [0m12:50:05  23 of 30 START sql table model public_silver.silver_sport_enterprise ........... [RUN]
+elt_dbt                  | [0m12:50:05  23 of 30 OK created sql table model public_silver.silver_sport_enterprise ...... [[32mSELECT 95[0m in 0.03s]
+elt_dbt                  | [0m12:50:05  24 of 30 START sql table model public_gold.gold_incorrect_moyen_deplacement .... [RUN]
+elt_dbt                  | [0m12:50:05  24 of 30 OK created sql table model public_gold.gold_incorrect_moyen_deplacement  [[32mSELECT 37[0m in 0.04s]
+elt_dbt                  | [0m12:50:05  25 of 30 START sql table model public_gold.gold_potential_moyen_deplac_bonus ... [RUN]
+elt_dbt                  | [0m12:50:05  25 of 30 OK created sql table model public_gold.gold_potential_moyen_deplac_bonus  [[32mSELECT 43[0m in 0.03s]
+elt_dbt                  | [0m12:50:05  26 of 30 START sql table model public_gold.gold_rh_info ........................ [RUN]
+elt_dbt                  | [0m12:50:05  26 of 30 OK created sql table model public_gold.gold_rh_info ................... [[32mSELECT 31[0m in 0.03s]
+elt_dbt                  | [0m12:50:05  27 of 30 START sql incremental model public_gold.gold_slack_message_activities . [RUN]
+elt_dbt                  | [0m12:50:05  27 of 30 OK created sql incremental model public_gold.gold_slack_message_activities  [[32mINSERT 0 1[0m in 0.03s]
+elt_dbt                  | [0m12:50:05  28 of 30 START sql incremental model public_gold.gold_sport_activities_history . [RUN]
+elt_dbt                  | [0m12:50:05  28 of 30 OK created sql incremental model public_gold.gold_sport_activities_history  [[32mINSERT 0 0[0m in 0.03s]
+elt_dbt                  | [0m12:50:05  29 of 30 START test not_null_gold_rh_info_id_salarie ........................... [RUN]
+elt_dbt                  | [0m12:50:05  29 of 30 PASS not_null_gold_rh_info_id_salarie ................................. [[32mPASS[0m in 0.01s]
+elt_dbt                  | [0m12:50:05  30 of 30 START test unique_gold_rh_info_id_salarie ............................. [RUN]
+elt_dbt                  | [0m12:50:05  30 of 30 PASS unique_gold_rh_info_id_salarie ................................... [[32mPASS[0m in 0.01s]
+elt_dbt                  | [0m12:50:05  
+elt_dbt                  | [0m12:50:05  Finished running 22 tests, 5 table models, 3 incremental models in 0 hours 0 minutes and 0.82 seconds (0.82s).
+elt_dbt                  | [0m12:50:05  
+elt_dbt                  | [0m12:50:05  [32mCompleted successfully[0m
+elt_dbt                  | [0m12:50:05  
+elt_dbt                  | [0m12:50:05  Done. PASS=30 WARN=0 ERROR=0 SKIP=0 TOTAL=30
+[Kelt_dbt exited with code 0
+slack_sender             | Démarrage du producteur d'activités sportives...
+slack_sender             | Connecté à la base de données sport_activities_db sur postgres:5432 en tant qu'utilisateur postgresuser.
+slack_sender             | (36981, datetime.date(2026, 2, 15), 'Natation', 15540, datetime.datetime(2026, 2, 16, 12, 50, 5, 684971, tzinfo=datetime.timezone.utc))
+slack_sender             | Connexion fermée.
+slack_sender             | row 0 : 36981
+slack_sender             | row 1 : 2026-02-15
+slack_sender             | row 2 : Natation
+slack_sender             | row 3 : 15540
+slack_sender             | row 4 : 2026-02-16 12:50:05.684971+00:00
+slack_sender             | row 5 : N/A
+slack_sender             | row 6 : N/A
+slack_sender             | row 7 : N/A
+slack_sender             | row 8 : N/A
+slack_sender             | row 9 : N/A
+[Kslack_sender exited with code 0
+Mon Feb 16 13:50:07 CET 2026: Daily pipeline execution completed
+ Container producer_history_strava  Recreate
+ Container producer_history_strava  Recreated
+ Container elt_dbt  Recreate
+ Container elt_dbt  Recreated
+ Container slack_sender  Recreate
+ Container slack_sender  Recreated
+Attaching to elt_dbt, producer_history_strava, slack_sender
+producer_history_strava  | Démarrage du producteur d'activités sportives...
+producer_history_strava  | Connecté à la base de données sport_activities_db sur postgres:5432 en tant qu'utilisateur postgresuser.
+producer_history_strava  | ✓ Table sport_enterprise existe et contient 161 lignes.
+producer_history_strava  | ✓ Table RH_info existe et contient 161 lignes.
+producer_history_strava  | Toutes les distances sont déjà calculées.
+producer_history_strava  | Generated activity for employee 17757: Badminton from 2026-01-14 04:15:00 to 2026-01-14 07:15:00 with distance Nonem and comments 'Score: 3/10'
+producer_history_strava  | Generated activity for employee 42960: Runing from 2026-01-18 08:43:00 to 2026-01-18 11:43:00 with distance Nonem and comments 'Score: 5/10'
+producer_history_strava  | Generated activity for employee 78962: Boxe from 2026-02-08 16:16:42 to 2026-02-08 19:16:42 with distance Nonem and comments 'Score: 6/10'
+producer_history_strava  | Generated activity for employee 18918: Tennis from 2026-01-26 14:30:27 to 2026-01-26 17:30:27 with distance Nonem and comments 'Score: 8/10'
+producer_history_strava  | Generated activity for employee 17036: Escalade from 2026-01-27 11:23:45 to 2026-01-27 12:23:45 with distance Nonem and comments 'Score: 5/10'
+producer_history_strava  | Generated activity for employee 90284: Randonnée from 2026-01-09 08:22:14 to 2026-01-09 09:22:14 with distance 14066m and comments 'Score: 10/10'
+producer_history_strava  | Generated activity for employee 37830: Randonnée from 2026-02-03 23:09:59 to 2026-02-04 01:09:59 with distance 2312m and comments 'Score: 5/10'
+producer_history_strava  | Generated activity for employee 71190: Badminton from 2026-01-07 13:30:58 to 2026-01-07 14:30:58 with distance Nonem and comments 'Score: 10/10'
+producer_history_strava  | Generated activity for employee 96558: Triathlon from 2026-01-18 16:06:18 to 2026-01-18 17:06:18 with distance Nonem and comments 'Score: 1/10'
+producer_history_strava  | Generated activity for employee 97309: Tennis from 2026-01-30 01:15:32 to 2026-01-30 02:15:32 with distance Nonem and comments 'Score: 2/10'
+producer_history_strava  | Generated activity for employee 36827: Tennis from 2026-02-09 19:21:55 to 2026-02-09 20:21:55 with distance Nonem and comments 'Score: 7/10'
+producer_history_strava  | Generated activity for employee 44472: Football from 2026-01-24 20:57:08 to 2026-01-24 21:57:08 with distance Nonem and comments 'Score: 2/10'
+producer_history_strava  | Generated activity for employee 35731: Rugby from 2026-01-23 10:59:17 to 2026-01-23 13:59:17 with distance Nonem and comments 'Score: 0/10'
+producer_history_strava  | Generated activity for employee 91916: Rugby from 2026-01-18 02:44:56 to 2026-01-18 04:44:56 with distance Nonem and comments 'Score: 9/10'
+producer_history_strava  | Generated activity for employee 96558: Triathlon from 2026-02-01 16:52:57 to 2026-02-01 17:52:57 with distance Nonem and comments 'Score: 4/10'
+producer_history_strava  | Generated activity for employee 56632: Voile from 2026-01-11 19:43:18 to 2026-01-11 22:43:18 with distance Nonem and comments 'Score: 10/10'
+producer_history_strava  | Generated activity for employee 44472: Football from 2026-01-14 21:39:10 to 2026-01-14 23:39:10 with distance Nonem and comments 'Score: 1/10'
+producer_history_strava  | Generated activity for employee 89943: Randonnée from 2026-01-24 04:54:11 to 2026-01-24 05:54:11 with distance 2896m and comments 'Score: 8/10'
+producer_history_strava  | Generated activity for employee 27483: Badminton from 2026-01-02 07:23:20 to 2026-01-02 08:23:20 with distance Nonem and comments 'Score: 0/10'
+producer_history_strava  | Generated activity for employee 18918: Tennis from 2026-01-18 20:41:29 to 2026-01-18 21:41:29 with distance Nonem and comments 'Score: 8/10'
+producer_history_strava  | Generated activity for employee 53673: Voile from 2026-01-03 00:56:17 to 2026-01-03 01:56:17 with distance Nonem and comments 'Score: 10/10'
+producer_history_strava  | Generated activity for employee 17997: Tennis de table from 2026-01-06 12:49:06 to 2026-01-06 13:49:06 with distance Nonem and comments 'Score: 7/10'
+producer_history_strava  | Generated activity for employee 78962: Boxe from 2026-01-27 04:09:07 to 2026-01-27 05:09:07 with distance Nonem and comments 'Score: 7/10'
+producer_history_strava  | Generated activity for employee 44472: Football from 2026-01-16 02:33:46 to 2026-01-16 03:33:46 with distance Nonem and comments 'Score: 1/10'
+producer_history_strava  | Generated activity for employee 25701: Runing from 2026-01-04 06:11:30 to 2026-01-04 09:11:30 with distance Nonem and comments 'Score: 3/10'
+producer_history_strava  | Generated activity for employee 73367: Boxe from 2026-01-02 14:40:38 to 2026-01-02 15:40:38 with distance Nonem and comments 'Score: 4/10'
+producer_history_strava  | Generated activity for employee 18941: Runing from 2026-01-18 00:43:50 to 2026-01-18 01:43:50 with distance Nonem and comments 'Score: 3/10'
+producer_history_strava  | Generated activity for employee 22426: Voile from 2026-02-11 06:23:40 to 2026-02-11 08:23:40 with distance Nonem and comments 'Score: 2/10'
+producer_history_strava  | Generated activity for employee 23842: Voile from 2026-01-11 07:25:33 to 2026-01-11 09:25:33 with distance Nonem and comments 'Score: 4/10'
+producer_history_strava  | Generated activity for employee 53673: Voile from 2026-01-20 01:12:27 to 2026-01-20 04:12:27 with distance Nonem and comments 'Score: 6/10'
+producer_history_strava  | Generated activity for employee 86948: Tennis from 2026-01-23 09:55:42 to 2026-01-23 11:55:42 with distance Nonem and comments 'Score: 9/10'
+producer_history_strava  | Generated activity for employee 49804: Runing from 2026-01-26 11:11:29 to 2026-01-26 14:11:29 with distance Nonem and comments 'Score: 3/10'
+producer_history_strava  | Generated activity for employee 53673: Voile from 2026-01-13 06:45:49 to 2026-01-13 08:45:49 with distance Nonem and comments 'Score: 0/10'
+producer_history_strava  | Generated activity for employee 91916: Rugby from 2026-02-13 15:35:03 to 2026-02-13 18:35:03 with distance Nonem and comments 'Score: 1/10'
+producer_history_strava  | Generated activity for employee 76076: Football from 2026-01-16 12:33:21 to 2026-01-16 14:33:21 with distance Nonem and comments 'Score: 3/10'
+producer_history_strava  | Generated activity for employee 86486: Judo from 2026-01-15 22:26:11 to 2026-01-15 23:26:11 with distance Nonem and comments 'Score: 7/10'
+producer_history_strava  | Generated activity for employee 56482: Tennis from 2026-01-06 21:58:40 to 2026-01-06 22:58:40 with distance Nonem and comments 'Score: 5/10'
+producer_history_strava  | Generated activity for employee 71190: Badminton from 2026-02-11 18:59:44 to 2026-02-11 21:59:44 with distance Nonem and comments 'Score: 3/10'
+producer_history_strava  | Generated activity for employee 50309: Runing from 2026-01-21 01:16:41 to 2026-01-21 03:16:41 with distance Nonem and comments 'Score: 3/10'
+producer_history_strava  | Generated activity for employee 78962: Boxe from 2026-01-29 06:15:57 to 2026-01-29 07:15:57 with distance Nonem and comments 'Score: 0/10'
+producer_history_strava  | Generated activity for employee 50504: Escalade from 2026-01-29 13:38:52 to 2026-01-29 16:38:52 with distance Nonem and comments 'Score: 2/10'
+producer_history_strava  | Generated activity for employee 34678: Randonnée from 2026-02-12 15:47:43 to 2026-02-12 18:47:43 with distance 11754m and comments 'Score: 9/10'
+producer_history_strava  | Generated activity for employee 86486: Judo from 2026-02-07 00:15:45 to 2026-02-07 01:15:45 with distance Nonem and comments 'Score: 5/10'
+producer_history_strava  | Generated activity for employee 92368: Runing from 2026-01-05 08:44:57 to 2026-01-05 11:44:57 with distance Nonem and comments 'Score: 8/10'
+producer_history_strava  | Generated activity for employee 20157: Basketball from 2026-01-15 23:40:24 to 2026-01-16 02:40:24 with distance Nonem and comments 'Score: 8/10'
+producer_history_strava  | Generated activity for employee 57589: Runing from 2026-01-19 09:42:23 to 2026-01-19 11:42:23 with distance Nonem and comments 'Score: 1/10'
+producer_history_strava  | Generated activity for employee 50504: Escalade from 2026-02-07 00:45:21 to 2026-02-07 01:45:21 with distance Nonem and comments 'Score: 9/10'
+producer_history_strava  | Generated activity for employee 43124: Équitation from 2026-01-21 20:36:06 to 2026-01-21 21:36:06 with distance Nonem and comments 'Score: 7/10'
+producer_history_strava  | Generated activity for employee 20697: Randonnée from 2026-01-17 13:23:12 to 2026-01-17 14:23:12 with distance 12784m and comments 'Score: 7/10'
+producer_history_strava  | Generated activity for employee 19260: Runing from 2026-02-12 08:36:29 to 2026-02-12 11:36:29 with distance Nonem and comments 'Score: 1/10'
+producer_history_strava  | Generated activity for employee 46903: Escalade from 2026-01-04 09:55:16 to 2026-01-04 10:55:16 with distance Nonem and comments 'Score: 8/10'
+producer_history_strava  | Generated activity for employee 44927: Randonnée from 2026-01-16 06:15:51 to 2026-01-16 08:15:51 with distance 10676m and comments 'Score: 0/10'
+producer_history_strava  | Generated activity for employee 22426: Voile from 2026-01-22 05:48:01 to 2026-01-22 06:48:01 with distance Nonem and comments 'Score: 10/10'
+producer_history_strava  | Generated activity for employee 93699: Runing from 2026-01-02 03:03:30 to 2026-01-02 05:03:30 with distance Nonem and comments 'Score: 7/10'
+producer_history_strava  | Generated activity for employee 92368: Runing from 2026-02-08 13:22:56 to 2026-02-08 14:22:56 with distance Nonem and comments 'Score: 10/10'
+producer_history_strava  | Generated activity for employee 89328: Tennis de table from 2026-01-15 14:22:13 to 2026-01-15 15:22:13 with distance Nonem and comments 'Score: 6/10'
+producer_history_strava  | Generated activity for employee 92368: Runing from 2026-01-13 20:18:15 to 2026-01-13 21:18:15 with distance Nonem and comments 'Score: 10/10'
+producer_history_strava  | Generated activity for employee 86486: Judo from 2026-01-02 11:49:47 to 2026-01-02 13:49:47 with distance Nonem and comments 'Score: 8/10'
+producer_history_strava  | Generated activity for employee 17036: Escalade from 2026-01-30 10:42:40 to 2026-01-30 13:42:40 with distance Nonem and comments 'Score: 4/10'
+producer_history_strava  | Generated activity for employee 49419: Natation from 2026-01-03 13:35:07 to 2026-01-03 14:35:07 with distance 13984m and comments 'Score: 8/10'
+producer_history_strava  | Generated activity for employee 86633: Runing from 2026-01-10 12:57:14 to 2026-01-10 14:57:14 with distance Nonem and comments 'Score: 3/10'
+producer_history_strava  | Generated activity for employee 56482: Tennis from 2026-01-20 06:58:32 to 2026-01-20 08:58:32 with distance Nonem and comments 'Score: 2/10'
+producer_history_strava  | Generated activity for employee 18918: Tennis from 2026-01-19 14:52:56 to 2026-01-19 17:52:56 with distance Nonem and comments 'Score: 1/10'
+producer_history_strava  | Generated activity for employee 99401: Runing from 2026-01-23 16:47:58 to 2026-01-23 19:47:58 with distance Nonem and comments 'Score: 5/10'
+producer_history_strava  | Generated activity for employee 56263: Boxe from 2026-01-29 22:23:01 to 2026-01-30 01:23:01 with distance Nonem and comments 'Score: 8/10'
+producer_history_strava  | Generated activity for employee 92440: Triathlon from 2026-01-16 10:11:05 to 2026-01-16 11:11:05 with distance Nonem and comments 'Score: 10/10'
+producer_history_strava  | Generated activity for employee 20157: Basketball from 2026-01-10 11:56:22 to 2026-01-10 12:56:22 with distance Nonem and comments 'Score: 9/10'
+producer_history_strava  | Generated activity for employee 22426: Voile from 2026-01-08 18:38:31 to 2026-01-08 19:38:31 with distance Nonem and comments 'Score: 4/10'
+producer_history_strava  | Generated activity for employee 86948: Tennis from 2026-02-08 18:46:04 to 2026-02-08 21:46:04 with distance Nonem and comments 'Score: 6/10'
+producer_history_strava  | Generated activity for employee 89943: Randonnée from 2026-01-28 12:57:26 to 2026-01-28 13:57:26 with distance 6485m and comments 'Score: 7/10'
+producer_history_strava  | Generated activity for employee 78962: Boxe from 2026-01-19 03:14:51 to 2026-01-19 05:14:51 with distance Nonem and comments 'Score: 8/10'
+producer_history_strava  | Generated activity for employee 90813: Natation from 2026-01-03 08:58:56 to 2026-01-03 10:58:56 with distance 10305m and comments 'Score: 3/10'
+producer_history_strava  | Generated activity for employee 27069: Runing from 2026-02-06 23:19:34 to 2026-02-07 00:19:34 with distance Nonem and comments 'Score: 4/10'
+producer_history_strava  | Generated activity for employee 36827: Tennis from 2026-02-05 16:37:59 to 2026-02-05 19:37:59 with distance Nonem and comments 'Score: 7/10'
+producer_history_strava  | Generated activity for employee 76076: Football from 2026-02-12 15:30:53 to 2026-02-12 18:30:53 with distance Nonem and comments 'Score: 1/10'
+producer_history_strava  | Generated activity for employee 81676: Tennis from 2026-01-06 20:16:23 to 2026-01-06 23:16:23 with distance Nonem and comments 'Score: 9/10'
+producer_history_strava  | Generated activity for employee 90284: Randonnée from 2026-01-18 11:00:15 to 2026-01-18 14:00:15 with distance 6686m and comments 'Score: 6/10'
+producer_history_strava  | Generated activity for employee 66882: Judo from 2026-01-11 04:27:05 to 2026-01-11 07:27:05 with distance Nonem and comments 'Score: 4/10'
+producer_history_strava  | Generated activity for employee 41293: Randonnée from 2026-01-15 06:39:03 to 2026-01-15 07:39:03 with distance 11381m and comments 'Score: 1/10'
+producer_history_strava  | Generated activity for employee 42960: Runing from 2026-02-02 08:21:28 to 2026-02-02 10:21:28 with distance Nonem and comments 'Score: 0/10'
+producer_history_strava  | Generated activity for employee 96558: Triathlon from 2026-01-17 17:04:07 to 2026-01-17 18:04:07 with distance Nonem and comments 'Score: 0/10'
+producer_history_strava  | Generated activity for employee 70933: Tennis from 2026-01-07 03:19:11 to 2026-01-07 06:19:11 with distance Nonem and comments 'Score: 0/10'
+producer_history_strava  | Generated activity for employee 35731: Rugby from 2026-02-06 13:54:24 to 2026-02-06 14:54:24 with distance Nonem and comments 'Score: 6/10'
+producer_history_strava  | Generated activity for employee 20697: Randonnée from 2026-01-03 18:08:13 to 2026-01-03 19:08:13 with distance 4827m and comments 'Score: 7/10'
+producer_history_strava  | Generated activity for employee 46903: Escalade from 2026-01-07 15:02:16 to 2026-01-07 18:02:16 with distance Nonem and comments 'Score: 10/10'
+producer_history_strava  | Generated activity for employee 67121: Rugby from 2026-01-23 01:11:07 to 2026-01-23 02:11:07 with distance Nonem and comments 'Score: 9/10'
+producer_history_strava  | Generated activity for employee 70933: Tennis from 2026-01-01 09:27:58 to 2026-01-01 12:27:58 with distance Nonem and comments 'Score: 2/10'
+producer_history_strava  | Generated activity for employee 90813: Natation from 2026-01-16 03:30:00 to 2026-01-16 05:30:00 with distance 14584m and comments 'Score: 1/10'
+producer_history_strava  | Generated activity for employee 75791: Runing from 2026-01-17 19:17:55 to 2026-01-17 21:17:55 with distance Nonem and comments 'Score: 5/10'
+producer_history_strava  | Generated activity for employee 37866: Natation from 2026-02-09 04:17:20 to 2026-02-09 07:17:20 with distance 4381m and comments 'Score: 1/10'
+producer_history_strava  | Generated activity for employee 36981: Natation from 2026-01-24 12:32:45 to 2026-01-24 14:32:45 with distance 17433m and comments 'Score: 5/10'
+producer_history_strava  | Generated activity for employee 53673: Voile from 2026-01-04 18:31:36 to 2026-01-04 20:31:36 with distance Nonem and comments 'Score: 4/10'
+producer_history_strava  | Generated activity for employee 42960: Runing from 2026-02-13 16:49:02 to 2026-02-13 17:49:02 with distance Nonem and comments 'Score: 7/10'
+producer_history_strava  | Generated activity for employee 45221: Randonnée from 2026-02-15 12:48:14 to 2026-02-15 13:48:14 with distance 17787m and comments 'Score: 1/10'
+producer_history_strava  | Generated activity for employee 50866: Randonnée from 2026-02-05 03:11:18 to 2026-02-05 05:11:18 with distance 14862m and comments 'Score: 7/10'
+producer_history_strava  | Generated activity for employee 76903: Basketball from 2026-01-20 14:20:20 to 2026-01-20 16:20:20 with distance Nonem and comments 'Score: 4/10'
+producer_history_strava  | Generated activity for employee 46903: Escalade from 2026-01-14 07:22:37 to 2026-01-14 10:22:37 with distance Nonem and comments 'Score: 10/10'
+producer_history_strava  | Generated activity for employee 37866: Natation from 2026-01-29 14:15:52 to 2026-01-29 16:15:52 with distance 18908m and comments 'Score: 1/10'
+producer_history_strava  | Generated activity for employee 53673: Voile from 2026-01-06 12:05:21 to 2026-01-06 14:05:21 with distance Nonem and comments 'Score: 8/10'
+producer_history_strava  | Generated activity for employee 50955: Rugby from 2026-02-10 15:02:00 to 2026-02-10 18:02:00 with distance Nonem and comments 'Score: 10/10'
+producer_history_strava  | Connexion fermée.
+[Kproducer_history_strava exited with code 0
+[31m[1mAborting on container exit...[0m
+ Container slack_sender  Stopping
+ Container slack_sender  Stopped
+ Container elt_dbt  Stopping
+ Container elt_dbt  Stopped
+ Container producer_history_strava  Stopping
+ Container producer_history_strava  Stopped
+elt_dbt                  | [0m12:55:03  Running with dbt=1.7.4
+elt_dbt                  | [0m12:55:03  dbt version: 1.7.4
+elt_dbt                  | [0m12:55:03  python version: 3.10.19
+elt_dbt                  | [0m12:55:03  python path: /usr/local/bin/python3.10
+elt_dbt                  | [0m12:55:03  os info: Linux-6.10.14-linuxkit-aarch64-with-glibc2.41
+elt_dbt                  | [0m12:55:03  Using profiles dir at /app/profiles
+elt_dbt                  | [0m12:55:03  Using profiles.yml file at /app/profiles/profiles.yml
+elt_dbt                  | [0m12:55:03  Using dbt_project.yml file at /app/dbt_project.yml
+elt_dbt                  | [0m12:55:03  adapter type: postgres
+elt_dbt                  | [0m12:55:03  adapter version: 1.7.4
+elt_dbt                  | [0m12:55:03  Configuration:
+elt_dbt                  | [0m12:55:03    profiles.yml file [[32mOK found and valid[0m]
+elt_dbt                  | [0m12:55:03    dbt_project.yml file [[32mOK found and valid[0m]
+elt_dbt                  | [0m12:55:03  Required dependencies:
+elt_dbt                  | [0m12:55:03   - git [[32mOK found[0m]
+elt_dbt                  | 
+elt_dbt                  | [0m12:55:03  Connection:
+elt_dbt                  | [0m12:55:03    host: postgres
+elt_dbt                  | [0m12:55:03    port: 5432
+elt_dbt                  | [0m12:55:03    user: postgresuser
+elt_dbt                  | [0m12:55:03    database: sport_activities_db
+elt_dbt                  | [0m12:55:03    schema: public
+elt_dbt                  | [0m12:55:03    connect_timeout: 10
+elt_dbt                  | [0m12:55:03    role: None
+elt_dbt                  | [0m12:55:03    search_path: None
+elt_dbt                  | [0m12:55:03    keepalives_idle: 0
+elt_dbt                  | [0m12:55:03    sslmode: None
+elt_dbt                  | [0m12:55:03    sslcert: None
+elt_dbt                  | [0m12:55:03    sslkey: None
+elt_dbt                  | [0m12:55:03    sslrootcert: None
+elt_dbt                  | [0m12:55:03    application_name: dbt
+elt_dbt                  | [0m12:55:03    retries: 1
+elt_dbt                  | [0m12:55:03  Registered adapter: postgres=1.7.4
+elt_dbt                  | [0m12:55:03    Connection test: [[32mOK connection ok[0m]
+elt_dbt                  | 
+elt_dbt                  | [0m12:55:03  [32mAll checks passed![0m
+elt_dbt                  | [0m12:55:04  Running with dbt=1.7.4
+elt_dbt                  | [0m12:55:05  Registered adapter: postgres=1.7.4
+elt_dbt                  | [0m12:55:05  Found 22 tests, 8 models, 3 sources, 0 exposures, 0 metrics, 401 macros, 0 groups, 0 semantic models
+elt_dbt                  | [0m12:55:05  
+elt_dbt                  | [0m12:55:05  Concurrency: 1 threads (target='dev')
+elt_dbt                  | [0m12:55:05  
+elt_dbt                  | [0m12:55:05  1 of 30 START test source_accepted_values_raw_data_rh_info_type_contrat__CDI__CDD  [RUN]
+elt_dbt                  | [0m12:55:05  1 of 30 PASS source_accepted_values_raw_data_rh_info_type_contrat__CDI__CDD .... [[32mPASS[0m in 0.03s]
+elt_dbt                  | [0m12:55:05  2 of 30 START test source_not_null_raw_data_rh_info_adresse_domicile ........... [RUN]
+elt_dbt                  | [0m12:55:05  2 of 30 PASS source_not_null_raw_data_rh_info_adresse_domicile ................. [[32mPASS[0m in 0.02s]
+elt_dbt                  | [0m12:55:05  3 of 30 START test source_not_null_raw_data_rh_info_bu_salarie ................. [RUN]
+elt_dbt                  | [0m12:55:05  3 of 30 PASS source_not_null_raw_data_rh_info_bu_salarie ....................... [[32mPASS[0m in 0.01s]
+elt_dbt                  | [0m12:55:05  4 of 30 START test source_not_null_raw_data_rh_info_distance_to_office_km ...... [RUN]
+elt_dbt                  | [0m12:55:05  4 of 30 PASS source_not_null_raw_data_rh_info_distance_to_office_km ............ [[32mPASS[0m in 0.01s]
+elt_dbt                  | [0m12:55:05  5 of 30 START test source_not_null_raw_data_rh_info_id_salarie ................. [RUN]
+elt_dbt                  | [0m12:55:05  5 of 30 PASS source_not_null_raw_data_rh_info_id_salarie ....................... [[32mPASS[0m in 0.01s]
+elt_dbt                  | [0m12:55:05  6 of 30 START test source_not_null_raw_data_rh_info_jours_cp ................... [RUN]
+elt_dbt                  | [0m12:55:05  6 of 30 PASS source_not_null_raw_data_rh_info_jours_cp ......................... [[32mPASS[0m in 0.02s]
+elt_dbt                  | [0m12:55:05  7 of 30 START test source_not_null_raw_data_rh_info_moyen_de_deplacement ....... [RUN]
+elt_dbt                  | [0m12:55:05  7 of 30 PASS source_not_null_raw_data_rh_info_moyen_de_deplacement ............. [[32mPASS[0m in 0.02s]
+elt_dbt                  | [0m12:55:05  8 of 30 START test source_not_null_raw_data_rh_info_salaire_brut ............... [RUN]
+elt_dbt                  | [0m12:55:05  8 of 30 PASS source_not_null_raw_data_rh_info_salaire_brut ..................... [[32mPASS[0m in 0.02s]
+elt_dbt                  | [0m12:55:05  9 of 30 START test source_not_null_raw_data_rh_info_type_contrat ............... [RUN]
+elt_dbt                  | [0m12:55:05  9 of 30 PASS source_not_null_raw_data_rh_info_type_contrat ..................... [[32mPASS[0m in 0.02s]
+elt_dbt                  | [0m12:55:05  10 of 30 START test source_not_null_raw_data_sport_activities_history_date_end . [RUN]
+elt_dbt                  | [0m12:55:05  10 of 30 PASS source_not_null_raw_data_sport_activities_history_date_end ....... [[32mPASS[0m in 0.01s]
+elt_dbt                  | [0m12:55:05  11 of 30 START test source_not_null_raw_data_sport_activities_history_date_start  [RUN]
+elt_dbt                  | [0m12:55:05  11 of 30 PASS source_not_null_raw_data_sport_activities_history_date_start ..... [[32mPASS[0m in 0.01s]
+elt_dbt                  | [0m12:55:05  12 of 30 START test source_not_null_raw_data_sport_activities_history_id_activity  [RUN]
+elt_dbt                  | [0m12:55:05  12 of 30 PASS source_not_null_raw_data_sport_activities_history_id_activity .... [[32mPASS[0m in 0.02s]
+elt_dbt                  | [0m12:55:05  13 of 30 START test source_not_null_raw_data_sport_activities_history_id_salarie  [RUN]
+elt_dbt                  | [0m12:55:05  13 of 30 PASS source_not_null_raw_data_sport_activities_history_id_salarie ..... [[32mPASS[0m in 0.01s]
+elt_dbt                  | [0m12:55:05  14 of 30 START test source_not_null_raw_data_sport_activities_history_type_activity  [RUN]
+elt_dbt                  | [0m12:55:05  14 of 30 PASS source_not_null_raw_data_sport_activities_history_type_activity .. [[32mPASS[0m in 0.01s]
+elt_dbt                  | [0m12:55:05  15 of 30 START test source_not_null_raw_data_sport_enterprise_id_duo ........... [RUN]
+elt_dbt                  | [0m12:55:05  15 of 30 PASS source_not_null_raw_data_sport_enterprise_id_duo ................. [[32mPASS[0m in 0.01s]
+elt_dbt                  | [0m12:55:05  16 of 30 START test source_not_null_raw_data_sport_enterprise_id_salarie ....... [RUN]
+elt_dbt                  | [0m12:55:05  16 of 30 PASS source_not_null_raw_data_sport_enterprise_id_salarie ............. [[32mPASS[0m in 0.02s]
+elt_dbt                  | [0m12:55:05  17 of 30 START test source_not_null_raw_data_sport_enterprise_type_activity .... [RUN]
+elt_dbt                  | [0m12:55:05  17 of 30 PASS source_not_null_raw_data_sport_enterprise_type_activity .......... [[32mPASS[0m in 0.01s]
+elt_dbt                  | [0m12:55:05  18 of 30 START test source_unique_raw_data_rh_info_id_salarie .................. [RUN]
+elt_dbt                  | [0m12:55:05  18 of 30 PASS source_unique_raw_data_rh_info_id_salarie ........................ [[32mPASS[0m in 0.02s]
+elt_dbt                  | [0m12:55:05  19 of 30 START test source_unique_raw_data_sport_activities_history_id_activity  [RUN]
+elt_dbt                  | [0m12:55:05  19 of 30 PASS source_unique_raw_data_sport_activities_history_id_activity ...... [[32mPASS[0m in 0.02s]
+elt_dbt                  | [0m12:55:05  20 of 30 START test source_unique_raw_data_sport_enterprise_id_duo ............. [RUN]
+elt_dbt                  | [0m12:55:05  20 of 30 PASS source_unique_raw_data_sport_enterprise_id_duo ................... [[32mPASS[0m in 0.02s]
+elt_dbt                  | [0m12:55:05  21 of 30 START sql table model public_silver.silver_rh_info .................... [RUN]
+elt_dbt                  | [0m12:55:05  21 of 30 OK created sql table model public_silver.silver_rh_info ............... [[32mSELECT 161[0m in 0.07s]
+elt_dbt                  | [0m12:55:05  22 of 30 START sql incremental model public_silver.silver_sport_activities_history  [RUN]
+elt_dbt                  | [0m12:55:05  22 of 30 OK created sql incremental model public_silver.silver_sport_activities_history  [[32mINSERT 0 1[0m in 0.07s]
+elt_dbt                  | [0m12:55:05  23 of 30 START sql table model public_silver.silver_sport_enterprise ........... [RUN]
+elt_dbt                  | [0m12:55:05  23 of 30 OK created sql table model public_silver.silver_sport_enterprise ...... [[32mSELECT 95[0m in 0.03s]
+elt_dbt                  | [0m12:55:05  24 of 30 START sql table model public_gold.gold_incorrect_moyen_deplacement .... [RUN]
+elt_dbt                  | [0m12:55:05  24 of 30 OK created sql table model public_gold.gold_incorrect_moyen_deplacement  [[32mSELECT 37[0m in 0.03s]
+elt_dbt                  | [0m12:55:05  25 of 30 START sql table model public_gold.gold_potential_moyen_deplac_bonus ... [RUN]
+elt_dbt                  | [0m12:55:05  25 of 30 OK created sql table model public_gold.gold_potential_moyen_deplac_bonus  [[32mSELECT 43[0m in 0.03s]
+elt_dbt                  | [0m12:55:05  26 of 30 START sql table model public_gold.gold_rh_info ........................ [RUN]
+elt_dbt                  | [0m12:55:05  26 of 30 OK created sql table model public_gold.gold_rh_info ................... [[32mSELECT 31[0m in 0.03s]
+elt_dbt                  | [0m12:55:05  27 of 30 START sql incremental model public_gold.gold_slack_message_activities . [RUN]
+elt_dbt                  | [0m12:55:05  27 of 30 OK created sql incremental model public_gold.gold_slack_message_activities  [[32mINSERT 0 2[0m in 0.03s]
+elt_dbt                  | [0m12:55:05  28 of 30 START sql incremental model public_gold.gold_sport_activities_history . [RUN]
+elt_dbt                  | [0m12:55:05  28 of 30 OK created sql incremental model public_gold.gold_sport_activities_history  [[32mINSERT 0 1[0m in 0.03s]
+elt_dbt                  | [0m12:55:05  29 of 30 START test not_null_gold_rh_info_id_salarie ........................... [RUN]
+elt_dbt                  | [0m12:55:05  29 of 30 PASS not_null_gold_rh_info_id_salarie ................................. [[32mPASS[0m in 0.01s]
+elt_dbt                  | [0m12:55:05  30 of 30 START test unique_gold_rh_info_id_salarie ............................. [RUN]
+elt_dbt                  | [0m12:55:05  30 of 30 PASS unique_gold_rh_info_id_salarie ................................... [[32mPASS[0m in 0.01s]
+elt_dbt                  | [0m12:55:05  
+elt_dbt                  | [0m12:55:05  Finished running 22 tests, 5 table models, 3 incremental models in 0 hours 0 minutes and 0.82 seconds (0.82s).
+elt_dbt                  | [0m12:55:05  
+elt_dbt                  | [0m12:55:05  [32mCompleted successfully[0m
+elt_dbt                  | [0m12:55:05  
+elt_dbt                  | [0m12:55:05  Done. PASS=30 WARN=0 ERROR=0 SKIP=0 TOTAL=30
+[Kelt_dbt exited with code 0
+slack_sender             | Démarrage du producteur d'activités sportives...
+slack_sender             | Connecté à la base de données sport_activities_db sur postgres:5432 en tant qu'utilisateur postgresuser.
+slack_sender             | (36981, datetime.date(2026, 2, 15), 'Natation', 15540, datetime.datetime(2026, 2, 16, 12, 55, 5, 805207, tzinfo=datetime.timezone.utc))
+slack_sender             | (45221, datetime.date(2026, 2, 15), 'Randonnée', 17787, datetime.datetime(2026, 2, 16, 12, 55, 5, 805207, tzinfo=datetime.timezone.utc))
+slack_sender             | Connexion fermée.
+slack_sender             | row 0 : 36981
+slack_sender             | row 1 : 2026-02-15
+slack_sender             | row 2 : Natation
+slack_sender             | row 3 : 15540
+slack_sender             | row 4 : 2026-02-16 12:55:05.805207+00:00
+slack_sender             | row 5 : N/A
+slack_sender             | row 6 : N/A
+slack_sender             | row 7 : N/A
+slack_sender             | row 8 : N/A
+slack_sender             | row 9 : N/A
+slack_sender             | row 0 : 45221
+slack_sender             | row 1 : 2026-02-15
+slack_sender             | row 2 : Randonnée
+slack_sender             | row 3 : 17787
+slack_sender             | row 4 : 2026-02-16 12:55:05.805207+00:00
+slack_sender             | row 5 : N/A
+slack_sender             | row 6 : N/A
+slack_sender             | row 7 : N/A
+slack_sender             | row 8 : N/A
+slack_sender             | row 9 : N/A
+[Kslack_sender exited with code 0
+Mon Feb 16 13:55:07 CET 2026: Daily pipeline execution completed
+ Container producer_history_strava  Recreate
+ Container producer_history_strava  Recreated
+ Container elt_dbt  Recreate
+ Container elt_dbt  Recreated
+ Container slack_sender  Recreate
+ Container slack_sender  Recreated
+Attaching to elt_dbt, producer_history_strava, slack_sender
+producer_history_strava  | Démarrage du producteur d'activités sportives...
+producer_history_strava  | Connecté à la base de données sport_activities_db sur postgres:5432 en tant qu'utilisateur postgresuser.
+producer_history_strava  | ✓ Table sport_enterprise existe et contient 161 lignes.
+producer_history_strava  | ✓ Table RH_info existe et contient 161 lignes.
+producer_history_strava  | Toutes les distances sont déjà calculées.
+producer_history_strava  | Generated activity for employee 49571: Rugby from 2026-01-13 07:16:24 to 2026-01-13 10:16:24 with distance Nonem and comments 'Score: 6/10'
+producer_history_strava  | Generated activity for employee 29793: Runing from 2026-02-06 18:19:01 to 2026-02-06 21:19:01 with distance Nonem and comments 'Score: 0/10'
+producer_history_strava  | Generated activity for employee 94680: Natation from 2026-01-03 14:42:17 to 2026-01-03 17:42:17 with distance 12641m and comments 'Score: 8/10'
+producer_history_strava  | Generated activity for employee 23842: Voile from 2026-01-15 03:50:05 to 2026-01-15 04:50:05 with distance Nonem and comments 'Score: 0/10'
+producer_history_strava  | Generated activity for employee 89328: Tennis de table from 2026-02-02 14:47:40 to 2026-02-02 17:47:40 with distance Nonem and comments 'Score: 10/10'
+producer_history_strava  | Generated activity for employee 44472: Football from 2026-01-01 06:58:58 to 2026-01-01 09:58:58 with distance Nonem and comments 'Score: 8/10'
+producer_history_strava  | Generated activity for employee 42472: Randonnée from 2026-01-15 08:52:17 to 2026-01-15 10:52:17 with distance 2456m and comments 'Score: 0/10'
+producer_history_strava  | Generated activity for employee 55153: Boxe from 2026-01-10 10:13:41 to 2026-01-10 13:13:41 with distance Nonem and comments 'Score: 9/10'
+producer_history_strava  | Generated activity for employee 53944: Natation from 2026-01-22 06:58:17 to 2026-01-22 07:58:17 with distance 1827m and comments 'Score: 7/10'
+producer_history_strava  | Generated activity for employee 89943: Randonnée from 2026-02-03 06:17:03 to 2026-02-03 09:17:03 with distance 4881m and comments 'Score: 7/10'
+producer_history_strava  | Generated activity for employee 29450: Randonnée from 2026-01-07 01:33:16 to 2026-01-07 03:33:16 with distance 13524m and comments 'Score: 10/10'
+producer_history_strava  | Generated activity for employee 86486: Judo from 2026-01-18 00:40:18 to 2026-01-18 02:40:18 with distance Nonem and comments 'Score: 10/10'
+producer_history_strava  | Generated activity for employee 50955: Rugby from 2026-01-27 17:01:48 to 2026-01-27 19:01:48 with distance Nonem and comments 'Score: 7/10'
+producer_history_strava  | Generated activity for employee 75791: Runing from 2026-01-29 06:21:25 to 2026-01-29 07:21:25 with distance Nonem and comments 'Score: 9/10'
+producer_history_strava  | Generated activity for employee 86847: Football from 2026-01-31 10:07:56 to 2026-01-31 11:07:56 with distance Nonem and comments 'Score: 7/10'
+producer_history_strava  | Generated activity for employee 49419: Natation from 2026-02-07 15:28:49 to 2026-02-07 18:28:49 with distance 14162m and comments 'Score: 2/10'
+producer_history_strava  | Generated activity for employee 19260: Runing from 2026-01-25 16:23:10 to 2026-01-25 18:23:10 with distance Nonem and comments 'Score: 8/10'
+producer_history_strava  | Generated activity for employee 44927: Randonnée from 2026-01-02 04:55:36 to 2026-01-02 06:55:36 with distance 7752m and comments 'Score: 8/10'
+producer_history_strava  | Generated activity for employee 71190: Badminton from 2026-02-12 01:59:52 to 2026-02-12 04:59:52 with distance Nonem and comments 'Score: 9/10'
+producer_history_strava  | Generated activity for employee 70933: Tennis from 2026-01-22 21:49:11 to 2026-01-23 00:49:11 with distance Nonem and comments 'Score: 0/10'
+producer_history_strava  | Generated activity for employee 22426: Voile from 2026-02-13 16:50:12 to 2026-02-13 17:50:12 with distance Nonem and comments 'Score: 6/10'
+producer_history_strava  | Generated activity for employee 22426: Voile from 2026-01-10 13:59:04 to 2026-01-10 16:59:04 with distance Nonem and comments 'Score: 3/10'
+producer_history_strava  | Generated activity for employee 49419: Natation from 2026-02-05 09:39:34 to 2026-02-05 12:39:34 with distance 3616m and comments 'Score: 5/10'
+producer_history_strava  | Generated activity for employee 92440: Triathlon from 2026-02-11 01:14:32 to 2026-02-11 02:14:32 with distance Nonem and comments 'Score: 7/10'
+producer_history_strava  | Generated activity for employee 67121: Rugby from 2026-01-19 13:00:37 to 2026-01-19 16:00:37 with distance Nonem and comments 'Score: 9/10'
+producer_history_strava  | Generated activity for employee 17027: Tennis from 2026-01-17 20:29:47 to 2026-01-17 23:29:47 with distance Nonem and comments 'Score: 0/10'
+producer_history_strava  | Generated activity for employee 86948: Tennis from 2026-01-15 06:25:12 to 2026-01-15 08:25:12 with distance Nonem and comments 'Score: 7/10'
+producer_history_strava  | Generated activity for employee 17997: Tennis de table from 2026-01-03 09:05:46 to 2026-01-03 10:05:46 with distance Nonem and comments 'Score: 9/10'
+producer_history_strava  | Generated activity for employee 89328: Tennis de table from 2026-01-02 14:27:42 to 2026-01-02 15:27:42 with distance Nonem and comments 'Score: 8/10'
+producer_history_strava  | Generated activity for employee 96558: Triathlon from 2026-01-22 10:24:19 to 2026-01-22 13:24:19 with distance Nonem and comments 'Score: 4/10'
+producer_history_strava  | Generated activity for employee 43124: Équitation from 2026-02-01 06:44:30 to 2026-02-01 08:44:30 with distance Nonem and comments 'Score: 0/10'
+producer_history_strava  | Generated activity for employee 22426: Voile from 2026-02-11 10:11:57 to 2026-02-11 11:11:57 with distance Nonem and comments 'Score: 4/10'
+producer_history_strava  | Generated activity for employee 32690: Badminton from 2026-01-18 03:20:25 to 2026-01-18 05:20:25 with distance Nonem and comments 'Score: 0/10'
+producer_history_strava  | Generated activity for employee 19260: Runing from 2026-01-10 23:04:11 to 2026-01-11 01:04:11 with distance Nonem and comments 'Score: 3/10'
+producer_history_strava  | Generated activity for employee 91916: Rugby from 2026-01-12 13:43:35 to 2026-01-12 15:43:35 with distance Nonem and comments 'Score: 9/10'
+producer_history_strava  | Generated activity for employee 56263: Boxe from 2026-01-30 10:17:25 to 2026-01-30 13:17:25 with distance Nonem and comments 'Score: 10/10'
+producer_history_strava  | Generated activity for employee 99401: Runing from 2026-02-03 04:44:02 to 2026-02-03 07:44:02 with distance Nonem and comments 'Score: 0/10'
+producer_history_strava  | Generated activity for employee 56263: Boxe from 2026-02-11 19:38:55 to 2026-02-11 20:38:55 with distance Nonem and comments 'Score: 3/10'
+producer_history_strava  | Generated activity for employee 75791: Runing from 2026-01-22 11:35:23 to 2026-01-22 13:35:23 with distance Nonem and comments 'Score: 1/10'
+producer_history_strava  | Generated activity for employee 41293: Randonnée from 2026-01-07 11:51:49 to 2026-01-07 13:51:49 with distance 3721m and comments 'Score: 6/10'
+producer_history_strava  | Generated activity for employee 44472: Football from 2026-01-31 12:12:05 to 2026-01-31 15:12:05 with distance Nonem and comments 'Score: 1/10'
+producer_history_strava  | Generated activity for employee 76903: Basketball from 2026-01-05 16:19:27 to 2026-01-05 17:19:27 with distance Nonem and comments 'Score: 9/10'
+producer_history_strava  | Generated activity for employee 76341: Football from 2026-01-19 09:20:11 to 2026-01-19 10:20:11 with distance Nonem and comments 'Score: 10/10'
+producer_history_strava  | Generated activity for employee 34382: Équitation from 2026-01-02 08:54:22 to 2026-01-02 10:54:22 with distance Nonem and comments 'Score: 10/10'
+producer_history_strava  | Generated activity for employee 29793: Runing from 2026-02-03 11:51:02 to 2026-02-03 12:51:02 with distance Nonem and comments 'Score: 9/10'
+producer_history_strava  | Generated activity for employee 49571: Rugby from 2026-01-12 03:49:27 to 2026-01-12 05:49:27 with distance Nonem and comments 'Score: 8/10'
+producer_history_strava  | Generated activity for employee 66386: Badminton from 2026-02-05 14:14:18 to 2026-02-05 17:14:18 with distance Nonem and comments 'Score: 9/10'
+producer_history_strava  | Generated activity for employee 34899: Football from 2026-02-14 16:23:27 to 2026-02-14 17:23:27 with distance Nonem and comments 'Score: 6/10'
+producer_history_strava  | Generated activity for employee 86486: Judo from 2026-01-23 02:45:03 to 2026-01-23 03:45:03 with distance Nonem and comments 'Score: 5/10'
+producer_history_strava  | Generated activity for employee 57589: Runing from 2026-02-09 04:12:18 to 2026-02-09 07:12:18 with distance Nonem and comments 'Score: 4/10'
+producer_history_strava  | Generated activity for employee 36827: Tennis from 2026-02-09 00:06:08 to 2026-02-09 02:06:08 with distance Nonem and comments 'Score: 0/10'
+producer_history_strava  | Generated activity for employee 76076: Football from 2026-02-01 11:10:58 to 2026-02-01 12:10:58 with distance Nonem and comments 'Score: 7/10'
+producer_history_strava  | Generated activity for employee 17757: Badminton from 2026-01-14 13:47:44 to 2026-01-14 15:47:44 with distance Nonem and comments 'Score: 4/10'
+producer_history_strava  | Generated activity for employee 76076: Football from 2026-01-06 00:43:42 to 2026-01-06 03:43:42 with distance Nonem and comments 'Score: 0/10'
+producer_history_strava  | Generated activity for employee 27069: Runing from 2026-02-12 11:10:09 to 2026-02-12 12:10:09 with distance Nonem and comments 'Score: 0/10'
+producer_history_strava  | Generated activity for employee 53673: Voile from 2026-01-14 10:13:40 to 2026-01-14 12:13:40 with distance Nonem and comments 'Score: 1/10'
+producer_history_strava  | Generated activity for employee 49571: Rugby from 2026-01-05 23:59:37 to 2026-01-06 00:59:37 with distance Nonem and comments 'Score: 3/10'
+producer_history_strava  | Generated activity for employee 22426: Voile from 2026-02-12 19:06:16 to 2026-02-12 21:06:16 with distance Nonem and comments 'Score: 5/10'
+producer_history_strava  | Generated activity for employee 56263: Boxe from 2026-01-28 22:48:50 to 2026-01-29 01:48:50 with distance Nonem and comments 'Score: 0/10'
+producer_history_strava  | Generated activity for employee 29793: Runing from 2026-02-09 20:23:09 to 2026-02-09 23:23:09 with distance Nonem and comments 'Score: 10/10'
+producer_history_strava  | Generated activity for employee 59040: Judo from 2026-01-14 19:27:47 to 2026-01-14 22:27:47 with distance Nonem and comments 'Score: 1/10'
+producer_history_strava  | Generated activity for employee 45221: Randonnée from 2026-01-02 10:34:33 to 2026-01-02 13:34:33 with distance 16041m and comments 'Score: 4/10'
+producer_history_strava  | Generated activity for employee 44472: Football from 2026-02-09 11:42:16 to 2026-02-09 14:42:16 with distance Nonem and comments 'Score: 9/10'
+producer_history_strava  | Generated activity for employee 55153: Boxe from 2026-01-22 15:14:08 to 2026-01-22 16:14:08 with distance Nonem and comments 'Score: 9/10'
+producer_history_strava  | Generated activity for employee 94680: Natation from 2026-02-07 20:44:05 to 2026-02-07 21:44:05 with distance 8880m and comments 'Score: 10/10'
+producer_history_strava  | Generated activity for employee 41293: Randonnée from 2026-01-01 19:37:06 to 2026-01-01 20:37:06 with distance 9885m and comments 'Score: 4/10'
+producer_history_strava  | Generated activity for employee 51866: Runing from 2026-01-15 17:48:31 to 2026-01-15 20:48:31 with distance Nonem and comments 'Score: 3/10'
+producer_history_strava  | Generated activity for employee 99401: Runing from 2026-01-17 04:52:52 to 2026-01-17 06:52:52 with distance Nonem and comments 'Score: 1/10'
+producer_history_strava  | Generated activity for employee 90207: Tennis from 2026-02-02 19:29:11 to 2026-02-02 21:29:11 with distance Nonem and comments 'Score: 8/10'
+producer_history_strava  | Generated activity for employee 94680: Natation from 2026-01-25 02:19:24 to 2026-01-25 04:19:24 with distance 11832m and comments 'Score: 3/10'
+producer_history_strava  | Generated activity for employee 69938: Randonnée from 2026-01-15 10:56:23 to 2026-01-15 13:56:23 with distance 12783m and comments 'Score: 10/10'
+producer_history_strava  | Generated activity for employee 92368: Runing from 2026-02-08 18:53:17 to 2026-02-08 19:53:17 with distance Nonem and comments 'Score: 7/10'
+producer_history_strava  | Generated activity for employee 36981: Natation from 2026-01-23 12:38:39 to 2026-01-23 14:38:39 with distance 15861m and comments 'Score: 8/10'
+producer_history_strava  | Generated activity for employee 43124: Équitation from 2026-02-02 06:59:14 to 2026-02-02 07:59:14 with distance Nonem and comments 'Score: 3/10'
+producer_history_strava  | Generated activity for employee 81676: Tennis from 2026-02-12 07:54:25 to 2026-02-12 10:54:25 with distance Nonem and comments 'Score: 2/10'
+producer_history_strava  | Generated activity for employee 76903: Basketball from 2026-02-03 19:51:50 to 2026-02-03 21:51:50 with distance Nonem and comments 'Score: 7/10'
+producer_history_strava  | Generated activity for employee 31222: Natation from 2026-01-10 22:57:00 to 2026-01-10 23:57:00 with distance 14033m and comments 'Score: 6/10'
+producer_history_strava  | Generated activity for employee 76903: Basketball from 2026-01-16 04:25:16 to 2026-01-16 06:25:16 with distance Nonem and comments 'Score: 0/10'
+producer_history_strava  | Generated activity for employee 78962: Boxe from 2026-01-15 05:21:57 to 2026-01-15 07:21:57 with distance Nonem and comments 'Score: 2/10'
+producer_history_strava  | Generated activity for employee 92368: Runing from 2026-01-13 17:43:25 to 2026-01-13 18:43:25 with distance Nonem and comments 'Score: 5/10'
+producer_history_strava  | Generated activity for employee 86486: Judo from 2026-01-13 20:37:05 to 2026-01-13 23:37:05 with distance Nonem and comments 'Score: 1/10'
+producer_history_strava  | Generated activity for employee 20697: Randonnée from 2026-02-06 10:36:33 to 2026-02-06 13:36:33 with distance 12539m and comments 'Score: 3/10'
+producer_history_strava  | Generated activity for employee 30945: Runing from 2026-02-10 06:28:04 to 2026-02-10 08:28:04 with distance Nonem and comments 'Score: 0/10'
+producer_history_strava  | Generated activity for employee 36827: Tennis from 2026-02-05 22:41:01 to 2026-02-05 23:41:01 with distance Nonem and comments 'Score: 5/10'
+producer_history_strava  | Generated activity for employee 31222: Natation from 2026-02-01 10:18:05 to 2026-02-01 13:18:05 with distance 13835m and comments 'Score: 10/10'
+producer_history_strava  | Generated activity for employee 33386: Randonnée from 2026-02-02 05:49:06 to 2026-02-02 08:49:06 with distance 10712m and comments 'Score: 0/10'
+producer_history_strava  | Generated activity for employee 49571: Rugby from 2026-01-01 07:25:31 to 2026-01-01 08:25:31 with distance Nonem and comments 'Score: 5/10'
+producer_history_strava  | Generated activity for employee 18941: Runing from 2026-01-30 13:55:17 to 2026-01-30 16:55:17 with distance Nonem and comments 'Score: 9/10'
+producer_history_strava  | Generated activity for employee 55153: Boxe from 2026-01-29 17:28:42 to 2026-01-29 19:28:42 with distance Nonem and comments 'Score: 6/10'
+producer_history_strava  | Generated activity for employee 69938: Randonnée from 2026-02-01 21:13:32 to 2026-02-01 23:13:32 with distance 17772m and comments 'Score: 4/10'
+producer_history_strava  | Generated activity for employee 70575: Randonnée from 2026-01-19 00:06:40 to 2026-01-19 01:06:40 with distance 16582m and comments 'Score: 7/10'
+producer_history_strava  | Generated activity for employee 90207: Tennis from 2026-01-10 09:11:21 to 2026-01-10 11:11:21 with distance Nonem and comments 'Score: 6/10'
+producer_history_strava  | Generated activity for employee 43542: Judo from 2026-01-16 08:29:32 to 2026-01-16 11:29:32 with distance Nonem and comments 'Score: 0/10'
+producer_history_strava  | Generated activity for employee 33386: Randonnée from 2026-02-11 16:48:51 to 2026-02-11 18:48:51 with distance 8608m and comments 'Score: 3/10'
+producer_history_strava  | Generated activity for employee 17997: Tennis de table from 2026-02-02 09:29:53 to 2026-02-02 10:29:53 with distance Nonem and comments 'Score: 0/10'
+producer_history_strava  | Generated activity for employee 17036: Escalade from 2026-02-09 22:26:59 to 2026-02-09 23:26:59 with distance Nonem and comments 'Score: 1/10'
+producer_history_strava  | Generated activity for employee 59040: Judo from 2026-02-08 11:14:01 to 2026-02-08 12:14:01 with distance Nonem and comments 'Score: 0/10'
+producer_history_strava  | Generated activity for employee 56482: Tennis from 2026-02-05 06:07:06 to 2026-02-05 09:07:06 with distance Nonem and comments 'Score: 9/10'
+producer_history_strava  | Generated activity for employee 70933: Tennis from 2026-02-08 23:26:45 to 2026-02-09 00:26:45 with distance Nonem and comments 'Score: 9/10'
+producer_history_strava  | Generated activity for employee 36981: Natation from 2026-01-13 03:45:33 to 2026-01-13 06:45:33 with distance 18511m and comments 'Score: 3/10'
+producer_history_strava  | Connexion fermée.
+[Kproducer_history_strava exited with code 0
+[31m[1mAborting on container exit...[0m
+ Container slack_sender  Stopping
+ Container slack_sender  Stopped
+ Container elt_dbt  Stopping
+ Container elt_dbt  Stopped
+ Container producer_history_strava  Stopping
+ Container producer_history_strava  Stopped
+elt_dbt                  | [0m13:00:02  Running with dbt=1.7.4
+elt_dbt                  | [0m13:00:02  dbt version: 1.7.4
+elt_dbt                  | [0m13:00:02  python version: 3.10.19
+elt_dbt                  | [0m13:00:02  python path: /usr/local/bin/python3.10
+elt_dbt                  | [0m13:00:02  os info: Linux-6.10.14-linuxkit-aarch64-with-glibc2.41
+elt_dbt                  | [0m13:00:02  Using profiles dir at /app/profiles
+elt_dbt                  | [0m13:00:02  Using profiles.yml file at /app/profiles/profiles.yml
+elt_dbt                  | [0m13:00:02  Using dbt_project.yml file at /app/dbt_project.yml
+elt_dbt                  | [0m13:00:02  adapter type: postgres
+elt_dbt                  | [0m13:00:02  adapter version: 1.7.4
+elt_dbt                  | [0m13:00:02  Configuration:
+elt_dbt                  | [0m13:00:02    profiles.yml file [[32mOK found and valid[0m]
+elt_dbt                  | [0m13:00:02    dbt_project.yml file [[32mOK found and valid[0m]
+elt_dbt                  | [0m13:00:02  Required dependencies:
+elt_dbt                  | [0m13:00:02   - git [[32mOK found[0m]
+elt_dbt                  | 
+elt_dbt                  | [0m13:00:02  Connection:
+elt_dbt                  | [0m13:00:02    host: postgres
+elt_dbt                  | [0m13:00:02    port: 5432
+elt_dbt                  | [0m13:00:02    user: postgresuser
+elt_dbt                  | [0m13:00:02    database: sport_activities_db
+elt_dbt                  | [0m13:00:02    schema: public
+elt_dbt                  | [0m13:00:02    connect_timeout: 10
+elt_dbt                  | [0m13:00:02    role: None
+elt_dbt                  | [0m13:00:02    search_path: None
+elt_dbt                  | [0m13:00:02    keepalives_idle: 0
+elt_dbt                  | [0m13:00:02    sslmode: None
+elt_dbt                  | [0m13:00:02    sslcert: None
+elt_dbt                  | [0m13:00:02    sslkey: None
+elt_dbt                  | [0m13:00:02    sslrootcert: None
+elt_dbt                  | [0m13:00:02    application_name: dbt
+elt_dbt                  | [0m13:00:02    retries: 1
+elt_dbt                  | [0m13:00:02  Registered adapter: postgres=1.7.4
+elt_dbt                  | [0m13:00:02    Connection test: [[32mOK connection ok[0m]
+elt_dbt                  | 
+elt_dbt                  | [0m13:00:02  [32mAll checks passed![0m
+elt_dbt                  | [0m13:00:04  Running with dbt=1.7.4
+elt_dbt                  | [0m13:00:04  Registered adapter: postgres=1.7.4
+elt_dbt                  | [0m13:00:04  Found 22 tests, 8 models, 3 sources, 0 exposures, 0 metrics, 401 macros, 0 groups, 0 semantic models
+elt_dbt                  | [0m13:00:04  
+elt_dbt                  | [0m13:00:04  Concurrency: 1 threads (target='dev')
+elt_dbt                  | [0m13:00:04  
+elt_dbt                  | [0m13:00:04  1 of 30 START test source_accepted_values_raw_data_rh_info_type_contrat__CDI__CDD  [RUN]
+elt_dbt                  | [0m13:00:04  1 of 30 PASS source_accepted_values_raw_data_rh_info_type_contrat__CDI__CDD .... [[32mPASS[0m in 0.03s]
+elt_dbt                  | [0m13:00:04  2 of 30 START test source_not_null_raw_data_rh_info_adresse_domicile ........... [RUN]
+elt_dbt                  | [0m13:00:05  2 of 30 PASS source_not_null_raw_data_rh_info_adresse_domicile ................. [[32mPASS[0m in 0.02s]
+elt_dbt                  | [0m13:00:05  3 of 30 START test source_not_null_raw_data_rh_info_bu_salarie ................. [RUN]
+elt_dbt                  | [0m13:00:05  3 of 30 PASS source_not_null_raw_data_rh_info_bu_salarie ....................... [[32mPASS[0m in 0.01s]
+elt_dbt                  | [0m13:00:05  4 of 30 START test source_not_null_raw_data_rh_info_distance_to_office_km ...... [RUN]
+elt_dbt                  | [0m13:00:05  4 of 30 PASS source_not_null_raw_data_rh_info_distance_to_office_km ............ [[32mPASS[0m in 0.02s]
+elt_dbt                  | [0m13:00:05  5 of 30 START test source_not_null_raw_data_rh_info_id_salarie ................. [RUN]
+elt_dbt                  | [0m13:00:05  5 of 30 PASS source_not_null_raw_data_rh_info_id_salarie ....................... [[32mPASS[0m in 0.02s]
+elt_dbt                  | [0m13:00:05  6 of 30 START test source_not_null_raw_data_rh_info_jours_cp ................... [RUN]
+elt_dbt                  | [0m13:00:05  6 of 30 PASS source_not_null_raw_data_rh_info_jours_cp ......................... [[32mPASS[0m in 0.02s]
+elt_dbt                  | [0m13:00:05  7 of 30 START test source_not_null_raw_data_rh_info_moyen_de_deplacement ....... [RUN]
+elt_dbt                  | [0m13:00:05  7 of 30 PASS source_not_null_raw_data_rh_info_moyen_de_deplacement ............. [[32mPASS[0m in 0.02s]
+elt_dbt                  | [0m13:00:05  8 of 30 START test source_not_null_raw_data_rh_info_salaire_brut ............... [RUN]
+elt_dbt                  | [0m13:00:05  8 of 30 PASS source_not_null_raw_data_rh_info_salaire_brut ..................... [[32mPASS[0m in 0.02s]
+elt_dbt                  | [0m13:00:05  9 of 30 START test source_not_null_raw_data_rh_info_type_contrat ............... [RUN]
+elt_dbt                  | [0m13:00:05  9 of 30 PASS source_not_null_raw_data_rh_info_type_contrat ..................... [[32mPASS[0m in 0.01s]
+elt_dbt                  | [0m13:00:05  10 of 30 START test source_not_null_raw_data_sport_activities_history_date_end . [RUN]
+elt_dbt                  | [0m13:00:05  10 of 30 PASS source_not_null_raw_data_sport_activities_history_date_end ....... [[32mPASS[0m in 0.01s]
+elt_dbt                  | [0m13:00:05  11 of 30 START test source_not_null_raw_data_sport_activities_history_date_start  [RUN]
+elt_dbt                  | [0m13:00:05  11 of 30 PASS source_not_null_raw_data_sport_activities_history_date_start ..... [[32mPASS[0m in 0.01s]
+elt_dbt                  | [0m13:00:05  12 of 30 START test source_not_null_raw_data_sport_activities_history_id_activity  [RUN]
+elt_dbt                  | [0m13:00:05  12 of 30 PASS source_not_null_raw_data_sport_activities_history_id_activity .... [[32mPASS[0m in 0.02s]
+elt_dbt                  | [0m13:00:05  13 of 30 START test source_not_null_raw_data_sport_activities_history_id_salarie  [RUN]
+elt_dbt                  | [0m13:00:05  13 of 30 PASS source_not_null_raw_data_sport_activities_history_id_salarie ..... [[32mPASS[0m in 0.01s]
+elt_dbt                  | [0m13:00:05  14 of 30 START test source_not_null_raw_data_sport_activities_history_type_activity  [RUN]
+elt_dbt                  | [0m13:00:05  14 of 30 PASS source_not_null_raw_data_sport_activities_history_type_activity .. [[32mPASS[0m in 0.01s]
+elt_dbt                  | [0m13:00:05  15 of 30 START test source_not_null_raw_data_sport_enterprise_id_duo ........... [RUN]
+elt_dbt                  | [0m13:00:05  15 of 30 PASS source_not_null_raw_data_sport_enterprise_id_duo ................. [[32mPASS[0m in 0.01s]
+elt_dbt                  | [0m13:00:05  16 of 30 START test source_not_null_raw_data_sport_enterprise_id_salarie ....... [RUN]
+elt_dbt                  | [0m13:00:05  16 of 30 PASS source_not_null_raw_data_sport_enterprise_id_salarie ............. [[32mPASS[0m in 0.02s]
+elt_dbt                  | [0m13:00:05  17 of 30 START test source_not_null_raw_data_sport_enterprise_type_activity .... [RUN]
+elt_dbt                  | [0m13:00:05  17 of 30 PASS source_not_null_raw_data_sport_enterprise_type_activity .......... [[32mPASS[0m in 0.01s]
+elt_dbt                  | [0m13:00:05  18 of 30 START test source_unique_raw_data_rh_info_id_salarie .................. [RUN]
+elt_dbt                  | [0m13:00:05  18 of 30 PASS source_unique_raw_data_rh_info_id_salarie ........................ [[32mPASS[0m in 0.02s]
+elt_dbt                  | [0m13:00:05  19 of 30 START test source_unique_raw_data_sport_activities_history_id_activity  [RUN]
+elt_dbt                  | [0m13:00:05  19 of 30 PASS source_unique_raw_data_sport_activities_history_id_activity ...... [[32mPASS[0m in 0.02s]
+elt_dbt                  | [0m13:00:05  20 of 30 START test source_unique_raw_data_sport_enterprise_id_duo ............. [RUN]
+elt_dbt                  | [0m13:00:05  20 of 30 PASS source_unique_raw_data_sport_enterprise_id_duo ................... [[32mPASS[0m in 0.02s]
+elt_dbt                  | [0m13:00:05  21 of 30 START sql table model public_silver.silver_rh_info .................... [RUN]
+elt_dbt                  | [0m13:00:05  21 of 30 OK created sql table model public_silver.silver_rh_info ............... [[32mSELECT 161[0m in 0.06s]
+elt_dbt                  | [0m13:00:05  22 of 30 START sql incremental model public_silver.silver_sport_activities_history  [RUN]
+elt_dbt                  | [0m13:00:05  22 of 30 OK created sql incremental model public_silver.silver_sport_activities_history  [[32mINSERT 0 0[0m in 0.06s]
+elt_dbt                  | [0m13:00:05  23 of 30 START sql table model public_silver.silver_sport_enterprise ........... [RUN]
+elt_dbt                  | [0m13:00:05  23 of 30 OK created sql table model public_silver.silver_sport_enterprise ...... [[32mSELECT 95[0m in 0.03s]
+elt_dbt                  | [0m13:00:05  24 of 30 START sql table model public_gold.gold_incorrect_moyen_deplacement .... [RUN]
+elt_dbt                  | [0m13:00:05  24 of 30 OK created sql table model public_gold.gold_incorrect_moyen_deplacement  [[32mSELECT 37[0m in 0.03s]
+elt_dbt                  | [0m13:00:05  25 of 30 START sql table model public_gold.gold_potential_moyen_deplac_bonus ... [RUN]
+elt_dbt                  | [0m13:00:05  25 of 30 OK created sql table model public_gold.gold_potential_moyen_deplac_bonus  [[32mSELECT 43[0m in 0.03s]
+elt_dbt                  | [0m13:00:05  26 of 30 START sql table model public_gold.gold_rh_info ........................ [RUN]
+elt_dbt                  | [0m13:00:05  26 of 30 OK created sql table model public_gold.gold_rh_info ................... [[32mSELECT 31[0m in 0.03s]
+elt_dbt                  | [0m13:00:05  27 of 30 START sql incremental model public_gold.gold_slack_message_activities . [RUN]
+elt_dbt                  | [0m13:00:05  27 of 30 OK created sql incremental model public_gold.gold_slack_message_activities  [[32mINSERT 0 2[0m in 0.03s]
+elt_dbt                  | [0m13:00:05  28 of 30 START sql incremental model public_gold.gold_sport_activities_history . [RUN]
+elt_dbt                  | [0m13:00:05  28 of 30 OK created sql incremental model public_gold.gold_sport_activities_history  [[32mINSERT 0 0[0m in 0.03s]
+elt_dbt                  | [0m13:00:05  29 of 30 START test not_null_gold_rh_info_id_salarie ........................... [RUN]
+elt_dbt                  | [0m13:00:05  29 of 30 PASS not_null_gold_rh_info_id_salarie ................................. [[32mPASS[0m in 0.01s]
+elt_dbt                  | [0m13:00:05  30 of 30 START test unique_gold_rh_info_id_salarie ............................. [RUN]
+elt_dbt                  | [0m13:00:05  30 of 30 PASS unique_gold_rh_info_id_salarie ................................... [[32mPASS[0m in 0.01s]
+elt_dbt                  | [0m13:00:05  
+elt_dbt                  | [0m13:00:05  Finished running 22 tests, 5 table models, 3 incremental models in 0 hours 0 minutes and 0.82 seconds (0.82s).
+elt_dbt                  | [0m13:00:05  
+elt_dbt                  | [0m13:00:05  [32mCompleted successfully[0m
+elt_dbt                  | [0m13:00:05  
+elt_dbt                  | [0m13:00:05  Done. PASS=30 WARN=0 ERROR=0 SKIP=0 TOTAL=30
+[Kelt_dbt exited with code 0
+slack_sender             | Démarrage du producteur d'activités sportives...
+slack_sender             | Connecté à la base de données sport_activities_db sur postgres:5432 en tant qu'utilisateur postgresuser.
+slack_sender             | (36981, datetime.date(2026, 2, 15), 'Natation', 15540, datetime.datetime(2026, 2, 16, 13, 0, 5, 561989, tzinfo=datetime.timezone.utc))
+slack_sender             | (45221, datetime.date(2026, 2, 15), 'Randonnée', 17787, datetime.datetime(2026, 2, 16, 13, 0, 5, 561989, tzinfo=datetime.timezone.utc))
+slack_sender             | Connexion fermée.
+slack_sender             | row 0 : 36981
+slack_sender             | row 1 : 2026-02-15
+slack_sender             | row 2 : Natation
+slack_sender             | row 3 : 15540
+slack_sender             | row 4 : 2026-02-16 13:00:05.561989+00:00
+slack_sender             | row 5 : N/A
+slack_sender             | row 6 : N/A
+slack_sender             | row 7 : N/A
+slack_sender             | row 8 : N/A
+slack_sender             | row 9 : N/A
+slack_sender             | row 0 : 45221
+slack_sender             | row 1 : 2026-02-15
+slack_sender             | row 2 : Randonnée
+slack_sender             | row 3 : 17787
+slack_sender             | row 4 : 2026-02-16 13:00:05.561989+00:00
+slack_sender             | row 5 : N/A
+slack_sender             | row 6 : N/A
+slack_sender             | row 7 : N/A
+slack_sender             | row 8 : N/A
+slack_sender             | row 9 : N/A
+[Kslack_sender exited with code 0
+Mon Feb 16 14:00:07 CET 2026: Daily pipeline execution completed

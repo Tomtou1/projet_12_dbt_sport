@@ -9,11 +9,13 @@ from dotenv import load_dotenv
 
 
 def connexion_sql():
+    load_dotenv()
+    
     hostname = "postgres"
     port_id = 5432
-    username = "postgresuser"
-    password = "postgrespw"
-    database = "sport_activities_db"
+    username = os.getenv("POSTGRES_USER")
+    password = os.getenv("POSTGRES_PASSWORD")
+    database = os.getenv("POSTGRES_DB")
 
     conn  = psycopg2.connect(
         host=hostname,
@@ -65,6 +67,7 @@ def create_sql_table_RH(conn):
     cur = conn.cursor()
     cur.execute('''CREATE TABLE IF NOT EXISTS RH_info (
     id_salarie INT NOT NULL PRIMARY KEY,
+    name_salarie VARCHAR(50) NOT NULL,
     bu_salarie VARCHAR(50) NOT NULL,
     salaire_brut INT NOT NULL,
     type_contrat VARCHAR(10) NOT NULL,
@@ -90,6 +93,7 @@ def create_sql_table_RH(conn):
     inserted_count = 0
     for row in df.iterrows():
         id_salarie = row[1]['ID salarié']
+        name_salarie = row[1]['Prénom']
         bu_salarie = row[1]['BU']
         salaire_brut = row[1]['Salaire brut']
         type_contrat = row[1]['Type de contrat']
@@ -99,11 +103,11 @@ def create_sql_table_RH(conn):
 
         cur.execute("""
             INSERT INTO RH_info 
-            (id_salarie, bu_salarie, salaire_brut, type_contrat, jours_cp, adresse_domicile, moyen_de_deplacement) 
-            VALUES (%s, %s, %s, %s, %s, %s, %s)
+            (id_salarie, name_salarie, bu_salarie, salaire_brut, type_contrat, jours_cp, adresse_domicile, moyen_de_deplacement) 
+            VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
             ON CONFLICT (id_salarie) DO NOTHING
             """,
-            (int(id_salarie), bu_salarie, salaire_brut, type_contrat, jours_cp, adresse_domicile, moyen_de_deplacement)
+            (int(id_salarie), name_salarie, bu_salarie, salaire_brut, type_contrat, jours_cp, adresse_domicile, moyen_de_deplacement)
         )
         inserted_count += 1
         conn.commit()
