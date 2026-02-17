@@ -59,6 +59,10 @@ sources:
             tests:
               - unique
               - not_null
+          - name: name_salarie
+            description: "Employee first name"
+            tests:
+              - not_null
           - name: bu_salarie
             description: "Business unit of the employee"
             tests:

@@ -6,7 +6,9 @@
 
 SELECT
     id_salarie,
-    DATE(date_start) AS activity_date,
+    name_salarie,
+    date_start::DATE AS activity_date,
+    EXTRACT(EPOCH FROM (date_end - date_start)) / 60 AS duration_minutes,
     type_activity,
     distance_m,
     CURRENT_TIMESTAMP AS dbt_loaded_at

@@ -57,13 +57,19 @@ if __name__ == "__main__":
             except IndexError:
                 print(f"row {i} : N/A")
 
-        activity_emoji = emoji_dict.get(row[2], "🏅")
+        activity_emoji = emoji_dict.get(row[3], "🏅")
+
+        if row[5] is not None:
+            distance_activity = "Bravo pour avoir parcouru " + str(row[5] / 1000) + " kms !"
+        else:
+            distance_activity = ""
 
         payload = {
-            "text": f"{activity_emoji} {row[1]} a fait du {row[2]} pendant {row[3]} minutes le {row[4].strftime('%Y-%m-%d %H:%M:%S')}."
+            "text": f"{activity_emoji} {row[1]} a fait du {row[4]} pendant {round(row[3])} minutes. {distance_activity}"
         }
 
         response = requests.post(webhook_url, json=payload)
 
         if response.status_code != 200:
             raise Exception(f"Slack error: {response.text}")
+    
