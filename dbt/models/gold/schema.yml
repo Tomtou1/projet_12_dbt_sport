@@ -9,22 +9,115 @@ models:
         tests:
           - unique
           - not_null
+      - name: salaire_brut
+        description: "Employee gross salary"
+      - name: distance_to_office_km
+        description: "Employee distance to office in km"
+        tests:
+          - not_null
+      - name: moyen_de_deplacement_valide
+        description: "Employee validated means of transportation for mobility bonus"
+        tests:
+          - not_null
 
-  - name: gold_sport_enterprise
-    description: "Employee sport preferences"
+  - name: gold_incorrect_moyen_deplacement
+    description: "Employee filling wrongly the means of transportation for mobility bonus"
     columns:
-      - name: id_duo
-        description: "Duo ID - Primary key"
-        tests:
-          - unique
-          - not_null
+          - name: id_salarie
+            description: "Salarie ID - Primary key"
+            tests:
+              - unique
+              - not_null
+          - name: salaire_brut
+            description: "Employee gross salary"
+            tests:
+              - not_null
+          - name: moyen_de_deplacement
+            description: "Employee means of transportation"
+            tests:
+              - not_null
+          - name: distance_to_office_km
+            description: "Employee distance to office in km"
+            tests:
+              - not_null
+          - name: moyen_de_deplacement_valide
+            description: "Employee validated means of transportation for mobility bonus"
+            tests:
+              - accepted_values:
+                  values: ['incorrect']
 
-      - name: id_salarie
-        description: "Salarie ID - Foreign key"
-        tests:
-          - not_null
+  - name: gold_potential_moyen_deplac_bonus
+    description: "Potential mobility bonus based on validated means of transportation"
+    columns:
+          - name: id_salarie
+            description: "Salarie ID - Primary key"
+            tests:
+              - unique
+              - not_null
+          - name: salaire_brut
+            description: "Employee gross salary"
+            tests:
+              - not_null
+          - name: moyen_de_deplacement
+            description: "Employee means of transportation"
+            tests:
+              - not_null
+          - name: distance_to_office_km
+            description: "Employee distance to office in km"
+            tests:
+              - not_null
+          - name: moyen_de_deplacement_valide
+            description: "Employee validated means of transportation for mobility bonus"
+            tests:
+              - not_null
+          - name: prime_mobilite_deplacement
+            description: "Mobility bonus based on validated means of transportation"
+            tests:
+              - not_null
 
-      - name: type_activity
-        description: "Type of sport activity"
-        tests:
-          - not_null
+  - name: gold_slack_message_activities
+    description: "Employee sport activities from yesterday, to send a Slack messages"
+    columns:
+          - name: id_salarie
+            description: "Salarie ID"
+            tests:
+              - not_null
+          - name: name_salarie
+            description: "Salarie name"
+            tests:
+              - not_null
+          - name: activity_date
+            description: "Date of the sport activity"
+            tests:
+              - not_null
+          - name: duration_minutes
+            description: "Duration of the sport activity in minutes"
+            tests:
+              - not_null
+          - name: type_activity
+            description: "Type of the sport activity"
+            tests:
+              - not_null
+          - name: distance_m
+            description: "Distance of the sport activity in m (if applicable)"
+
+  - name: gold_sport_activities_history
+    description: "Employee sport activities history"
+    columns:
+          - name: id_salarie
+            description: "Salarie ID - Primary key"
+            tests:
+              - unique
+              - not_null
+          - name: nombre_activites_12_mois
+            description: "Number of sport activities in the last 12 months"
+            tests:
+              - not_null
+          - name: nombre_types_activites
+            description: "Number of sport activities in the last 12 months"
+            tests:
+              - not_null
+          - name: derniere_activite
+            description: "Date of the last sport activity"
+            tests:
+              - not_null

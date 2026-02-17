@@ -13,6 +13,34 @@ models:
         description: "Employee first name"
         tests:
           - not_null
+      - name: bu_salarie  
+        description: "Employee business unit"
+      - name: salaire_brut
+        description: "Employee gross salary"
+      - name: type_contrat
+        description: "Employee contract type"
+        tests:
+          - accepted_values:
+              values: ['CDI', 'CDD']
+      - name: jours_cp
+        description: "Employee paid leave days"
+        tests:
+          - accepted_values:
+              values: [24, 25, 26, 27, 28, 29, 30]
+      - name: adresse_domicile
+        description: "Employee home address"
+      - name: moyen_de_deplacement
+        description: "Employee means of transportation"
+        tests:
+        - not_null
+      - name: distance_to_office_km
+        description: "Employee distance to office in km"
+        tests:
+          - not_null
+      - name: moyen_de_deplacement_valide
+        description: "Employee validated means of transportation for mobility bonus"
+        tests:
+          - not_null
 
   - name: silver_sport_activities_history
     description: "Silver layer - Sport activities history enriched with employee names"
@@ -28,6 +56,8 @@ models:
           - not_null
       - name: name_salarie
         description: "Employee first name from RH info"
+        tests:
+          - not_null
       - name: date_start
         description: "Activity start timestamp"
         tests:
@@ -36,6 +66,14 @@ models:
         description: "Type of sport activity"
         tests:
           - not_null
+      - name: distance_m
+        description: "Distance covered during the activity in meters"
+      - name: date_end
+        description: "Activity end timestamp"
+        tests:
+          - not_null
+      - name: comments
+        description: "Additional comments about the activity"
 
   - name: silver_sport_enterprise
     description: "Silver layer - Employee sport preferences"
@@ -49,34 +87,6 @@ models:
         description: "Salarie ID - Foreign key"
         tests:
           - not_null
-      - name: type_activity
-        description: "Type of sport activity"
-        tests:
-          - not_null
-
-  - name: stg_rh_info
-    description: "HR information"
-    columns:
-      - name: id_salarie
-        description: "Salarie ID - Primary key"
-        tests:
-          - unique
-          - not_null
-
-  - name: stg_sport_enterprise
-    description: "Employee sport preferences"
-    columns:
-      - name: id_duo
-        description: "Duo ID - Primary key"
-        tests:
-          - unique
-          - not_null
-
-      - name: id_salarie
-        description: "Salarie ID - Foreign key"
-        tests:
-          - not_null
-
       - name: type_activity
         description: "Type of sport activity"
         tests:

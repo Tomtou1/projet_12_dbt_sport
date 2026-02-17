@@ -83,8 +83,6 @@ sources:
               - not_null
           - name: adresse_domicile
             description: "Home address"
-            tests:
-              - not_null
           - name: moyen_de_deplacement
             description: "Transportation method"
             tests:

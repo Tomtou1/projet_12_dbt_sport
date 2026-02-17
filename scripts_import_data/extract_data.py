@@ -72,7 +72,7 @@ def create_sql_table_RH(conn):
     salaire_brut INT NOT NULL,
     type_contrat VARCHAR(10) NOT NULL,
     jours_cp INT NOT NULL,
-    adresse_domicile TEXT NOT NULL, 
+    adresse_domicile TEXT, 
     moyen_de_deplacement VARCHAR(50) NOT NULL
     );''')
     conn.commit()
@@ -128,7 +128,6 @@ def add_distance_to_office(conn, api_use):
         "Marche/running": "walking"
     }
 
-
     if len(employees) == 0:
         print("Toutes les distances sont déjà calculées.")
         return
@@ -154,6 +153,20 @@ def add_distance_to_office(conn, api_use):
             cur.execute("UPDATE RH_info SET distance_to_office_km = %s WHERE id_salarie = %s",
                         (distance_to_office_km, id_salarie))
         conn.commit()
+
+def clean_adresses(conn):
+    cur = conn.cursor()
+    cur.execute("SELECT id_salarie, adresse_domicile, distance_to_office_km FROM RH_info")
+    employees = cur.fetchall()
+
+    for employee in employees:
+        id_salarie = employee[0]
+        distance_office = employee[2]
+
+        if distance_office >0:
+            cur.execute("UPDATE RH_info SET adresse_domicile = NULL WHERE id_salarie = %s", (id_salarie,))
+                    
+    conn.commit()       
 
 def generate_history_activity(conn):
     range_start_date = datetime(2026, 1, 1).timestamp()
@@ -196,6 +209,7 @@ if __name__ == "__main__":
     create_sql_table_sport_enterprise(conn)
     create_sql_table_RH(conn)
     add_distance_to_office(conn, False)
+    clean_adresses(conn)
 
     #Create history of activity
     n_history_activities = 100
