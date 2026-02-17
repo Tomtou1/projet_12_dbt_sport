@@ -13,4 +13,4 @@ WORKDIR /app
 
 COPY . .
 
-CMD dbt debug && dbt build
+CMD dbt debug && dbt deps && dbt build

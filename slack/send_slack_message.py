@@ -57,7 +57,7 @@ if __name__ == "__main__":
             except IndexError:
                 print(f"row {i} : N/A")
 
-        activity_emoji = emoji_dict.get(row[3], "🏅")
+        activity_emoji = emoji_dict.get(row[4], "🏅")
 
         if row[5] is not None:
             distance_activity = "Bravo pour avoir parcouru " + str(row[5] / 1000) + " kms !"

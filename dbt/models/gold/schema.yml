@@ -73,7 +73,8 @@ models:
           - name: prime_mobilite_deplacement
             description: "Mobility bonus based on validated means of transportation"
             tests:
-              - not_null
+            - dbt_utils.expression_is_true:
+                expression: "{{ column_name }} = 0.05 * salaire_brut"
 
   - name: gold_slack_message_activities
     description: "Employee sport activities from yesterday, to send a Slack messages"
@@ -89,17 +90,26 @@ models:
           - name: activity_date
             description: "Date of the sport activity"
             tests:
-              - not_null
+              - dbt_utils.accepted_range:
+                  min_value: "CURRENT_DATE - INTERVAL '1 day'"
+                  max_value: "CURRENT_DATE - INTERVAL '1 day'"
+
           - name: duration_minutes
             description: "Duration of the sport activity in minutes"
             tests:
-              - not_null
+              - dbt_utils.accepted_range:
+                  min_value: 0
+                  max_value: 1441
+                  inclusive: False
           - name: type_activity
             description: "Type of the sport activity"
             tests:
               - not_null
           - name: distance_m
             description: "Distance of the sport activity in m (if applicable)"
+            tests:
+              - dbt_utils.expression_is_true:
+                  expression: "{{ column_name }} IS NULL OR distance_m > 0"
 
   - name: gold_sport_activities_history
     description: "Employee sport activities history"
@@ -120,4 +130,6 @@ models:
           - name: derniere_activite
             description: "Date of the last sport activity"
             tests:
-              - not_null
+              - dbt_utils.accepted_range:
+                    min_value: "'2025-01-01'::timestamp"
+                    max_value: "CURRENT_DATE"

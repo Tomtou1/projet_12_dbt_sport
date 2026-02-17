@@ -5,9 +5,9 @@ etl_project:
       type: postgres
       host: "{{ env_var('POSTGRES_HOST', 'postgres') }}"
       port: 5432
-      user: "{{ env_var('POSTGRES_USER', 'postgresuser') }}"
-      password: "{{ env_var('POSTGRES_PASSWORD', 'postgrespw') }}"
-      dbname: "{{ env_var('POSTGRES_DB', 'sport_activities_db') }}"
+      user: "{{ env_var('POSTGRES_USER') }}"
+      password: "{{ env_var('POSTGRES_PASSWORD') }}"
+      dbname: "{{ env_var('POSTGRES_DB') }}"
       schema: public
       threads: 1
       keepalives_idle: 0

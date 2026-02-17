@@ -17,6 +17,9 @@ models:
         description: "Employee business unit"
       - name: salaire_brut
         description: "Employee gross salary"
+        tests:
+          - dbt_utils.accepted_range:
+                min_value: 0
       - name: type_contrat
         description: "Employee contract type"
         tests:
@@ -25,8 +28,9 @@ models:
       - name: jours_cp
         description: "Employee paid leave days"
         tests:
-          - accepted_values:
-              values: [24, 25, 26, 27, 28, 29, 30]
+          - dbt_utils.accepted_range:
+                min_value: 20
+                max_value: 30
       - name: adresse_domicile
         description: "Employee home address"
       - name: moyen_de_deplacement
@@ -36,7 +40,9 @@ models:
       - name: distance_to_office_km
         description: "Employee distance to office in km"
         tests:
-          - not_null
+          - dbt_utils.accepted_range:
+                min_value: 0
+                inclusive: False
       - name: moyen_de_deplacement_valide
         description: "Employee validated means of transportation for mobility bonus"
         tests:
@@ -61,7 +67,9 @@ models:
       - name: date_start
         description: "Activity start timestamp"
         tests:
-          - not_null
+          - dbt_utils.accepted_range:
+                min_value: "'2025-01-01'::timestamp"
+                max_value: "CURRENT_DATE"
       - name: type_activity
         description: "Type of sport activity"
         tests:
@@ -71,7 +79,8 @@ models:
       - name: date_end
         description: "Activity end timestamp"
         tests:
-          - not_null
+          - dbt_utils.expression_is_true:
+                expression: "{{ column_name }} > date_start"
       - name: comments
         description: "Additional comments about the activity"
 
