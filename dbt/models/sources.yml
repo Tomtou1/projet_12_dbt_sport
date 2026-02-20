@@ -59,8 +59,12 @@ sources:
             tests:
               - unique
               - not_null
-          - name: name_salarie
+          - name: first_name_salarie
             description: "Employee first name"
+            tests:
+              - not_null
+          - name: last_name_salarie
+            description: "Employee last name"
             tests:
               - not_null
           - name: bu_salarie

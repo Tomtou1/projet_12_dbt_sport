@@ -24,6 +24,7 @@ SELECT
     sa.id_activity,
     sa.id_salarie,
     rh.name_salarie,
+    rh.bu_salarie,
     sa.date_start,
     sa.type_activity,
     sa.distance_m,

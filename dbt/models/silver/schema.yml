@@ -64,6 +64,10 @@ models:
         description: "Employee first name from RH info"
         tests:
           - not_null
+      - name: bu_salarie
+        description: "Business unit of the employee"
+        tests:
+          - not_null
       - name: date_start
         description: "Activity start timestamp"
         tests:

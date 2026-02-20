@@ -67,7 +67,8 @@ def create_sql_table_RH(conn):
     cur = conn.cursor()
     cur.execute('''CREATE TABLE IF NOT EXISTS RH_info (
     id_salarie INT NOT NULL PRIMARY KEY,
-    name_salarie VARCHAR(50) NOT NULL,
+    first_name_salarie VARCHAR(50) NOT NULL,
+    last_name_salarie VARCHAR(50) NOT NULL,
     bu_salarie VARCHAR(50) NOT NULL,
     salaire_brut INT NOT NULL,
     type_contrat VARCHAR(10) NOT NULL,
@@ -93,7 +94,8 @@ def create_sql_table_RH(conn):
     inserted_count = 0
     for row in df.iterrows():
         id_salarie = row[1]['ID salarié']
-        name_salarie = row[1]['Prénom']
+        first_name_salarie = row[1]['Prénom']
+        last_name_salarie = row[1]['Nom']
         bu_salarie = row[1]['BU']
         salaire_brut = row[1]['Salaire brut']
         type_contrat = row[1]['Type de contrat']
@@ -103,11 +105,11 @@ def create_sql_table_RH(conn):
 
         cur.execute("""
             INSERT INTO RH_info 
-            (id_salarie, name_salarie, bu_salarie, salaire_brut, type_contrat, jours_cp, adresse_domicile, moyen_de_deplacement) 
-            VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
+            (id_salarie, first_name_salarie, last_name_salarie, bu_salarie, salaire_brut, type_contrat, jours_cp, adresse_domicile, moyen_de_deplacement) 
+            VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)
             ON CONFLICT (id_salarie) DO NOTHING
             """,
-            (int(id_salarie), name_salarie, bu_salarie, salaire_brut, type_contrat, jours_cp, adresse_domicile, moyen_de_deplacement)
+            (int(id_salarie), first_name_salarie, last_name_salarie, bu_salarie, salaire_brut, type_contrat, jours_cp, adresse_domicile, moyen_de_deplacement)
         )
         inserted_count += 1
         conn.commit()
@@ -140,7 +142,6 @@ def add_distance_to_office(conn, api_use):
 
             print(f" {id_salarie} a le mode de deplacement: {moyen_de_deplacement}, le mode gmaps est donc {gmaps_dict_mode.get(moyen_de_deplacement, 'driving')}")
             if api_use:
-                # Call the API to get the distance
                 load_dotenv()
                 gmaps = googlemaps.Client(key=os.getenv("GCP_key"))
                 adresse_entreprise = "1362 Av. des Platanes, 34970 Lattes"
@@ -169,12 +170,23 @@ def clean_adresses(conn):
     conn.commit()       
 
 def generate_history_activity(conn):
-    range_start_date = datetime(2026, 1, 1).timestamp()
-    range_end_date = datetime.now().timestamp() - 24*3600  # Up to yesterday
+    cur = conn.cursor()
+    cur.execute("SELECT COUNT(*) FROM sport_activities_history")
+    existing_count = cur.fetchone()[0]
+
+    if existing_count < 2000:
+        range_start_date = datetime(2025, 1, 1).timestamp()
+        range_end_date = datetime(2026, 1, 15).timestamp()
+    elif existing_count >= 2000 and existing_count < 2250:
+        range_start_date = datetime(2026, 1, 16).timestamp()
+        range_end_date = datetime(2026, 1, 31).timestamp() # January 2026
+    else:
+        range_start_date = datetime(2026, 2, 1).timestamp()
+        range_end_date = datetime.now().timestamp() - 24*3600  # Up to yesterday
+    
 
     start_dt = datetime.fromtimestamp(random.uniform(range_start_date, range_end_date))
-    end_dt = start_dt + timedelta(hours=random.randint(1, 3))  
-
+    end_dt = start_dt + timedelta(minutes=random.randint(30, 180))  
 
     cur = conn.cursor()
     # Get all employee IDs and their sports activities
@@ -193,7 +205,6 @@ def generate_history_activity(conn):
     date_end = end_dt.strftime("%Y-%m-%d %H:%M:%S")
     comments = f"Score: {random.randint(0, 10)}/10"
 
-    print(f"Generated activity for employee {id_salarie}: {type_activity} from {date_start} to {date_end} with distance {distance_m}m and comments '{comments}'")
     cur.execute(
         "INSERT INTO sport_activities_history (id_salarie, date_start, type_activity, distance_m, date_end, comments) VALUES (%s, %s, %s, %s, %s, %s)",
         (id_salarie, date_start, type_activity, distance_m, date_end, comments)
@@ -211,11 +222,20 @@ if __name__ == "__main__":
     add_distance_to_office(conn, False)
     clean_adresses(conn)
 
-    #Create history of activity
-    n_history_activities = 100
+    #Create history of activity 
+    cur = conn.cursor()
+    cur.execute("SELECT COUNT(*) FROM sport_activities_history")
+    existing_count = cur.fetchone()[0]
+
+    if existing_count < 5:
+        n_history_activities = 1999
+    else:
+        n_history_activities = 250
+        
     for _ in range(n_history_activities):
         generate_history_activity(conn)
 
+    print(f"{n_history_activities} activités générées.")
     #while True:
     #    generate_history_activity(conn)
     #    time.sleep(2)  # Wait for 2 seconds before generating the next activity

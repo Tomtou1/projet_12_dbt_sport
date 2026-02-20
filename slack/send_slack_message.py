@@ -43,11 +43,19 @@ if __name__ == "__main__":
 
     webhook_url = "https://hooks.slack.com/services/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"
     emoji_dict = {
-        "Running": "🏃‍♂️",
+        "Runing": "🏃‍♂️",
         "Randonnée": "🚴‍♂️",
         "Natation": "🏊‍♂️",
         "Vélo": "🚴‍♂️",
-        "Tennis": "🎾"
+        "Tennis": "🎾",
+        "Escalade": "🧗‍♂️",
+        "Badminton": "🏸",
+        "Football": "⚽",
+        "Basketball": "🏀",
+        "Équitation": "🐎",
+        "Boxe": "🥊",
+        "Triathlon": "🏊‍♂️🚴‍♂️🏃‍♂️",
+        "Tennis de table": "🏓"
     }
 
     for row in rows:
