@@ -1,0 +1,39 @@
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+  external_labels:
+    monitor: 'sport-monitor'
+
+scrape_configs:
+  # Monitoring d'Airflow via StatsD Exporter
+  - job_name: 'airflow'
+    static_configs:
+      - targets: ['statsd_exporter:9102']
+        labels:
+          component: 'airflow_metrics'
+
+  # Monitoring de PostgreSQL (base Airflow) via exporter
+  - job_name: 'postgres_airflow'
+    static_configs:
+      - targets: ['postgres_exporter_airflow:9187']
+        labels:
+          instance: 'airflow_db'
+
+  # Monitoring de PostgreSQL (base Sport) via postgres_exporter
+  - job_name: 'postgres_sport'
+    static_configs:
+      - targets: ['postgres_exporter:9187']
+        labels:
+          instance: 'sport_db'
+
+  # Monitoring de Redis via exporter
+  - job_name: 'redis'
+    static_configs:
+      - targets: ['redis_exporter:9121']
+        labels:
+          instance: 'airflow_redis'
+
+  # Monitoring de Prometheus lui-même
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']

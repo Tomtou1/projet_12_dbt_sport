@@ -2,7 +2,7 @@ version: 2
 
 models:
   - name: gold_rh_info
-    description: "HR information"
+    description: "HR information with mobility bonus calculation"
     columns:
       - name: id_salarie
         description: "Salarie ID - Primary key"
@@ -19,6 +19,11 @@ models:
         description: "Employee validated means of transportation for mobility bonus"
         tests:
           - not_null
+      - name: prime_mobilite_deplacement
+        description: "Mobility bonus (5% of gross salary for eligible transportation methods)"
+        tests:
+          - dbt_utils.accepted_range:
+              min_value: 0
 
   - name: gold_incorrect_moyen_deplacement
     description: "Employee filling wrongly the means of transportation for mobility bonus"
@@ -47,7 +52,7 @@ models:
               values: ['incorrect']
 
   - name: gold_potential_moyen_deplac_bonus
-    description: "Potential mobility bonus based on validated means of transportation"
+    description: "Potential mobility bonus based on validated means of transportation for employees not using active transport but living close"
     columns:
       - name: id_salarie
         description: "Salarie ID - Primary key"
@@ -71,10 +76,15 @@ models:
         tests:
           - not_null
       - name: prime_mobilite_deplacement
-        description: "Mobility bonus based on validated means of transportation"
+        description: "Standard mobility bonus (5% of gross salary)"
         tests:
         - dbt_utils.expression_is_true:
             expression: "{{ column_name }} = 0.05 * salaire_brut"
+      - name: prime_mobilite_deplacement_proche
+        description: "Mobility bonus for close proximity (5% of gross salary if distance < 5km, otherwise 0)"
+        tests:
+        - dbt_utils.accepted_range:
+            min_value: 0
 
   - name: gold_slack_message_activities
     description: "Employee sport activities from yesterday, to send a Slack messages"
@@ -110,47 +120,53 @@ models:
         tests:
           - dbt_utils.expression_is_true:
               expression: "{{ column_name }} IS NULL OR distance_m > 0"
+      - name: dbt_loaded_at
+        description: "Timestamp when the record was loaded by dbt"
+        tests:
+          - not_null
 
-  - name: gold_sport_activities_history
-    description: "Employee sport activities history"
+  - name: gold_sport_activities_history_current_year
+    description: "Employee sport activities history for current year (2026) with wellness day eligibility"
     columns:
       - name: id_salarie
         description: "Salarie ID - Primary key"
         tests:
           - unique
           - not_null
-      - name: nombre_activites_12_mois
-        description: "Number of sport activities in the last 12 months"
+      - name: name_salarie
+        description: "Employee name"
+        tests:
+          - not_null
+      - name: bu_salarie
+        description: "Business unit of the employee"
+        tests:
+          - not_null
+      - name: nombre_activites_this_year
+        description: "Number of sport activities in 2026"
         tests:
           - not_null
       - name: nombre_types_activites
-        description: "Number of sport activities in the last 12 months"
+        description: "Number of different sport activity types"
         tests:
           - not_null
       - name: derniere_activite
         description: "Date of the last sport activity"
         tests:
           - dbt_utils.accepted_range:
-                min_value: "'2025-01-01'::timestamp"
+                min_value: "'2026-01-01'::timestamp"
                 max_value: "CURRENT_DATE"
+      - name: journee_bien_etre
+        description: "Wellness days granted (5 days if activities > prorated threshold, otherwise 0)"
+        tests:
+          - accepted_values:
+              values: [0, 5]
+      - name: dbt_loaded_at
+        description: "Timestamp when the record was loaded by dbt"
+        tests:
+          - not_null
 
-  - name: gold_sport_activities_per_bu
-    description: "Employee sport activities history grouped per bu"
-    columns:
-      - name: bu_salarie
-        description: "Business Unit of the employee"
-        tests:
-          - unique
-          - not_null
-      - name: nombre_activites_12_mois
-        description: "Number of activity done by this business unit"
-        tests:
-          - not_null
-      - name: derniere_activite
-        description: "Date of the last activity"
-        
   - name: gold_sport_activities_prime_last_year
-    description: "Employee sport activities history grouped per bu"
+    description: "Employee sport activities for year 2025 with wellness day calculation"
     columns:
       - name: id_salarie
         description: "Employee ID"
@@ -161,7 +177,28 @@ models:
         description: "Employee name"
         tests:
           - not_null
-      - name: salaire_brut
-        description: "Employee gross salary"
-      - name: nombre_activites_12_mois
-        description: "Number of activities in the last 12 months"
+      - name: bu_salarie
+        description: "Business unit of the employee"
+        tests:
+          - not_null
+      - name: nombre_activites_2025
+        description: "Number of activities in 2025 (minimum 4 to be included)"
+        tests:
+          - not_null
+          - dbt_utils.accepted_range:
+              min_value: 4
+      - name: nombre_types_activites
+        description: "Number of different sport activity types"
+        tests:
+          - not_null
+      - name: derniere_activite
+        description: "Date of the last sport activity in 2025"
+        tests:
+          - dbt_utils.accepted_range:
+                min_value: "'2025-01-01'::timestamp"
+                max_value: "'2025-12-31'::timestamp"
+      - name: journee_bien_etre
+        description: "Wellness days granted (5 days if activities > 14, otherwise 0)"
+        tests:
+          - accepted_values:
+              values: [0, 5]

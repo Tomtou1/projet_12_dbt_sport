@@ -25,16 +25,32 @@ WITH activities_2025 AS (
             )
         )
     {% endif %}
+),
+
+aggregated_activities AS (
+    SELECT 
+        id_salarie,
+        name_salarie,
+        bu_salarie,
+        COUNT(*) AS nombre_activites_2025,
+        COUNT(DISTINCT type_activity) AS nombre_types_activites,
+        MAX(date_start) AS derniere_activite
+    FROM activities_2025
+    GROUP BY id_salarie, name_salarie, bu_salarie
+    HAVING COUNT(*) > 3
 )
 
 SELECT 
     id_salarie,
     name_salarie,
     bu_salarie,
-    COUNT(*) AS nombre_activites_2025,
-    COUNT(DISTINCT type_activity) AS nombre_types_activites,
-    MAX(date_start) AS derniere_activite
-FROM activities_2025
-GROUP BY id_salarie,name_salarie,bu_salarie
-HAVING COUNT(*) > 3
+    nombre_activites_2025,
+    nombre_types_activites,
+    derniere_activite,
+    CASE
+        WHEN nombre_activites_2025 > 14 
+        THEN 5
+        ELSE 0
+    END AS journee_bien_etre
+FROM aggregated_activities
 ORDER BY nombre_activites_2025 DESC

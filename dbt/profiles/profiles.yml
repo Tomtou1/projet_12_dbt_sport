@@ -3,7 +3,7 @@ etl_project:
   outputs:
     dev:
       type: postgres
-      host: "{{ env_var('POSTGRES_HOST', 'postgres') }}"
+      host: "{{ env_var('POSTGRES_HOST', 'postgres_sport') }}"
       port: 5432
       user: "{{ env_var('POSTGRES_USER') }}"
       password: "{{ env_var('POSTGRES_PASSWORD') }}"

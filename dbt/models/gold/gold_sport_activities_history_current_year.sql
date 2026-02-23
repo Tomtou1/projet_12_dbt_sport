@@ -25,15 +25,31 @@ WITH activities_this_year AS (
             )
         )
     {% endif %}
+),
+
+aggregated_activities AS (
+    SELECT 
+        id_salarie,
+        name_salarie,
+        bu_salarie,
+        COUNT(*) AS nombre_activites_this_year,
+        COUNT(DISTINCT type_activity) AS nombre_types_activites,
+        MAX(date_start) AS derniere_activite
+    FROM activities_this_year
+    GROUP BY id_salarie, name_salarie, bu_salarie
 )
 
 SELECT 
     id_salarie,
     name_salarie,
     bu_salarie,
-    COUNT(*) AS nombre_activites_12_mois,
-    COUNT(DISTINCT type_activity) AS nombre_types_activites,
-    MAX(date_start) AS derniere_activite,
+    nombre_activites_this_year,
+    nombre_types_activites,
+    derniere_activite,
+    CASE
+        WHEN nombre_activites_this_year > ((CURRENT_DATE - DATE '2026-01-01') / 365.0 * 14)
+        THEN 5
+        ELSE 0
+    END AS journee_bien_etre,
     CURRENT_TIMESTAMP AS dbt_loaded_at
-FROM activities_this_year
-GROUP BY id_salarie,name_salarie,bu_salarie
+FROM aggregated_activities
