@@ -1,6 +1,7 @@
 import time
 import random
 from datetime import datetime, timedelta
+from unittest import case
 import psycopg2
 import pandas as pd
 import googlemaps
@@ -11,7 +12,7 @@ from dotenv import load_dotenv
 def connexion_sql():
     load_dotenv()
     
-    hostname = "postgres"
+    hostname = "postgres_sport"
     port_id = 5432
     username = os.getenv("POSTGRES_USER")
     password = os.getenv("POSTGRES_PASSWORD")
@@ -186,7 +187,8 @@ def generate_history_activity(conn):
     
 
     start_dt = datetime.fromtimestamp(random.uniform(range_start_date, range_end_date))
-    end_dt = start_dt + timedelta(minutes=random.randint(30, 180))  
+    time_activity = random.randint(30, 180)  # Duration between 30 minutes and 3 hours
+    end_dt = start_dt + timedelta(minutes=time_activity)
 
     cur = conn.cursor()
     # Get all employee IDs and their sports activities
@@ -201,7 +203,18 @@ def generate_history_activity(conn):
     type_activity = random_employee[1]
     
     date_start = start_dt.strftime("%Y-%m-%d %H:%M:%S")
-    distance_m = random.randint(1000, 20000) if type_activity in ['Randonnée', 'Running', 'Natation'] else None
+
+    # depending which activity, we decide the distance:
+    match type_activity:
+        case "Randonnée":
+            distance_m = random.randint(3000, 6000)/60*time_activity  # between 3000 and 6000 meters per hour
+        case "Runing":
+            distance_m = random.randint(5000, 20000)/60*time_activity  # between 5000 and 20000 meters per hour
+        case "Natation":
+            distance_m = random.randint(600, 2500)/60*time_activity  # between 600 and 2500 meters per hour
+        case _:
+            distance_m = None
+
     date_end = end_dt.strftime("%Y-%m-%d %H:%M:%S")
     comments = f"Score: {random.randint(0, 10)}/10"
 
@@ -219,7 +232,7 @@ if __name__ == "__main__":
     #Create table wih activities of each employee, and RH table with info about employees
     create_sql_table_sport_enterprise(conn)
     create_sql_table_RH(conn)
-    add_distance_to_office(conn, False)
+    add_distance_to_office(conn, True)
     clean_adresses(conn)
 
     #Create history of activity 

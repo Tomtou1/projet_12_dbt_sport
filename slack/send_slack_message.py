@@ -1,19 +1,19 @@
 import os
-import time
-import random
 from datetime import datetime, timedelta
 import psycopg2
 import requests
-from slack_sdk import WebClient
 import os
+from dotenv import load_dotenv
+
 
 def connexion_sql():
-    hostname = "postgres"
+    load_dotenv()
+    
+    hostname = "postgres_sport"
     port_id = 5432
-    username = "postgresuser"
-    password = "postgrespw"
-    database = "sport_activities_db"
-
+    username = os.getenv("POSTGRES_USER")
+    password = os.getenv("POSTGRES_PASSWORD")
+    database = os.getenv("POSTGRES_DB")
     conn  = psycopg2.connect(
         host=hostname,
         port=port_id,
@@ -41,10 +41,12 @@ if __name__ == "__main__":
     conn.close()
     print("Connexion fermée.")
 
+
+
     webhook_url = "https://hooks.slack.com/services/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"
     emoji_dict = {
         "Runing": "🏃‍♂️",
-        "Randonnée": "🚴‍♂️",
+        "Randonnée": "🏃‍♂️",
         "Natation": "🏊‍♂️",
         "Vélo": "🚴‍♂️",
         "Tennis": "🎾",
@@ -55,29 +57,40 @@ if __name__ == "__main__":
         "Équitation": "🐎",
         "Boxe": "🥊",
         "Triathlon": "🏊‍♂️🚴‍♂️🏃‍♂️",
-        "Tennis de table": "🏓"
+        "Tennis de table": "🏓", 
+        "Rugby": "🏉",
+        "Judo": "🥋",
     }
 
-    for row in rows:
-        for i in range(10):
-            try:
-                print(f"row {i} :", row[i])
-            except IndexError:
-                print(f"row {i} : N/A")
-
-        activity_emoji = emoji_dict.get(row[4], "🏅")
-
-        if row[5] is not None:
-            distance_activity = "Bravo pour avoir parcouru " + str(row[5] / 1000) + " kms !"
-        else:
-            distance_activity = ""
-
-        payload = {
-            "text": f"{activity_emoji} {row[1]} a fait du {row[4]} pendant {round(row[3])} minutes. {distance_activity}"
+    fem_dict = {        
+        "Randonnée": "de la",
+        "Natation": "de la",
+        "Escalade": "de l'",
+        "Équitation": "de l'",
+        "Boxe": "de la",
         }
 
-        response = requests.post(webhook_url, json=payload)
+    for row in rows:
+        # if the table is up to date, and is the day before
+        yesterday = (datetime.now() - timedelta(days=1)).date()
+        if row[2] == yesterday:
+            activity_emoji = emoji_dict.get(row[4], "🏅")
 
-        if response.status_code != 200:
-            raise Exception(f"Slack error: {response.text}")
+            if row[5] is not None:
+                distance_activity = "Bravo pour avoir parcouru " + str(row[5] / 1000) + " kms !"
+            else:
+                distance_activity = ""
+
+            masc_fem = "du"
+            if row[4] in fem_dict:
+                masc_fem = fem_dict[row[4]]
+
+            payload = {
+                "text": f"{activity_emoji} {row[1]} a fait {masc_fem} {row[4].lower()} pendant {round(row[3])} minutes. {distance_activity}"
+            }
+
+            response = requests.post(webhook_url, json=payload)
+
+            if response.status_code != 200:
+                raise Exception(f"Slack error: {response.text}")
     
