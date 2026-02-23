@@ -41,9 +41,8 @@ if __name__ == "__main__":
     conn.close()
     print("Connexion fermée.")
 
-
-
-    webhook_url = "https://hooks.slack.com/services/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"
+    load_dotenv()
+    webhook_url = os.getenv("webhook_url")
     emoji_dict = {
         "Runing": "🏃‍♂️",
         "Randonnée": "🏃‍♂️",
