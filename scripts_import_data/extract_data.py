@@ -209,7 +209,7 @@ def generate_history_activity(conn):
         case "Randonnée":
             distance_m = random.randint(3000, 6000)/60*time_activity  # between 3000 and 6000 meters per hour
         case "Runing":
-            distance_m = random.randint(5000, 20000)/60*time_activity  # between 5000 and 20000 meters per hour
+            distance_m = random.randint(5000, 2000)/60*time_activity  # between 5000 and 2000 meters per hour
         case "Natation":
             distance_m = random.randint(600, 2500)/60*time_activity  # between 600 and 2500 meters per hour
         case _:
